@@ -1,0 +1,119 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter III}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Homework One}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Samuel Teitelbaum}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{(8.2. 15 pts)} Consider the charging capacitor in Prob. 7.34
+    \begin{enumerate}
+      \item Find the electric and magnetic fields in the gap, as functions of the distance $s$
+      from the axis and the time $t$. (Assume the charge is zero at $t=0$.)
+
+
+      \item Find the energy density $u_{em}$ and the Poynting vector $S$ in the gap. Note especially 
+      the direction of $S$. Check that $Eq. 8.12$ is satisfied.
+
+
+      \item Determine the total energy in the gap, as a function of time. Calculate the total
+      power flowing into the gap, by integrating the Poynting vector over the appropriate surface. 
+      Check that the power input is equal to the rate of increase of energy in the gap ($Eq. 8.9$—in 
+      this case $W=0$, because there is no charge in the gap). [If you’re worried about the fringing 
+      fields, do it for a volume of radius $b < a$ well inside the gap.]
+      
+    \end{enumerate}
+
+    \item \textbf{(8.4. 15 pts)}
+    \begin{enumerate}
+      \item Consider two equal point charges $q$, separated by a distance $2a$. Construct the
+      plane equidistant from the two charges. By integrating Maxwell’s stress tensor
+      over this plane, determine the force of one charge on the other
+
+
+      \item Do the same for charges that are opposite in sign.
+
+      
+    \end{enumerate}
+
+
+    \item \textbf{(8.16. 35 pts)} A sphere of radius $R$ carries a uniform polarization $P$ and a uniform
+    magnetization $M$ (not necessarily in the same direction). Find the electromagnetic momentum of this configuration.
+    [Answer: $\dfrac{4}{9} \pi \mu_0 R^3 (M \times P)$]
+    
+
+
+    \item \textbf{(8.17. 35 pts)} Picture the electron as a uniformly charged spherical shell, with
+    charge $e$ and radius $R$, spinning at angular velocity $\omega$.
+    \begin{enumerate}
+      \item Calculate the total energy contained in the electromagnetic fields.
+
+
+      \item Calculate the total angular momentum contained in the fields.
+
+
+      \item According to the Einstein formula $(E = mc^2)$, the energy in the fields should
+      contribute to the mass of the electron. Lorentz and others speculated that the
+      entire mass of the electron might be accounted for in this way: $U_{em} = m_e c^2$.
+      Suppose, moreover, that the electron’s spin angular momentum is entirely
+      attributable to the electromagnetic fields: $L_{em}=\dfrac{\hbar}{2}$. On these two 
+      assumptions, determine the radius and angular velocity of the electron. What is their
+      product, $\omega R$? Does this classical model make sense?
+      
+    \end{enumerate}
+
+
+  \end{enumerate}
+
+\end{document}
