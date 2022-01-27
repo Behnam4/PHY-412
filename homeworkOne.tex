@@ -62,6 +62,100 @@
       \item Find the electric and magnetic fields in the gap, as functions of the distance $s$
       from the axis and the time $t$. (Assume the charge is zero at $t=0$.)
 
+        \textcolor{hwColor}{
+          \\
+          Consider the charging capacitor below (Prob. 7.34)
+        }
+
+        \begin{center}
+          \includegraphics[height=3cm, width=10cm]{problem734.JPG}
+        \end{center}
+
+        \textcolor{hwColor}{
+          Think of a single sheet that has a positive charge distributed through its surface and 
+          consider a Gaussian surface in the form of a cylinder right in the middle of the sheet. Gaussian cylinder
+          is going to emit an electric field that exists the cylinder in both directions. (Outward flux)
+          We can calculate the electric field using the Gauss'a law: 
+          \\
+          \\
+          $
+            \bigoint E.da=\dfrac{1}{\epsilon_0} Q_{enc}
+          $
+          \\
+          \\
+          The Total electric flux for both siders of the Gaussian cylinder is $EA$. Therefore, $EA+EA=\dfrac{1}{\epsilon_0} Q$.
+          We also know that surface charge density is $\sigma=\dfrac{Q}{A}$, so we have:
+          \\
+          $
+            2EA=\dfrac{1}{\epsilon_0} \sigma A \Longrightarrow \overrightarrow{E}=\dfrac{\sigma}{2 \epsilon_0} \hat{z}
+          $
+          ~~~~~~ (Assuming the $\hat{z}$ is to the right)
+          \\
+          \\
+          We now know the electric field of one plate then the electric field in between the two plates is:
+          \\
+          \\
+          $
+            \overrightarrow{E}+\overrightarrow{E}=\dfrac{\sigma}{2 \epsilon_0} \hat{z}+\dfrac{\sigma}{2 \epsilon_0} \hat{z}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{E}=\dfrac{\sigma}{\epsilon_0} \hat{z}
+          $
+          \\
+          \\
+          Note: We assumed the charged is distributed uniformly. For a circular plate we have:
+          \\
+          \\
+          $
+            \sigma=\dfrac{Q}{A}=\dfrac{I ~ t}{\pi a^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{E}=\dfrac{I ~ t}{\epsilon_0 \pi a^2} \hat{z} ~~~~ \checkmark
+          $
+          \\
+          \\
+          \\
+          \\
+          \\
+          We can use the Ampere's law to find the magnetic field in the gap at a distance $s < a$. 
+          \\
+          \\
+          $
+            \bigoint B.dl=\mu_0 I_{enc}
+            \\
+            \\
+          $
+          In chapter 7, we learned about displacement current $J_d \equiv \epsilon_0 \dfrac{\partial E}{\partial t}$.
+          Through the gap the displacment is in the $z$ direction. By rewriting the Ampere's law we have:
+          \\
+          \\
+          $
+            \bigoint B.dl=\mu_0 I_{dis} \Longrightarrow B \times 2 \pi s=\mu_0 I_{dis}
+            \\
+            \\
+            I_{dis}=\bigints J_d.da
+            =\bigints \left(\epsilon_0 \dfrac{\partial E}{\partial t}\right).da
+            =\bigints\limits_{0}^{s} \bigints\limits_{0}^{2 \pi} \left[
+              \epsilon_0 \dfrac{\partial}{\partial t} \left(\dfrac{I ~ t}{\epsilon_0 \pi a^2} \hat{z} \right)
+            \right].s ~ ds ~ d\phi ~ \hat{z}
+            \\
+            \\
+            =\bigints\limits_{0}^{s} \bigints\limits_{0}^{2 \pi} \left( 
+              \dfrac{\epsilon_0 ~ I}{\epsilon_0 \pi a^2} \hat{z} 
+            \right).s ~ ds ~ d\phi ~ \hat{z}
+            =\left[\dfrac{I ~ s^2}{2 \pi a^2}\right]_{0}^{s} \times \left[2 \pi\right]
+            \\
+            \\
+            \\
+            \therefore ~~~ I_{dis}=\dfrac{I ~ s^2}{a^2} \Longrightarrow B \times 2 \pi s=\mu_0 I_{dis}=\mu_0 \dfrac{I ~ s^2}{a^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{B}=\mu_0 \dfrac{I ~ s}{2 \pi a^2} \hat{\phi} ~~~~ \checkmark
+          $
+        }
 
       \item Find the energy density $u_{em}$ and the Poynting vector $S$ in the gap. Note especially 
       the direction of $S$. Check that $Eq. 8.12$ is satisfied.
