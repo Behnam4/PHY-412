@@ -162,7 +162,7 @@
 
         \textcolor{hwColor}{
           \\
-          Eq 8.5 gives the total energy stored in electromagnetic fields as
+          Eq 8.5 gives the energy density as (energy density)
           \\
           \\
           $
@@ -222,6 +222,102 @@
       Check that the power input is equal to the rate of increase of energy in the gap ($Eq. 8.9$—in 
       this case $W=0$, because there is no charge in the gap). [If you’re worried about the fringing 
       fields, do it for a volume of radius $b < a$ well inside the gap.]
+
+        \textcolor{hwColor}{
+          \\
+          $
+            \dfrac{d W}{dt}=-\dfrac{d}{dt} \bigints\limits_{v} \dfrac{1}{2} \left(\epsilon_0 E^2+\dfrac{1}{\mu_0}B^2 \right) d\tau
+            -\dfrac{1}{\mu_0} \bigoint\limits_{S} \left(E \times B\right).da
+          $
+          \\
+          Previously, we found the energy density $u_{em}$. And we learned $Eq. 8.9$ (above) has two parts, is known
+          as Poynting's theorem. The first integral on the right is the total energy stored in the fields.
+          \\
+          Since we have the energy density in the gap, we can use the first integral on the right side of the above equation to 
+          calculate the total energy.
+          \\
+          \\
+          $
+            U=\bigints\limits_{v} \dfrac{1}{2} \left(\epsilon_0 E^2+\dfrac{1}{\mu_0}B^2 \right) d\tau
+            =\bigints\limits_{0}^{a} \bigints\limits_{0}^{2 \pi} \bigints\limits_{0}^{w} 
+            \dfrac{1}{2} \left(\epsilon_0 \dfrac{I^2 ~ t^2}{\epsilon_0^2 \pi^2 a^4}+\dfrac{1}{\mu_0} \mu_0^2 \dfrac{I^2 ~ s^2}{4 \pi^2 a^4} \right) s ~ ds ~ d\phi ~ dz
+            \\
+            \\
+            \\
+            =\dfrac{1}{2} \bigints\limits_{0}^{a} \bigints\limits_{0}^{2 \pi} \bigints\limits_{0}^{w} 
+            \left(
+              \dfrac{I^2 ~ t^2}{\epsilon_0 \pi^2 a^4}
+              +\dfrac{\mu_0 I^2 ~ s^2}{4 \pi^2 a^4} 
+            \right) s ~ ds ~ d\phi ~ dz
+            =\dfrac{I^2}{2 \pi^2 a^4} \left(\dfrac{t^2 a^2}{2 \epsilon_0}+\dfrac{\mu_0 a^4}{16}\right) \left(2 \pi\right) \left(w\right)
+            \\
+            \\
+            \\
+            \therefore ~~~ U=\dfrac{I^2 w}{2 \pi a^2} \left(\dfrac{t^2}{\epsilon_0}+\dfrac{\mu_0 a^2}{8}\right) ~~~~ \checkmark
+          $
+          \\
+          \\
+          Now it's time to calculate the total power flowing into the gap, by integrating the Poynting vector
+          over the appropriate surface as we are asked. The gap is cylindrical and the power flowing into the gap 
+          is the closed surface integral $ \bigoint\limits_{S} S.da$. The Poynting vector points radially inward
+          so the only contribution to this integral is from the cylindrical body of the capacitor. In other words
+          the surface enclosing the cylindrical gap includes the circular surfaces at each of the plates but for the 
+          two plates $S.da=0$, therefore they are not part of the solution.
+          \\
+          \\
+          $
+            P_{Gap}=\bigints\limits_{0}^{2 \pi} \bigints\limits_{0}^{w} S.\left(s ~ d\phi ~ dz ~ \hat{s} \right)
+            =\bigints\limits_{0}^{2 \pi} \bigints\limits_{0}^{w} 
+            \left(-\dfrac{I^2 t s}{2 \pi^2 \epsilon_0 a^4} \hat{s}\right).\left(s ~ d\phi ~ dz ~ \hat{s}\right)
+            \\
+            \\
+            =\bigints\limits_{0}^{2 \pi} \bigints\limits_{0}^{w} 
+            -\dfrac{I^2 t s^2}{2 \pi^2 \epsilon_0 a^4} ~ d\phi ~ dz
+            =-\dfrac{I^2 t s^2}{2 \pi^2 \epsilon_0 a^4} \bigints\limits_{0}^{2 \pi} \bigints\limits_{0}^{w} ~ d\phi ~ dz
+            =-\dfrac{I^2 t a^2}{2 \pi^2 \epsilon_0 a^4} \left(2 \pi w\right)
+            \\
+            \\
+            \\
+            \therefore ~~~ P_{Gap}=-\dfrac{I^2 t w}{\pi \epsilon_0 a^2}
+          $
+          \\
+          \\
+          Note: For the above calculation $s=a$. We are also asked to check that the power input is equal to the rate
+          of increase of energy in the gap ($Eq.8.9$—in this case $W=0$, because there is no charge in the gap).
+          \\
+          \\
+          $
+            \dfrac{d W}{dt}=-\dfrac{d}{dt} \bigints\limits_{v} \dfrac{1}{2} \left(\epsilon_0 E^2+\dfrac{1}{\mu_0}B^2 \right) d\tau
+            -\dfrac{1}{\mu_0} \bigoint\limits_{S} \left(E \times B\right).da
+          $
+          \\
+          \\
+          $\dfrac{d W}{dt}$ is zero simply because ther are no charges in the gap. Hence:
+          \\
+          \\
+          $
+            0=-\dfrac{d}{dt} \bigints\limits_{v} \dfrac{1}{2} \left(\epsilon_0 E^2+\dfrac{1}{\mu_0}B^2 \right) d\tau
+            -\dfrac{1}{\mu_0} \bigoint\limits_{S} \left(E \times B\right).da
+            \\
+            \\
+            \dfrac{d}{dt} \bigints\limits_{v} \dfrac{1}{2} \left(\epsilon_0 E^2+\dfrac{1}{\mu_0}B^2 \right) d\tau
+            =-\dfrac{1}{\mu_0} \bigoint\limits_{S} \left(E \times B\right).da
+            \\
+            \\
+            \dfrac{dU}{dt}=-\bigoint\limits_{S} S.da
+            \\
+            \\
+            \dfrac{d}{dt} \left[\dfrac{I^2 w}{2 \pi a^2} \left(\dfrac{t^2}{\epsilon_0}+\dfrac{\mu_0 a^2}{8}\right)\right]
+            =-\left[-\dfrac{I^2 t w}{\pi \epsilon_0 a^2}\right]
+            \Longrightarrow
+            \dfrac{I^2 t w}{\pi \epsilon_0 a^2}
+            =\dfrac{I^2 t w}{\pi \epsilon_0 a^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \dfrac{dU}{dt}=-\bigoint\limits_{S} S.da ~~~~\checkmark
+          $
+        }
       
     \end{enumerate}
 
