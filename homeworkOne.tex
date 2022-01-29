@@ -321,16 +321,234 @@
       
     \end{enumerate}
 
+    \pagebreak
+
     \item \textbf{(8.4. 15 pts)}
     \begin{enumerate}
       \item Consider two equal point charges $q$, separated by a distance $2a$. Construct the
       plane equidistant from the two charges. By integrating Maxwell’s stress tensor
-      over this plane, determine the force of one charge on the other
+      over this plane, determine the force of one charge on the other.
+
+        \begin{center}
+          \includegraphics[height=6cm, width=10cm]{problem8.14.JPG}
+        \end{center}
+
+        \textcolor{hwColor}{
+          \\
+          On page 364 of the textbook we learned that the total electromagnetic force on the charges in $\mathcal{V}$ is
+          \\
+          \\
+          $
+            F=\bigoint\limits_{S} \overleftrightarrow{T}.da-\epsilon_0 \mu_0 \dfrac{d}{dt} \bigints\limits_{v} S d\tau
+          $
+          \\
+          \\
+          Note that We do not have magnetic fields in this problem. The \textbf{Maxwell Stress Tensor} is defined as 
+          \\
+          \\
+          $
+            T_{ij} \equiv \epsilon_0 \left(E_i E_j - \dfrac{1}{2} \delta_{ij} E^2 \right)
+            +\dfrac{1}{\mu_0} \left(B_i B_j - \dfrac{1}{2} \delta_{ij} B^2\right)
+            \\
+            \\
+            \\
+            \therefore ~~~ \overleftrightarrow{T}=\epsilon_0 \begin{pmatrix}
+              E_x^2-\dfrac{E^2}{2} && E_x E_y && E_x E_z
+              \\
+              E_y E_x && E_y^2-\dfrac{E^2}{2} && E_y E_z
+              \\
+              E_z E_x && E_z E_y && E_z^2-\dfrac{E^2}{2}
+            \end{pmatrix}
+          $
+          \\
+          \\
+          We have two charges, let's call them charges 1 and 2. The force that charge 1 exerts on charge 2 is what we are 
+          interested in. Imagine a system where the origin of it is on charge 1. Then the electric field due to charge 1
+          is
+          \\
+          \\
+          $
+            E_1=\dfrac{q}{4 \pi \epsilon_0 r^2} \hat{r}
+            =\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{a^2+y^2+z^2}\right)
+            \left(\dfrac{-a \hat{x}+y\hat{y}+z\hat{z}}{\sqrt{a^2+y^2+z^2}}\right)
+          $
+          \\
+          The electric field of charge 2 is
+          \\
+          \\
+          $
+            E_2=\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{(-a+2a)^2+y^2+z^2}\right)
+            \left(\dfrac{(-a+2a) \hat{x}+y\hat{y}+z\hat{z}}{\sqrt{(-a+2a)^2+y^2+z^2}}\right)
+            \\
+            \\
+            E_2=\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{a^2+y^2+z^2}\right)
+            \left(\dfrac{a \hat{x}+y\hat{y}+z\hat{z}}{\sqrt{a^2+y^2+z^2}}\right)
+          $
+          \\
+          \\
+          \\
+          The total electric field between the charges is 
+          \\
+          \\
+          $
+            E=E_1+E_2
+            =\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{a^2+y^2+z^2}\right)
+            \left(\dfrac{-a \hat{x}+y\hat{y}+z\hat{z}}{\sqrt{a^2+y^2+z^2}}\right)
+            +\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{a^2+y^2+z^2}\right)
+            \left(\dfrac{a \hat{x}+y\hat{y}+z\hat{z}}{\sqrt{a^2+y^2+z^2}}\right)
+            \\
+            \\
+            \\
+            \therefore ~~~ E=\dfrac{q}{2\pi \epsilon_0} \left[\dfrac{1}{\left(a^2+y^2+z^2\right)^{3/2}}\right] \left[y \hat{y}+z \hat{z}\right] ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \therefore ~~~ \begin{cases}
+              E_x=0
+              \\
+              \\
+              E_y=\dfrac{q}{2\pi \epsilon_0} \left[\dfrac{y}{\left(a^2+y^2+z^2\right)^{3/2}}\right]
+              \\
+              \\
+              E_z=\dfrac{q}{2\pi \epsilon_0} \left[\dfrac{z}{\left(a^2+y^2+z^2\right)^{3/2}}\right]
+              \\
+              \\
+              E^2=\dfrac{q^2}{4 \pi^2 \epsilon_0^2} \left[\dfrac{y^2+z^2}{\left(a^2+y^2+z^2\right)^3}\right]
+            \end{cases}
+          $
+          \\
+          \\
+          Now, by getting back to the total electromagnetic force on the charges formula that was written 
+          above, we can find the force on charge 2 due tio charge 1.
+          \\
+          \\
+          $
+            F=\bigints\limits_{-\infty}^{+\infty} \bigints\limits_{-\infty}^{+\infty} \overleftrightarrow{T}.dy ~ dz ~ \hat{x}
+            \\
+            \\
+            \\
+            \overleftrightarrow{T}.\hat{x}=\epsilon_0 \begin{pmatrix}
+              -\dfrac{E^2}{2} && 0 && 0
+              \\
+              0 && E_y^2-\dfrac{E^2}{2} && E_y E_z
+              \\
+              0 && E_z E_y && E_z^2-\dfrac{E^2}{2}
+            \end{pmatrix} \begin{pmatrix}
+              1
+              \\
+              0
+              \\
+              0
+            \end{pmatrix}
+            =-\epsilon_0 \dfrac{E^2}{2} \hat{x}=-\dfrac{\epsilon_0}{2} \left[\dfrac{q^2}{4 \pi^2 \epsilon_0^2} \left[\dfrac{y^2+z^2}{\left(a^2+y^2+z^2\right)^3}\right]\right] \hat{x}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overleftrightarrow{T}.\hat{x}=-\dfrac{q^2}{8 \pi^2 \epsilon_0} 
+            \left[
+              \dfrac{y^2+z^2}{\left(a^2+y^2+z^2\right)^3}
+            \right] \hat{x} ~~~~ \checkmark
+          $
+          \\
+          \\
+          Plugging in $\overleftrightarrow{T}.\hat{x}$ into $F$ we get
+          \\
+          \\
+          $
+            F=\bigints\limits_{-\infty}^{+\infty} \bigints\limits_{-\infty}^{+\infty} \overleftrightarrow{T}.dy ~ dz ~ \hat{x}
+            =\bigints\limits_{-\infty}^{+\infty} \bigints\limits_{-\infty}^{+\infty} \left[
+              -\dfrac{q^2}{8 \pi^2 \epsilon_0} \left(\dfrac{y^2+z^2}{\left(a^2+y^2+z^2\right)^3}\right)
+            \right].dy ~ dz ~ \hat{x}
+            \\
+            \\
+          $
+          Assuming the $yz$ plane be in cylindrical coordinates and $s=\sqrt{y^2+z^2}$ then
+          \\
+          \\
+          $  
+            =-\bigints\limits_{0}^{+\infty} \bigints\limits_{0}^{2 \pi} \dfrac{q^2}{8 \pi^2 \epsilon_0} \left(\dfrac{s^2}{(a^2+s^2)^3}\right) s ~ ds ~ d\phi ~ \hat{x}
+            \\
+            \\
+            \\
+            \bigints\limits_{0}^{+\infty} \dfrac{s^3}{\left(a^2+s^2\right)^3} ds \longrightarrow \begin{cases}
+              u=s^2
+              \\
+              du=2s ds
+            \end{cases}
+            \\
+            \\
+            \\
+            \therefore ~~~ \bigints\limits_{0}^{+\infty} \dfrac{s^3}{\left(a^2+s^2\right)^3} ds=\bigints\limits_{0}^{+\infty} \dfrac{s \times u}{\left(a^2+s^2\right)^3} \dfrac{du}{2s}
+            =-\dfrac{1}{2} \left[\dfrac{u}{(u+a^2)^2}+\dfrac{a^2}{2(a^2+u)^2}\right]_{0}^{\infty}=\dfrac{1}{4a^2}
+            \\
+            \\
+            \\
+            F=-\bigints\limits_{0}^{+\infty} \bigints\limits_{0}^{2 \pi} \dfrac{q^2}{8 \pi^2 \epsilon_0} \left(\dfrac{s^2}{(a^2+s^2)^3}\right) s ~ ds ~ d\phi ~ \hat{x}
+            =-\dfrac{q^2}{8 \pi^2 \epsilon_0} \dfrac{1}{4a^2} 2 \pi ~ \hat{x}
+            \\
+            \\
+            \\
+            \therefore ~~~ F=-\dfrac{q^2}{4 \pi \epsilon_0 (2a)^2} ~ \hat{x} ~~~~ \checkmark
+          $
+          \\
+          \\
+          This is the exact same result that we get if were to use the Coulomb's law.
+          \\
+        }
 
 
       \item Do the same for charges that are opposite in sign.
-
       
+        \textcolor{hwColor}{
+          \\
+          Now one of the charges has to have opposite charge. The steps are the pretty much the same. 
+          \\
+          \\
+          $
+            E_1=\dfrac{q}{4 \pi \epsilon_0 r^2} \hat{r}
+            =\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{a^2+y^2+z^2}\right)
+            \left(\dfrac{-a \hat{x}+y\hat{y}+z\hat{z}}{\sqrt{a^2+y^2+z^2}}\right)
+            \\
+            \\
+            \\
+            E_2=-\dfrac{q}{4 \pi \epsilon_0} \left(\dfrac{1}{a^2+y^2+z^2}\right) \left(\dfrac{a \hat{x}+y \hat{y}+z \hat{z}}{\sqrt{a^2+y^2+z^2}}\right)
+            \\
+            \\
+            \therefore ~~~ E=E_1+E_2=\dfrac{q}{4 \pi \epsilon_0 \left(a^2+y^2+z^2\right)^{3/2}} \left(-2a \hat{x}\right)
+            \\
+            \\
+            \overleftrightarrow{T}=\epsilon_0 \begin{pmatrix}
+              \dfrac{E^2}{2} && 0 && 0
+              \\
+              0 && -\dfrac{E^2}{2} && 0
+              \\
+              0 && 0 && -\dfrac{E^2}{2}
+            \end{pmatrix}
+            \\
+            \\
+            \\
+            \overleftrightarrow{T}.\hat{x}=\epsilon_0 \dfrac{E^2}{2} \hat{x}=\epsilon_0 \dfrac{4 a^2 q^2}{32 \pi^2 \epsilon_0^2 \left(a^2+y^2+z^2\right)^3} \hat{x}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overleftrightarrow{T}.\hat{x}=\dfrac{a^2 q^2}{8 \pi^2 \epsilon_0 \left(a^2+y^2+z^2\right)^3} \hat{x}
+            \\
+            \\
+            \\
+            F=\bigints\limits_{-\infty}^{+\infty} \bigints\limits_{-\infty}^{+\infty} \dfrac{a^2 q^2}{8 \pi^2 \epsilon_0 \left(a^2+y^2+z^2\right)^3} dy dz
+            \\
+            \\
+            =\bigints\limits_{0}^{+\infty} \bigints\limits_{0}^{2 \pi} \dfrac{a^2 q^2}{8 \pi^2 \epsilon_0 \left(a^2+s^2\right)^3} s ~ ds ~ d\phi ~ \hat{x}
+            =\dfrac{a^2 q^2}{4 \pi \epsilon_0} \bigints\limits_{0}^{+\infty} \dfrac{s}{\left(a^2+s^2\right)^3} ds ~ \hat{x}
+            =\left(\dfrac{a^2 q^2}{4 \pi \epsilon_0}\right) \left(\dfrac{1}{4a}\right) ~ \hat{x}
+            \\
+            \\
+            \\
+            \therefore ~~~ F=\dfrac{q^2}{4 \pi \epsilon_0 \left(2a\right)^2} ~ \hat{x} ~~~~ \checkmark
+            \\
+          $ 
+        }
+  
     \end{enumerate}
 
 
