@@ -1,0 +1,126 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter III}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Homework Two}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Samuel Teitelbaum}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{(9.2. 20 pts)} Show that the \textbf{standing wave} $f(z,t)=A sin(kz) ~ cos(kvt)$ satisfies
+    the wave equation, and express it as the sum of a wave traveling to the left and a wave traveling to the 
+    right (Eq. 9.6).
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \item \textbf{(9.4. 20 pts)} Obtain Eq. 9.20 directly from the wave equation, by separation of variables.
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \item \textbf{(9.33. 30 pts)} The “inversion theorem” for Fourier transforms states that
+    $$
+      \tilde{\phi}(z)=\int\limits_{-\infty}^{+\infty} \tilde{\Phi}(k) ~ e^{ikz} ~ dk 
+      \Longleftrightarrow 
+      \tilde{\Phi}(k)=\dfrac{1}{2 \pi} \int\limits_{-\infty}^{+\infty} \tilde{\phi}(z) ~ e^{-ikz} ~ dz 
+    $$
+    Use this to determine $\tilde{A}(k)$, in $Eq. 9.20$, in terms of $f(z, 0)$ and $\dot{f}(z,0)$.
+
+    [\emph{Answer:} $(1/2 \pi) \int\limits_{-\infty}^{+\infty} \left[
+      f(z, 0)+(i/\omega) \dot{f}(z,0)
+    \right]e^{-ikz} dz$]
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \item \textbf{(9.35. 30 pts)} Suppose
+    $$
+      E(r, \theta, \phi, t)=A \dfrac{sin(\theta)}{r} \left[
+        cos\left(kr-\omega t\right)-\left(1/kr\right) sin\left(kr-\omega t\right)
+      \right] \hat{\phi}, ~~~ \text{with} ~ \dfrac{\omega}{k}=c
+    $$
+    (This is, incidentally, the simplest possible \textbf{spherical wave}. For notational convenience, 
+    let $\left(kr-\omega t\right) \equiv u$ in your calculations.)
+    \begin{enumerate}
+      \item Show that $E$ obeys all four of Maxwell’s equations, in vacuum, and find the
+      associated magnetic field.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Calculate the Poynting vector. Average $S$ over a full cycle to get the intensity
+      vector $I$. (Does it point in the expected direction? Does it fall off like $r^{−2}$, as it
+      should?)
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Integrate $I.da$ over a spherical surface to determine the total power radiated.
+      
+      [\emph{Answer:} $4 \pi A^2/3 \mu_0 c$]
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+  \end{enumerate}
+
+\end{document}
