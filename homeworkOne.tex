@@ -557,15 +557,91 @@
     [Answer: $\dfrac{4}{9} \pi \mu_0 R^3 (M \times P)$]
     
 
+      % \textcolor{hwColor}{
+      %   \\
+
+      % }
 
     \item \textbf{(8.17. 35 pts)} Picture the electron as a uniformly charged spherical shell, with
     charge $e$ and radius $R$, spinning at angular velocity $\omega$.
     \begin{enumerate}
       \item Calculate the total energy contained in the electromagnetic fields.
-
+      
+        \textcolor{hwColor}{
+          \\
+          There was a similar question in chapter 5 where we found the magentic and electric fields inside and outside the shell as
+          \\
+          $
+            \begin{cases}
+              r>R \longrightarrow E=\dfrac{1}{4 \pi \epsilon_0} \dfrac{e}{r^2} \hat{r}, ~~ B=\dfrac{\mu_0 \sigma \omega R^4}{3 r^3} \left(2 cos(\theta) \hat{r}+sin(\theta) \hat{\theta}\right)
+              \\
+              \\
+              r<R \longrightarrow E=0, ~~ B=\dfrac{2}{3} \mu_0 \sigma R \omega \hat{z}, ~~ \sigma=\dfrac{e}{4 \pi R^2}
+            \end{cases}
+            \\
+            \\
+          $
+          \\
+          We got the energy stored in the electric field
+          \\
+          \\
+          $
+            W_E=\dfrac{1}{8 \pi \epsilon_0} \dfrac{e^2}{R}
+          $
+          \\
+          \\
+          And the energy density of B as (inside)
+          \\
+          \\
+          $
+            u_B=\dfrac{1}{2 \mu_0} B^2=\dfrac{1}{2 \mu_0} \left(\dfrac{2}{3} \dfrac{\mu_0 R \omega e}{4 \pi R^2}\right)^2
+            \\
+            \\
+            \\
+            \therefore ~~~ W_{B_{inside}}=\dfrac{\omega^2 e^2 \mu_0 R^4}{18(16 \pi^2)} \dfrac{1}{r^6} \left(3 cos^2(\theta)+1\right)
+          $
+          \\
+          \\
+          And the energy density of B as (outside)
+          \\
+          \\
+          $
+            u_B=\dfrac{1}{2 \mu_0} \dfrac{\mu_0}{16 \pi^2} \dfrac{m^2}{r^6} \left(4 cos^2(\theta)+sin^2(\theta)\right)
+            \\
+            \\
+            \\
+            W_{B_{outside}}=\dfrac{\mu \omega^2 e^2 R^4}{288 \pi^2} \bigints\limits_{R}^{+\infty} \bigints\limits_{0}^{\pi} \bigints\limits_{0}^{2 \pi}
+            \dfrac{1}{r^4} \left(3 cos^2(\theta)+1\right) sin(\theta) ~ dr ~ d\theta ~ d\phi
+            \\
+            \\
+            =\dfrac{\mu_0 \omega^2 e^2 R^4}{288 \pi} \left(\dfrac{1}{3R^3}\right) \left(8 \pi\right)
+            =\dfrac{\mu_0 \omega^2 e^2 R}{108 \pi}
+            \\
+            \\
+            \\
+            W=W_E+W_B=\dfrac{1}{8 \pi \epsilon_0} \dfrac{e^2}{R^2}+ \left[\dfrac{\mu_0 \omega^2 e^2 R}{108 \pi} \times 3\right]
+            \\
+            \\
+            \\
+            \therefore ~~~ W=\dfrac{1}{8 \pi \epsilon_0} \dfrac{e^2}{R^2}+\dfrac{\mu_0 \omega^2 e^2 R}{36 \pi} ~~~~ \checkmark
+            \\
+          $
+        }
 
       \item Calculate the total angular momentum contained in the fields.
-
+      
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              m \longrightarrow \dfrac{1}{3} \omega e R^2
+              \\
+              \\
+              Q \longrightarrow e
+            \end{cases} \\Longrightarrow L=\dfrac{\mu_0 \omega e^2 R}{18 \pi} ~ \hat{z} ~~~~ \checkmark
+            \\
+          $
+        }
 
       \item According to the Einstein formula $(E = mc^2)$, the energy in the fields should
       contribute to the mass of the electron. Lorentz and others speculated that the
@@ -574,6 +650,42 @@
       attributable to the electromagnetic fields: $L_{em}=\dfrac{\hbar}{2}$. On these two 
       assumptions, determine the radius and angular velocity of the electron. What is their
       product, $\omega R$? Does this classical model make sense?
+
+        \textcolor{hwColor}{
+          \\
+          $
+            \dfrac{\hbar}{2}=\dfrac{\mu_0 \omega R e^2}{18 \pi} \Longrightarrow \omega R=\dfrac{9 \pi \hbar}{\mu_0 e^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \omega R=\dfrac{9 \pi \times 1.05 \times 10^{-34}}{\left(4 \pi \times 10^{-7}\right) \left(1.60 \times 10^{-19}\right)^2}
+            =9.228 \times 10^{10} ~ m/s
+            \\
+            \\
+            \\
+            mc^2=\dfrac{1}{8 \pi \epsilon_0} \dfrac{e^2}{R} \left[1+\dfrac{2}{9}\left(\dfrac{\omega R}{c}\right)^2\right]
+            =\dfrac{1}{8 \pi \epsilon_0} \dfrac{e^2}{R} \left[1+\dfrac{2}{9}\left(\dfrac{9.228 \times 10^{10}}{3 \times 10^8}\right)^2\right]
+            =2.10 \times 10^4
+            \\
+            \\
+          $
+          \\
+          Now we can find the radius $R$
+          \\
+          \\
+          $
+            \therefore ~~~ R=\dfrac{\left(2.10 \times 10^4\right) \left(1.6 \times 10^{-19}\right)^2}{8 \pi \left(8.85 \times 10^{-12}\right) \left(9.11 \times 10^{-31}\right) \left(3 \times 10^8\right)^2}
+            =2.94 \times 10^{-11} ~ m ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \therefore ~~~ \omega=\dfrac{9.228 \times 10^{10}}{R}=\dfrac{9.228 \times 10^{10}}{2.94 \times 10^{-11}}=3.1387 \times 10^{21} ~ rad/s ~~~~ \checkmark
+          $
+          \\
+          \\
+          This classical model does not make sense, simply because the value of $\omega R$ is insanely bigger than the speed of light.
+          \\
+        }
       
     \end{enumerate}
 
