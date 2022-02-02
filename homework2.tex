@@ -72,7 +72,55 @@
         \begin{center}
           \includegraphics[height=5cm, width=10cm]{QuestionOne.JPG}
         \end{center}
-        Behnam
+        Equation $\dfrac{\partial^2 f}{\partial z^2}=\dfrac{1}{v^2} \dfrac{\partial^2 f }{\partial t^2}$ from the textbook 
+        is the classical \textbf{wave equation}. Let's see if the given standing wave satisfies the wave equation. We define 
+        $f(z,t)=f(z-vt, 0)=g(z-vt)$ and $u \equiv z-vt$.
+        \\
+        \\
+        $
+          \begin{cases}
+            \dfrac{\partial f}{\partial z}=Ak ~ cos(kvt) ~ cos(kz)
+            \\
+            \\
+            \dfrac{\partial^2 f}{\partial z^2}=-Ak^2 ~ cos(kvt) ~ sin(kz) ~~~~ (A)
+          \end{cases}
+          \begin{cases}
+            \dfrac{\partial f}{\partial t}=-Akv ~ sin(kz) ~ sin(kvt)
+            \\
+            \\
+            \dfrac{\partial^2 f}{\partial t^2}=-A k^2 v^2 ~ sin(kz) ~ cos(kvt) ~~~~ (B)
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        Now let's plug in $(A)$ and $(B)$ into the wave equation.
+        \\
+        \\
+        $
+          (A)=\dfrac{1}{v^2} (B) \Longrightarrow -Ak^2 ~ cos(kvt) ~ sin(kz)=\dfrac{1}{v^2} \times -A k^2 v^2 ~ sin(kz) ~ cos(kvt)
+          \\
+          \\
+          \therefore ~~~ \boxed{cos(kvt) ~ sin(kz)=sin(kz) ~ cos(kvt)} ~~~~ \checkmark ~~~~ \emph{The wave equation is satisfied}
+        $
+        \\
+        \\
+        We are asked to express the given function as sum of a wave traveling to the left and a wave traveling to the right 
+        according to $f(z,t)=g(z-vt)+h(z+vt) ~~ (\textbf{Eq. $9.6$})$. We know from trigonometry the below identity that we
+        can use to rewrite $f(z,t)=A sin(kz) ~ cos(kvt)$.
+        \\
+        \\
+        $
+          \boxed{sin(\alpha) ~ cos(\beta)=\dfrac{1}{2} \left[sin(\alpha+\beta)+cos(\alpha-\beta)\right]}
+          \\
+          \\
+          f(z,t)=A ~ sin(kz) ~ cos(kvt)=A \times \dfrac{1}{2} \left[sin(kz+kvt)+cos(kz-kvt)\right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{f(z,t)=\dfrac{A}{2} ~ sin(kz+kvt)+\dfrac{A}{2} ~ cos(kz-kvt)=g(z-vt)+h(z+vt)} ~~~~ \checkmark
+          \\
+        $
       }
 
     \item \textbf{(9.4. 20 pts)} Obtain Eq. 9.20 directly from the wave equation, by separation of variables.
