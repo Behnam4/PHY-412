@@ -20,7 +20,7 @@
 \newcommand{\scriptr}{\mathcalligra{r}\,}
 \newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
 
-\definecolor{hwColor}{HTML}{AD53BA}
+\definecolor{hwColor}{HTML}{442020}
 
 \begin{document}
 
@@ -125,9 +125,109 @@
 
     \item \textbf{(9.4. 20 pts)} Obtain Eq. 9.20 directly from the wave equation, by separation of variables.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        The method of \textbf{Separation of Variables} relies upon the assumption that a function of the form $u(x,t)=\phi(x) G(t)$, 
+        will be a solution to a linear homogeneous partial differential equation in $x$ and $t$. This is called a product solution
+        and provided the boundary conditions are also linear and homogeneous this will also satisfy the boundary conditions.
+        The method of Separation of Variables cannot always be used and even when it can be used 
+        it will not always be possible to get much past the first step in the method. This strategy can also be used to solve PDEs 
+        in cylindrical polar coordinates; $u(\rho, \phi)=R(\rho) \Phi(\phi)$. Then we need to substitute this potential solution 
+        into our original PDE, and see if we can determine what form $R(\rho)$ and $\Phi(\phi)$ should take.
+        \\
+        From the textbook we have $Eq. 9.20$ as $\tilde{f}(z,t)=\int\limits_{-\infty}^{+\infty} \tilde{A}(k) ~ e^{i(kz-\omega t)} ~ dk$. 
+        Let's assume $f(z,t)=Z(z) T(t)$ (separation of variables) is a solution for the wave equation. Plugging it into the wave equation, we get
+        \\
+        \\
+        $
+          \dfrac{\partial^2 f}{\partial z^2}=\dfrac{1}{v^2} \dfrac{\partial^2 f }{\partial t^2}
+          \longrightarrow
+          \dfrac{\partial^2}{\partial z^2} \left[Z(z) T(t)\right]=\dfrac{1}{v^2} \dfrac{\partial^2}{\partial t^2} \left[Z(z) T(t)\right]
+          \\
+          \\
+          \dfrac{
+            \dfrac{\partial^2}{\partial z^2} \left[Z(z) T(t)\right]
+          }{Z(z) T(t)}=\dfrac{1}{v^2} \dfrac{
+            \dfrac{\partial^2}{\partial t^2} \left[Z(z) T(t)\right]
+          }{Z(z) T(t)}
+          \Longrightarrow
+          \dfrac{Z^{''}(z)}{Z(z)}=\dfrac{1}{v^2} \dfrac{T^{''}(t)}{T(t)}
+        $
+        \\
+        \\
+        The left hand side depends on $z$ and the right hand side depends on $t$. Only the two are equal when they are constants. Let's call the 
+        constant $-k^2$, therefore:
+        \\
+        \\
+        $
+          \dfrac{Z^{''}(z)}{Z(z)}=\dfrac{1}{v^2} \dfrac{T^{''}(t)}{T(t)}=\text{Constant}=-k^2
+          \\
+          \\
+          \begin{cases}
+            \dfrac{Z^{''}(z)}{Z(z)}=-k^2
+            \\
+            \\
+            \dfrac{1}{v^2} \dfrac{T^{''}(t)}{T(t)}=\text{Constant}=-k^2
+          \end{cases} \Longrightarrow 
+          \begin{cases}
+            Z(z)=A ~ e^{ikz}+B ~ e^{-ikz}
+            \\
+            \\
+            T(t)=C ~ e^{ikvt}+D ~ e^{-ikvt}
+          \end{cases}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{f(z,t)=\left[A ~ e^{ikz}+B ~ e^{-ikz}\right] \times \left[C ~ e^{ikvt}+D ~ e^{-ikvt}\right]}
+          \\
+          \\
+          f(z,t)=
+          \left[A ~ e^{ikz} ~ C ~ e^{ikvt}\right]
+          \left[A ~ e^{ikz} ~ D ~ e^{-ikvt}\right]
+          \left[B ~ e^{-ikz} ~ C ~ e^{ikvt}\right]
+          \left[B ~ e^{-ikz} ~ D ~ e^{-ikvt}\right]
+          \\
+          \\
+          =AC ~ e^{i(kz+kvt)}+AD ~ e^{i(kz-kvt)}+BC ~ e^{i(-kz+kvt)}+BD ~ e^{i(-kz-kvt)}
+          \\
+          \\
+          \therefore ~~~ \boxed{f(z,t)=A_1 ~ e^{i(kz+kvt)}+A_2 ~ e^{i(kz-kvt)}+A_3 ~ e^{i(-kz+kvt)}+A_4 ~ e^{i(-kz-kvt)}}
+          \\
+          \\
+          \\
+          f(z,t)=\bigints\limits_{0}^{+\infty} \Bigg(A_1 ~ e^{i(kz+kvt)}+A_2 ~ e^{i(kz-kvt)}+A_3 ~ e^{i(-kz+kvt)}+A_4 ~ e^{i(-kz-kvt)}\Bigg) dk
+          \\
+          \\
+          \text{Assumming} ~ \omega=kv ~ \text{then we have}
+          \\
+          \\
+          f(z,t)=\bigints\limits_{-\infty}^{+\infty} \Bigg(A_1 ~ e^{i(kz+\omega t)}+A_2 ~ e^{i(kz-\omega t)}\Bigg) dk
+          \\
+          \\
+          \text{Using Euler's formula}
+          \\
+          \\
+          =\bigints\limits_{-\infty}^{+\infty} \Bigg(
+            A_1 ~ \left[cos(kz+\omega t)+i ~ sin(kz+\omega t)\right]+A_2 ~ \left[cos(kz-\omega t)+i ~ sin(kz-\omega t)\right]
+          \Bigg) dk
+          \\
+          \\
+          \\
+        $
+        We need the real part of what we have now, plus we can use either $A_1 ~ e^{i(kz+\omega t)}$ or $A_2 ~ e^{i(kz-\omega t)}$ since 
+        both one has waves in both directions. I am using the second one in order to get to $Eq. 9.20$. The general solution is
+        \\ 
+        $  
+          \\
+          \therefore ~~~ \tilde{f}(z,t)=\bigints\limits_{-\infty}^{+\infty} \Bigg(A ~ \left[cos(kz-\omega t)+i ~ sin(kz-\omega t)\right]\Bigg) dk
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{\tilde{f}(z,t)=\bigints\limits_{-\infty}^{+\infty} \tilde{A} ~ e^{i(kz-\omega t)} dk} ~~~~ \checkmark
+        $
+      }
+
+    \pagebreak
 
     \item \textbf{(9.33. 30 pts)} The “inversion theorem” for Fourier transforms states that
     $$
