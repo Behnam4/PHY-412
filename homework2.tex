@@ -120,6 +120,8 @@
           \\
           \therefore ~~~ \boxed{f(z,t)=\dfrac{A}{2} ~ sin(kz+kvt)+\dfrac{A}{2} ~ cos(kz-kvt)=g(z-vt)+h(z+vt)} ~~~~ \checkmark
           \\
+          \\
+          \\
         $
       }
 
@@ -241,9 +243,62 @@
       f(z, 0)+(i/\omega) \dot{f}(z,0)
     \right]e^{-ikz} dz$]
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          \omega \equiv |k|v
+          \\
+          \\
+          \begin{cases}
+            \tilde{f}(z, 0)=\bigints\limits_{-\infty}^{+\infty} \tilde{A}(k) ~ e^{ikz} dk 
+            \\
+            \\
+            \tilde{f}(z, 0)^*=\bigints\limits_{-\infty}^{+\infty} \tilde{A}(k)^* ~ e^{-ikz} dk
+            =\bigints\limits_{-\infty}^{+\infty} \tilde{A}(-k)^* ~ e^{ikz} dk
+          \end{cases}
+          \\
+          \\
+          \\
+          f(z,0)=Re \left(\tilde{f}(z, 0)\right)=\dfrac{1}{2} \left[\tilde{f}(z, 0)+\tilde{f}(z, 0)^*\right]
+          =\dfrac{1}{2} \bigints\limits_{-\infty}^{+\infty} \left[\tilde{A}(k)+\tilde{A}(-k)^* \right] ~ e^{ikz} ~ dk
+          \\
+          \\
+          \\
+          \tilde{\dot{f}}(z,t)=\bigints\limits_{-\infty}^{+\infty} \tilde{A}(k) \left(-i \omega\right) ~ e^{i(kz-\omega t)} dk
+          \Longrightarrow \tilde{\dot{f}}(z,0)=\bigints\limits_{-\infty}^{+\infty} \tilde{A}(k) \left(-i \omega\right) ~ e^{ikz} dk
+          \\
+          \\
+          \\
+          \tilde{\dot{f}}(z,0)^*=\bigints\limits_{-\infty}^{+\infty} \tilde{A}(k) \left(i \omega\right) ~ e^{-ikz} dk
+          =\bigints\limits_{-\infty}^{+\infty} \left(i|k| v \tilde{A}(k)^*\right) ~ e^{-ikz} ~ dk
+          \\
+          \\
+          =\bigints\limits_{-\infty}^{+\infty} \left(i|k| v \tilde{A}(-k)^*\right) ~ e^{ikz} ~ dk
+          =\bigints\limits_{-\infty}^{+\infty} \tilde{A}(-k)^* \times i \omega ~ e^{ikz} ~ dk
+          \\
+          \\
+          \\
+          \dot{f}(z,0)=Re\left(\tilde{\dot{f}}(z,0)\right)=\dfrac{1}{2} \left(
+            \tilde{\dot{f}}(z,0)+\tilde{\dot{f}}(z,0)^*
+          \right)
+          =\dfrac{1}{2} \bigints\limits_{-\infty}^{+\infty} \left(i \omega \tilde{A}(-k)^*-i \omega \tilde{A}(k)\right) \times e^{ikz} ~ dk
+          \\
+          \\
+          \\
+          \therefore ~~~ \begin{cases}
+            \dfrac{1}{2} \left[\tilde{A}(k)-\tilde{A}(-k)^*\right]=\dfrac{1}{2 \pi} \bigints\limits_{-\infty}^{+\infty} e^{-ikz} \dfrac{i}{\omega} \dot{f}(z,0) ~ dz
+            \\
+            \\
+            -i \dfrac{\omega}{2} \left[\tilde{A}(k)-\tilde{A}(-k)^*\right]=\dfrac{1}{2 \pi} \bigints\limits_{-\infty}^{+\infty} e^{-ikz} \dot{f}(z,0) ~ dz
+          \end{cases} ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{\tilde{A}(k)=\dfrac{1}{2} \bigints\limits_{-\infty}^{+\infty} \left(f(z,0)+\dfrac{i}{\omega} \dot{f}(z,0)\right) ~ e^{-ikz} ~ dz} ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item \textbf{(9.35. 30 pts)} Suppose
     $$
