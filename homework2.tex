@@ -257,25 +257,220 @@
       \item Show that $E$ obeys all four of Maxwell’s equations, in vacuum, and find the
       associated magnetic field.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          \textbf{Gauss’ law:}
+          \\
+          \\
+          $
+            \boxed{\overrightarrow{\nabla}.\overrightarrow{E}=\dfrac{1}{r ~ sin(\theta)} \dfrac{\partial E}{\partial \phi}=0} ~~~~ \checkmark
+            \\
+            \\
+            \text{Note that} ~ E ~ \text{does not depend on} ~ \phi
+          $
+        }
+
+
+        \textcolor{hwColor}{
+          \\
+          \textbf{Faraday's law:}
+          \\
+          \\
+          $
+            \overrightarrow{\nabla} \times \overrightarrow{E}=\dfrac{1}{r ~ sin(\theta)} \dfrac{\partial ~ E sin(\theta)}{\partial \theta} \hat{r}
+            -\dfrac{1}{r} \dfrac{\partial ~ r E}{\partial r} \hat{\theta}
+            =\dfrac{1}{r ~ sin(\theta)} \left[E ~ cos(\theta)+\dfrac{\partial E}{\partial \theta}sin(\theta)\right] \hat{r}
+            -\dfrac{1}{r} \left[E+\dfrac{\partial E}{\partial r} r\right] \hat{\theta}
+            \\
+            \\
+            \\
+            \begin{cases}
+              \dfrac{\partial E}{\partial r}=-\dfrac{A ~ sin(\theta)}{r^2} \left[cos(u)-\dfrac{sin(u)}{kr}\right]
+              +\dfrac{A ~ sin(\theta)}{r} \left[\dfrac{sin(u)}{kr^2}-k sin(u)-\dfrac{k cos(u)}{kr}\right]
+              \\
+              =\dfrac{A ~ sin(\theta)}{r^2} \left[2\dfrac{sin(u)}{kr}-2 cos(u)-kr sin(u)\right]
+              \\
+              \\
+              \\
+              \dfrac{\partial E}{\partial \theta}=\dfrac{A ~ cos(\theta)}{r} \left[cos(u)-\dfrac{sin(u)}{kr}\right]
+            \end{cases}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{\nabla} \times \overrightarrow{E}
+            =\dfrac{A}{r^2} \left[
+              2 cos(\theta) \left(cos(u)-\dfrac{sin(u)}{kr}\right) \hat{r}
+              +sin(\theta) \left(cos(u)+sin(u)(kr-\dfrac{1}{kr})\right) \hat{\theta}
+            \right]
+            \\
+            \\
+            \\
+            \begin{cases}
+              \omega=ck 
+              \\
+              \\
+              S=\bigints sin(u)dt=\dfrac{cos(u)}{\omega}
+              \\
+              \\
+              C=\bigints cos(u) dt=-\dfrac{sin(u)}{\omega}
+            \end{cases}
+            \\
+            \\
+            \\
+            \\
+            \overrightarrow{B}=-\bigints ~ \left(\overrightarrow{\nabla} \times \overrightarrow{E}\right) dt
+            =-\dfrac{A}{r^2} \left[
+              2 cos(\theta) \left(C-\dfrac{S}{kr}\right) \hat{r}
+              +sin(\theta) \left(C+S(kr-\dfrac{1}{kr})\right) \hat{\theta}
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \overrightarrow{B}=\dfrac{2A cos(\theta)}{r^2 ck} \left[sin(u)+\dfrac{cos(u)}{kr}\right] \hat{r}
+              +\dfrac{A sin(\theta)}{r^2 ck} \left[sin(u)-cos(u)(kr-\dfrac{1}{kr})\right] \hat{\theta}
+            } ~~~~ \checkmark
+            \\
+          $
+          \\
+          \\
+          We know that Gauss law for magnetism is $\overrightarrow{\nabla}.\overrightarrow{B}=0$ in vaccum. Now let's 
+          quickly do a sanity check
+          \\
+          \\
+          $
+            \overrightarrow{\nabla}.\overrightarrow{B}=\overrightarrow{\nabla}. \left[\dfrac{2A cos(\theta)}{r^2 ck} \left[sin(u)+\dfrac{cos(u)}{kr}\right] \hat{r}
+            +\dfrac{A sin(\theta)}{r^2 ck} \left[sin(u)-cos(u)(kr-\dfrac{1}{kr})\right] \hat{\theta}\right]
+            \\
+            \\
+            \\
+            =\dfrac{2A cos(\theta)}{r^2 ck} \dfrac{\partial}{\partial r} \left[sin(u)+\dfrac{cos(u)}{kr}\right]
+            +\dfrac{A}{r^3 ck}\dfrac{1}{sin(\theta)} \dfrac{\partial ~ sin^2(\theta)}{\partial \theta} \left[sin(u)+cos(u) (kr+\dfrac{1}{kr})\right]
+            \\
+            \\
+            \\
+            =\dfrac{2A cos(\theta)}{r^2 ck}\left[
+              -\dfrac{1}{r^2k} cos(u)-\dfrac{1}{r} sin(u)+k cos(u)
+              +\dfrac{1}{r} \left(sin(u)-cos(u)(kr-\dfrac{1}{kr})\right)
+            \right]
+            \\
+            \\
+            \\
+            =\dfrac{2A cos(\theta)}{r^2 ck} \left[
+              -\dfrac{1}{r^2 k}cos(u)-\dfrac{1}{r} sin(u)+k cos(u)-k cos(u)+\dfrac{1}{r} sin(u)+\dfrac{cos(u)}{r^2 k}
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\overrightarrow{\nabla}.\overrightarrow{B}=0} ~~~~ \checkmark
+            \\
+            \\
+          $ 
+        }
+
+        \textcolor{hwColor}{
+          \\
+          \textbf{Ampère's law:}
+          \\
+          \\
+          $
+            \overrightarrow{\nabla} \times \overrightarrow{B}=\dfrac{1}{r} \left[
+              \dfrac{\partial}{\partial r} \left(
+                r \times \dfrac{A ~ sin(\theta)}{r^2 ck} \left(sin(u)-cos(u)(kr-\dfrac{1}{kr})\right)
+                \right)
+                -\dfrac{\partial }{\partial \theta} \times \dfrac{2A cos(\theta)}{r^2 ck} \left(sin(u)+\dfrac{cos(u)}{kr}\right)
+            \right]\hat{\phi}
+            \\
+            \\
+            \\
+            \\
+            \\
+            =\dfrac{1}{r} (
+              \dfrac{A ~ sin(\theta)}{r^2 ck} \left[sin(u)-cos(u) \left(kr-\dfrac{1}{kr}\right)\right]
+              \\
+              +\dfrac{A ~ sin(\theta)}{r ck} \left[-cos(u)(k+\dfrac{1}{r^2 k})+k ~ cos(u)+k ~ sin(u) (kr-\dfrac{1}{kr})\right]
+              \\
+              +\dfrac{2A sin(\theta)}{r^2 ck} \left[sin(u)+\dfrac{cos(u)}{kr}\right]
+            ) \hat{\phi}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\overrightarrow{\nabla} \times \overrightarrow{B}=\dfrac{A ~ sin(\theta)}{r^2 c} \left(
+              kr ~ sin(u)+cos(u)
+            \right) \hat{\phi}} ~~~~ \checkmark
+          $
+          \\
+          \\
+          We just saw that \textbf{ Maxwell’s equation} are satisfied.
+          \\
+        }
+
 
       \item Calculate the Poynting vector. Average $S$ over a full cycle to get the intensity
       vector $I$. (Does it point in the expected direction? Does it fall off like $r^{−2}$, as it
       should?)
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From the textbook we learned the definition of the Poynting vector.
+          \\
+          \\
+          $
+            S=\dfrac{1}{\mu_0} \left(\overrightarrow{E} \times \overrightarrow{B}\right)
+            =\dfrac{1}{\mu_0} \left[
+              E \hat{\phi} \times \left[
+                \dfrac{2A ~ cos(\theta)}{r^2 ck} \left[sin(u)+\dfrac{cos(u)}{kr}\right] \hat{r}
+                +\dfrac{A ~ sin(\theta)}{r^2 ck} \left[sin(u)-cos(u) \left(kr-\dfrac{1}{kr}\right)\right] \hat{\theta}
+              \right]
+            \right]
+            \\
+            \\
+            \\
+            =-\dfrac{A^2}{\mu_0 ~ r^3 ck} (
+              \left(-kr~ cos(u)+sin(u)+\dfrac{cos(u)}{kr}\right) \left(cos(u)-\dfrac{sin(u)}{kr}\right) sin^2(\theta) \hat{r}
+              \\
+              +2 sin(\theta) ~ cos(\theta) \left(sin(u)+\dfrac{cos(u)}{kr}\right) \left(cos(u)-\dfrac{sin(u)}{kr}\right) \hat{\theta}
+            )
+            \\
+            \\
+            \\
+            =-\dfrac{A^2}{\mu_0 ~ r^3 ck} (
+              \left[-kr ~ cos^2(u)+\dfrac{cos^2(u)-sin^2(u)}{kr}+sin(u) ~ cos(u) (2-\dfrac{1}{r^2 k^2}) \right] sin^2(\theta) \hat{r}
+              \\
+              +2 sin(\theta) ~ cos(\theta) \left[\left(\dfrac{cos^2(u)-sin^2(u)}{kr}\right) sin(u) cos(u) (1-\dfrac{1}{kr}) \right] \hat{\theta}
+            )
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\langle \overrightarrow{S} \rangle=\dfrac{A^2~ sin^2(\theta)}{2\mu_0 ~ r^2 c} \hat{r}=\overrightarrow{I}} ~~~~ \checkmark
+          $
+          \\
+          \\
+          The intensity vector is radially outward and yes falls off like $r^{-2}$. For some reason, it is hard for me to 
+          visualize this result.
+          \\
+        }
 
-      \item Integrate $I.da$ over a spherical surface to determine the total power radiated.
+      \item Integrate $\overrightarrow{I}.d \overrightarrow{a}$ over a spherical surface to determine the total power radiated.
       
-      [\emph{Answer:} $4 \pi A^2/3 \mu_0 c$]
+      [\emph{Answer:} $4 \pi A^2/3 \mu_0 c$] 
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \bigints \bigints \overrightarrow{I}.d \overrightarrow{a}
+            =\dfrac{A^2}{2 \mu_0 c} \bigints\limits_{0}^{\pi} 2\pi r^2 ~ sin(\theta) \times \left(\dfrac{sin(\theta)}{r}\right)^2 ~ d\theta
+            \\
+            \\
+            =-\dfrac{A^2 \pi}{\mu_0 c} \bigints\limits_{0}^{\pi} sin^3(\theta) d\theta
+            =\dfrac{A^2 \pi}{\mu_0 c} \bigints\limits_{-1}^{+1} \left(1-x^2\right) dx
+            =\dfrac{A^2 \pi}{\mu_0 c} \times \dfrac{4}{3}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\bigints \bigints \overrightarrow{I}.d \overrightarrow{a}=\dfrac{4}{3}\dfrac{\pi A^2}{\mu_0 c}} ~~~~ \checkmark
+          $
+        }
 
     \end{enumerate}
 
