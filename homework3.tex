@@ -172,15 +172,124 @@
 
     \end{enumerate}
 
+    \pagebreak
 
     \item \textbf{9.13 (40 points)} Find all elements of the Maxwell stress tensor for a monochromatic plane wave traveling in the 
     $z$ direction and linearly polarized in the $x$ direction (Eq. $9.48$). Does your answer make sense? (Remember that 
     $-\overleftrightarrow{T}$ represents the momentum flux density.) How is the momentum flux density related to the energy
     density, in this case?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Equation $9.48$ from the textbook
+        \\
+        \\
+        $
+          \begin{cases}
+            E(z,t)=E_0 ~ cos(kz-\omega t+\delta) ~ \hat{x}
+            \\
+            \\
+            B(z,t)=\dfrac{1}{c} E_0 ~ cos(kz-\omega t+\delta) ~ \hat{y}
+          \end{cases}
+        $
+        \\
+        \\
+      }
+      \begin{center}
+        \includegraphics[height=5cm, width=12cm]{2.JPG}
+      \end{center}
+      \textcolor{hwColor}{    
+        \\
+        \\
+        In chapter 8, we learned about the \textbf{Maxwell stress tensor}. Let's rewrite again here. Note the  \textbf{Kronecker delta},
+        $\delta_{ij}$ is $1$ if the indices are the same $(\delta_{xx}=\delta_{yy}=\delta_{zz}=1)$ and zero otherwise
+        $(\delta_{xy}=\delta_{xz}=\delta_{yz}=0)$. Also, $c^2=\dfrac{1}{\mu_0 ~ \epsilon_0}$ comes from the wave equation that  
+        can be derived from Maxwell's equations.
+        \\
+        \\
+        $
+          T_{ij} \equiv \epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right) ~~~~~~~~~~~~~~~ (8.17)
+          \\
+          \\
+          \\
+          \overleftrightarrow{T}=\begin{pmatrix}
+            T_{xx} & T_{xy} & T_{xz} 
+            \\
+            T_{yx} & T_{yy} & T_{yz} 
+            \\
+            T_{zx} & T_{zy} & T_{zz} 
+          \end{pmatrix}
+          \\
+          \\
+          \\
+          T_{xx}=\epsilon_0 \left(E_0 ~ E_0 -\dfrac{1}{2} ~ E_0^2 \right)
+          +\dfrac{1}{\mu_0} \left(0 -\dfrac{1}{2} \left(\dfrac{1}{c} E_0\right)^2 \right)
+          =\epsilon_0 \left(E_0^2 -\dfrac{1}{2} ~ E_0^2 \right)
+          +\dfrac{1}{\mu_0} \left(-\dfrac{1}{2c^2} E_0^2 \right)
+          \\
+          =\dfrac{1}{2} \left[
+            \epsilon_0 ~ E_0^2
+            -\dfrac{1}{\mu_0 c^2} E_0^2
+          \right]
+          =\dfrac{1}{2} \left[
+            \epsilon_0 ~ E_0^2
+            -\epsilon_0 E_0^2
+          \right]       
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{T_{xx}=0} ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \\
+          T_{xy}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{xz}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{yx}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{yy}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{yz}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{zx}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{zy}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+          \\
+          \\
+          \\
+          \\
+          T_{zz}=\epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+          +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right)
+        $
+      }
 
 
     \item \textbf{9.14 (30 points)} Calculate the exact reflection and transmission coefficients, without assuming $\mu_1=\mu_2=\mu_0$. 
