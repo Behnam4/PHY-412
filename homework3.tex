@@ -71,22 +71,104 @@
       \emph{An elegant notation for circular polarization (or elliptical, if the amplitudes are unequal) is to use a
       complex $\hat{n}$, but I shall not do so in this book.}
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          Equation $9.36$ and $9.39$ from the textbook are
+          \\
+          \\ 
+          $
+            \tilde{f}(z,t)=\tilde{A} ~ e^{i(kz-\omega t)} ~ \hat{n} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ (9.36)
+            \\
+            \\
+            \tilde{f}(z,t)=\left(\tilde{A} ~ cos(\theta)\right) e^{i(kz-\omega t)} \hat{x}
+            +\left(\tilde{A} ~ sin(\theta)\right) e^{i(kz-\omega t)} \hat{y} ~~~~~ (9.39)
+            \\
+            \\
+          $
+          Electromagnetic waves are transverse. There are two dimensions perpendicular to any given line of propagation. Transverse waves
+          occur in two independent states of polarization. If the two components are of equal amplitude, but out of phase by $90^{\circ}$
+          , the result is circularly polarized wave. Then
+          $
+            \\
+            \\
+            \tilde{f}(z,t)=A ~ e^{i(kz-\omega t)} ~ \hat{x}+A ~ e^{i(kz-\omega t+\dfrac{\pi}{2})} ~ \hat{y}
+            =A \left[\hat{x}+e^{i \dfrac{\pi}{2}} ~ \hat{y}\right] ~ e^{i(kz-\omega t)}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\tilde{f}(z,t)=A \left(\hat{x}+i ~ \hat{y}\right) e^{i(kz-\omega t)}} ~~~~ \checkmark
+          $
+          \\
+          \\
+          For simplicity, let's $z=0$ so we have
+          \\
+          \\
+          $
+            \tilde{f}(0,t)=A \left(\hat{x}+i ~ \hat{y}\right) e^{-i\omega t}
+            =A \left(\hat{x}+i ~ \hat{y}\right) \times \left[cos(\omega t)+i ~ sin(-\omega t)\right]
+            \\
+            \\
+            =A \left(\hat{x}+i ~ \hat{y}\right) \times \left[cos(\omega t)-i ~ sin(\omega t)\right]
+            =A \left[
+              cos(\omega t) ~ \hat{x}
+              -i ~ sin(\omega t) ~ \hat{x}
+              +i ~ cos(\omega t) ~ \hat{y}
+              -i ~ i ~ sin(\omega t) ~ \hat{y}
+            \right]
+            \\
+            \\
+            =Re\left[A \left(
+              cos(\omega t)~ \hat{x}+sin(\omega t) ~ \hat{y}
+            \right)\right]
+          $
+          \\
+          \\
+          In above we assume that $A$ is real and the real part of these equations are what we are interested in.
+          \\
+          \\
+          \\
+          $
+            \therefore ~~~ \boxed{
+              \begin{cases}
+                \text{X-direction}: ~ f=cos(\omega t)~ \hat{x}
+                \\
+                \\
+                \text{Y-direction}: ~ f=sin(\omega t) ~ \hat{y}
+              \end{cases}
+            } ~~~~ \checkmark
+            \\
+          $
+          \\
+          \\
+          We are familiar with this equation back from \textbf{Calculus} which is nothing but the equation of a circle. This circle goes 
+          counter-clockwise as we look down the axis toward the origin. 
+          \\
+          \\
+          In order to construct a wave circling the other way, all we need to do is switching the sign of phase difference between the two
+          $(-90^{\circ})$.
+          \\
+          \\
+        }
 
       \item Sketch the string at time $t = 0$.
-      
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[height=7cm, width=12cm]{1.png}
+          \caption{
+            This figure is taken from Wikipedia. 
+          }
+        \end{figure}
 
 
       \item How would you shake the string in order to produce a circularly polarized wave?
       
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          To answer this question we can picture battle ropes at the gym. In order to produce a circularly polarized waved with them, all we
+          need to do is rotating our arms in circle.
+          \\
+        }
 
     \end{enumerate}
 
