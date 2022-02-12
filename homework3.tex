@@ -207,6 +207,11 @@
         can be derived from Maxwell's equations.
         \\
         \\
+        NOTE: \textbf{For simplicity, it was assumed the amplitude of $E=E_0$ and $B=\dfrac{1}{c} E_0$ without using the trig part.
+        All the results are correct but for the last element, $T_{zz}$, values of $E$ and $B$ are used.}
+        \\
+        \\
+        \\
         $
           T_{ij} \equiv \epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
           +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right) ~~~~~~~~~~~~~~~ (8.17)
@@ -226,7 +231,7 @@
           T_{xx}=\epsilon_0 \left(E_x ~ E_x -\dfrac{1}{2} \delta_{xx} ~ E^2 \right)
           +\dfrac{1}{\mu_0} \left(B_x ~ B_x -\dfrac{1}{2} \delta_{xx} B^2 \right)
           \\
-          =\epsilon_0 \left(E_0 ~ E_0 -\dfrac{1}{2} ~ E_0^2 \right)
+          =\epsilon_0 \left(E ~ E -\dfrac{1}{2} ~ E^2 \right)
           +\dfrac{1}{\mu_0} \left(0 -\dfrac{1}{2} \left(\dfrac{1}{c} E_0\right)^2 \right)
           =\epsilon_0 \left(E_0^2 -\dfrac{1}{2} ~ E_0^2 \right)
           +\dfrac{1}{\mu_0} \left(-\dfrac{1}{2c^2} E_0^2 \right)
@@ -356,9 +361,25 @@
           \\
         $
         All elements of the Maxwell stress tensor vanished except $T_{zz}$. Well, this justifies that the momentum of the fields points in the
-        Z-direction which makes sense. Also, we know that $E_0^2 ~ cos^2(kz-\omega t+\delta)=-T_{zz}$ is the momentum flux density
+        Z-direction which makes sense.
         \\
-        The stress tensor can be considered as \emph{momentum flux density} tensor
+        The energy density of EM in terms of $E$ is
+        \\
+        \\
+        $
+          u=\dfrac{1}{2} \left(\epsilon_0 ~ E_2+\dfrac{1}{\mu_0} ~ B^2\right), ~~~~~~~ B=E ~ \sqrt{\epsilon_0 ~ \mu_0}
+          \\
+          \\
+          \therefore ~~~ u=\dfrac{1}{2} \left(\epsilon_0 ~ E_2+\dfrac{1}{\mu_0} ~ \left(E ~ \sqrt{\epsilon_0 ~ \mu_0}\right)^2\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{u=\epsilon_0 ~ E^2} ~~~~ \checkmark
+        $
+        \\
+        \\
+        Based on the above, $T_{zz}=-u$ which shows how the momentum flux density is related to the energy density in this case.
+        \\
       }
 
 
