@@ -465,7 +465,7 @@
 
     \pagebreak
 
-    \item \textbf{9.7 (10 points)} Suppose string $2$ is embedded in a viscous medium (such as molasses), which imposes a drag force 
+    \item \textbf{Bonus: 9.7 (10 points)} Suppose string $2$ is embedded in a viscous medium (such as molasses), which imposes a drag force 
     that is proportional to its (transverse) speed:
     $$
       \Delta F_{drag}=-\gamma \dfrac{\partial f}{\partial t} ~ \Delta z
@@ -473,30 +473,52 @@
     \begin{enumerate}
       \item Derive the modified wave equation describing the motion of the string.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\ 
+          $
+            \begin{cases}
+              F_{transverse}=mu ~ \Delta z ~ \dfrac{\partial^2 f}{\partial t^2}
+              \\
+              \\
+              F_{viscous}=T ~ \Delta z ~ \dfrac{\partial^2 f}{\partial z^2}+\left(-\gamma \dfrac{\partial f}{\partial t} ~ \Delta z\right)
+            \end{cases}
+            \\
+            \\
+            \\
+            T ~ \Delta z ~ \dfrac{\partial^2 f}{\partial z^2}-\gamma \dfrac{\partial f}{\partial t} ~ \Delta z=mu ~ \Delta z ~ \dfrac{\partial^2 f}{\partial t^2}=F_{transverse}
+            \\
+            \\
+            \\
+            T ~ \dfrac{\partial^2 f}{\partial z^2}-\gamma \dfrac{\partial f}{\partial t}=\mu ~ \dfrac{\partial^2 f}{\partial t^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{T ~ \dfrac{\partial^2 f}{\partial z^2}=\gamma \dfrac{\partial f}{\partial t}+\mu ~ \dfrac{\partial^2 f}{\partial t^2}} ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
-      \item Solve this equation, assuming the string vibrates at the incident frequency $\omega$. That is, look for solutions of the
-      form $\tilde{f}(z,t)=e^{i \omega t} ~ \tilde{F}(z)$.
+      % \item Solve this equation, assuming the string vibrates at the incident frequency $\omega$. That is, look for solutions of the
+      % form $\tilde{f}(z,t)=e^{i \omega t} ~ \tilde{F}(z)$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+      %   % \textcolor{hwColor}{
+      %   %   \\
+      %   % }
 
-      \item Show that the waves are \textbf{attenuated} (that is, their amplitude decreases with increasing $z$). Find the characteristic penetration distance, at which the amplitude
-      is $1/e$ of its original value, in terms of $\gamma$ , $T$, $\mu$, and $\omega$.
+      % \item Show that the waves are \textbf{attenuated} (that is, their amplitude decreases with increasing $z$). Find the characteristic penetration distance, at which the amplitude
+      % is $1/e$ of its original value, in terms of $\gamma$ , $T$, $\mu$, and $\omega$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+      %   % \textcolor{hwColor}{
+      %   %   \\
+      %   % }
 
-      \item If a wave of amplitude $A_I$ , phase $\delta_I=0$, and frequency $\omega$ is incident from the left (string 1), find the reflected wave’s
-      amplitude and phase.
+      % \item If a wave of amplitude $A_I$ , phase $\delta_I=0$, and frequency $\omega$ is incident from the left (string 1), find the reflected wave’s
+      % amplitude and phase.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+      %   % \textcolor{hwColor}{
+      %   %   \\
+      %   % }
 
     \end{enumerate}
 
