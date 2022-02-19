@@ -70,14 +70,134 @@
 
   \pagebreak
 
+  \textbf{Vector Calculus Identities}
+
+  \vspace{1cm}
+
+  $
+    \begin{cases}
+      \nabla \times \left(\nabla V\right)=0
+      \\
+      \\
+      \nabla.\left(\nabla \times \overrightarrow{A}\right)=0
+      \\
+      \\
+      \nabla \times \left(\nabla \times \overrightarrow{A}\right)=\nabla\left(\nabla \overrightarrow{A}\right)-\nabla^2 \overrightarrow{A}
+      \\
+      \\
+      \nabla^2 \overrightarrow{A}=\nabla^2 A_x ~ \hat{x}+\nabla^2 A_y ~ \hat{y}+\nabla^2 A_z ~ \hat{z}
+      \\
+      \\
+      C=A+i ~ B=r ~ e^{i \phi}
+      \\
+      \\
+      Re(C)=A=r ~ cos(\phi)
+      \\
+      \\
+      Im(C)=B=r ~ sin(\phi)
+      \\
+      \\
+      |C|=r=\sqrt{A^2+B^2}
+    \end{cases}
+  $
+
+  \pagebreak
+
   \begin{enumerate}
     \item \textbf{Problem 1 [20 points]}
     \begin{enumerate}
       \item Derive the charge continuity equation directly from Maxwell’s equations (7.40).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From page $337$ of the textbook we have the Maxwell’s equations (E.g $ ~ 7.40$) as
+          $
+            \\
+            \\
+            \begin{cases}
+              \text{Gauss’s law}: ~~~ \nabla.E=\dfrac{1}{\epsilon_0} \rho
+              \\
+              \\
+              \text{No name}: ~~~ \nabla.B=0
+              \\
+              \\
+              \text{Faraday’s law}: ~~~ \nabla \times E=-\dfrac{\partial B}{\partial t}
+              \\
+              \\
+              \text{Ampère’s law with Maxwell’s correction}: ~~~ \nabla \times B=\mu_0 ~ J+\mu_0 ~ \epsilon_0 ~ \dfrac{\partial E}{\partial t}
+            \end{cases}
+            \\
+            \\
+          $
+          \emph{If the charge in some region changes, then exactly that amount of charge must have passed in or out through the surface.} We 
+          know that current density is $J=\dfrac{I}{A}$ and volume charge density is $\rho=\dfrac{Q}{V}$. Also we know that 
+          $ 
+            \\
+            \\ 
+            Q_{in}+Q_{out}=Constant \Longrightarrow \dfrac{d Q_{in}}{dt}+\dfrac{d Q_{out}}{dt}=0
+            \\
+            \\
+            \therefore ~~~ \dfrac{d Q_{in}}{dt}=-\dfrac{d Q_{out}}{dt} ~~~~ \checkmark
+            \\
+            \\
+            \\
+            Q(t)=\bigints\limits_{V} ~ \rho(r,t) ~ d\tau
+            \Longrightarrow
+            \dfrac{dQ}{dt}=-\bigoint\limits_{V} J.da
+            \\
+            \\
+            \\
+            \bigints\limits_{V} ~ \dfrac{\partial \rho}{\partial t} ~ d\tau=-\bigints\limits_{V} ~ \nabla.J ~ d\tau
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \dfrac{\partial \rho}{\partial t}=-\nabla.J
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+          $
+          This is the continuity equation—the precise mathematical statement of local conservation of charge. Starting
+          from the Ampère’s law we have.
+          \\
+          \\
+          $
+            \nabla \times B=\mu_0 ~ J+\mu_0 ~ \epsilon_0 ~ \dfrac{\partial E}{\partial t}
+            \\
+            \\
+            \\
+            \nabla.\left[\nabla \times B\right]=\nabla.\left[\mu_0 ~ J+\mu_0 ~ \epsilon_0 ~ \dfrac{\partial E}{\partial t}\right]
+            \\
+            \\
+            \\
+            0=\nabla.\left(\mu_0 ~ J\right)+\nabla.\left(\mu_0 ~ \epsilon_0 ~ \dfrac{\partial E}{\partial t}\right)
+            =\mu_0 \left[
+              \nabla.J+\nabla.\left(\epsilon_0 ~ \dfrac{\partial E}{\partial t}\right)
+            \right]
+            \\
+            \\
+            \\
+            0=\nabla.J+\nabla.\left(\epsilon_0 ~ \dfrac{\partial E}{\partial t}\right)
+            =\nabla.J+\epsilon_0 ~ \left(\nabla.\dfrac{\partial E}{\partial t}\right)
+            =\nabla.J+\epsilon_0 ~ \dfrac{\partial}{\partial t} \left(\nabla.E\right)
+            \\
+            \\
+          $
+          Gauss’s law states $\nabla.E=\dfrac{1}{\epsilon_0} \rho$, hence we have:
+          \\
+          \\
+          $
+            0=\nabla.J+\epsilon_0 ~ \dfrac{\partial}{\partial t} \left(\dfrac{1}{\epsilon_0} ~ \rho\right)
+            =\nabla.J+\dfrac{\partial \rho}{\partial t}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \dfrac{\partial \rho}{\partial t}=-\nabla.J
+            } ~~~~ \checkmark
+          $
+        }
       
       \item Suppose there is a charge current density $\mathcal{J}=Cx ~ \hat{x}$ within some region of space. Find the
       charge density $\rho(r, t)$ at the origin $r=0$ at some later time $t$, assuming that $\rho(0, 0)=0$.
