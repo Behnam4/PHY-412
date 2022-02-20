@@ -275,6 +275,8 @@
 
       \end{enumerate}
 
+    \pagebreak
+
     \item \textbf{Problem 3 [20 points]} 
     Two infinite, electrically neutral wires are parallel to each other and each carries a current $I$ flowing
     in the $\hat{z}$ direction. The axes of the wires pass through the points $\pm d\hat{x}$ (hence they are separated by
@@ -283,10 +285,56 @@
       \item Determine the force per unit length acting on the wire passing through $+d\hat{x}$ by making use of
       the Maxwell stress tensor. Make sure that you get the correct direction of the force.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          On page 364 of the textbook we learned that the total electromagnetic force on the charges in $\mathcal{V}$ is
+          \\
+          \\
+          $
+            F=\bigoint\limits_{S} \overleftrightarrow{T}.da-\epsilon_0 \mu_0 \dfrac{d}{dt} \bigints\limits_{v} S d\tau
+          $
+          \\
+          \\
+          The \textbf{Maxwell Stress Tensor} is defined as 
+          \\
+          \\
+          $
+            T_{ij} \equiv \epsilon_0 \left(E_i E_j - \dfrac{1}{2} \delta_{ij} E^2 \right)
+            +\dfrac{1}{\mu_0} \left(B_i B_j - \dfrac{1}{2} \delta_{ij} B^2\right) ~~~~~~~ \delta_{ij}=\begin{cases}
+              1 ~~~~ \text{if} ~~ i=j
+              \\
+              0 ~~~~ \text{if} ~~ i \neq j
+            \end{cases}
+            \\
+            \\
+            \\
+            \begin{cases}
+              T_{xx}=\dfrac{\epsilon_0}{2} \left(E_x^2-E_y^2-E_z^2\right)+\dfrac{1}{2 \mu_0} \left(B_x^2-B_y^2-B_z^2\right)=\dfrac{1}{2 \mu_0} B_x^2
+              \\
+              \\
+              T_{yy}=\dfrac{\epsilon_0}{2} \left(E_y^2-E_z^2-E_x^2\right)+\dfrac{1}{2 \mu_0} \left(B_y^2-B_z^2-B_x^2\right)=-\dfrac{1}{2 \mu_0} B_x^2
+              \\
+              \\
+              T_{zz}=\dfrac{\epsilon_0}{2} \left(E_z^2-E_y^2-E_x^2\right)+\dfrac{1}{2 \mu_0} \left(B_z^2-B_y^2-B_x^2\right)=-\dfrac{1}{2 \mu_0} B_x^2
+              \\
+              \\
+              T_{xy}=T_{yx}=\epsilon_0 \left(E_x E_y\right)+\dfrac{1}{\mu_0} \left(B_x B_y\right)=0
+              \\
+              \\
+              T_{yz}=T_{zy}=\epsilon_0 \left(E_y E_z\right)+\dfrac{1}{\mu_0} \left(B_y B_z\right)=0
+              \\
+              \\
+              T_{zx}=T_{xz}=\epsilon_0 \left(E_z E_x\right)+\dfrac{1}{\mu_0} \left(B_z B_x\right)=0
+            \end{cases} ~~~~~ \checkmark
+            \\
+            \\
+            \\
+          $
+          \\
+          \\
+        }
 
+        % \overleftrightarrow{T}
 
       \item Confirm the result in part (a) by doing the easier calculation (i.e. use the Lorentz force law).
       The following integral might be helpful for part (a):
@@ -326,23 +374,58 @@
       \item State the three laws of geometrical optics that were derived in Griffiths. \emph{Hint: recall that they
       concern relationships between angles of incidence, reflection, and transmission.}
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From section $9.3.3$ we have the three laws of geometrical optics.
+          \\
+          \begin{itemize}
+            \item \textbf{First Law}: \emph{The incident, reflected, and transmitted wave vectors
+            form a plane (called the plane of incidence), which also includes the
+            normal to the surface}. 
+            \\
+            $
+              k_I ~ sin ~ \theta_I=k_R ~ sin ~ \theta_R=k_T ~ sin ~ \theta_T
+              \\
+              \\
+              \begin{cases}
+                \theta_I: ~ \text{The angle of incidence}
+                \\
+                \\
+                \theta_R: ~ \text{The angle of reflection} 
+                \\
+                \\
+                \theta_T: ~ \text{The angle of transmission (more commonly known as the angle of refraction)} 
+              \end{cases}
+            $
+            \\
+            \item \textbf{Second Law}: \emph{The angle of incidence is equal to the angle of
+            reflection,} $\theta_I=\theta_R$ which this is known as the \textbf{law of reflection}.
+            \item \textbf{Third Law}: $\dfrac{sin ~ \theta_T}{sin ~ \theta_I}=\dfrac{n_1}{n_2}$. This is the \textbf{law of refraction—Snell’s law}.
+          \end{itemize}
+        }
 
 
       \item State three important assumptions about the materials that were used in deriving the above laws.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          The following are three important assumptions about the materials that were used in deriving the three laws of geometrical optics.
+          \\
+          \begin{itemize}
+            \item Regions where there is no free charge or free current.
+            \item Medium is linear, $\mu$ and $\epsilon$ are homogeneous.
+            \item Propagation is in a straight-line.
+            \item Lights do not have interference when they pass through each other.
+          \end{itemize}
+        }
 
 
-      \item Explain what the “Brewster angle” is in one sentence.
+      \item Explain what the “Brewste's angle” is in one sentence.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          Brewste's angle is basically the angle of incident which we have prefect transmission through. 
+        }
       
     \end{enumerate}
 
