@@ -390,110 +390,73 @@
               \\
               \\
               \\
+              \begin{cases}
+                T_{xx}=\dfrac{\epsilon_0}{2} \left(E_x^2-E_y^2-E_z^2\right)+\dfrac{1}{2 \mu_0} \left(B_x^2-B_y^2-B_z^2\right)
+                \\
+                \\
+                T_{yy}=\dfrac{\epsilon_0}{2} \left(E_y^2-E_z^2-E_x^2\right)+\dfrac{1}{2 \mu_0} \left(B_y^2-B_z^2-B_x^2\right)
+                \\
+                \\
+                T_{zz}=\dfrac{\epsilon_0}{2} \left(E_z^2-E_y^2-E_x^2\right)+\dfrac{1}{2 \mu_0} \left(B_z^2-B_y^2-B_x^2\right)
+                \\
+                \\
+                T_{xy}=T_{yx}=\epsilon_0 \left(E_x E_y\right)+\dfrac{1}{\mu_0} \left(B_x B_y\right)
+                \\
+                \\
+                T_{yz}=T_{zy}=\epsilon_0 \left(E_y E_z\right)+\dfrac{1}{\mu_0} \left(B_y B_z\right)
+                \\
+                \\
+                T_{zx}=T_{xz}=\epsilon_0 \left(E_z E_x\right)+\dfrac{1}{\mu_0} \left(B_z B_x\right)
+              \end{cases}
+              \\
+              \\
+            $
+            \\
+            Since $B=0$ we have
+            \\
+            \\
+            $
+              \\
+              \begin{cases}
+                T_{xx}=\dfrac{\epsilon_0}{2} \left(E_x^2-E_y^2-E_z^2\right)
+                =-\dfrac{\epsilon_0}{2} \left(E_y^2+E_z^2\right)
+                \\
+                \\
+                T_{yy}=\dfrac{\epsilon_0}{2} \left(E_y^2-E_z^2-E_x^2\right)
+                =\dfrac{\epsilon_0}{2} \left(E_y^2-E_z^2\right)
+                \\
+                \\
+                T_{zz}=\dfrac{\epsilon_0}{2} \left(E_z^2-E_y^2-E_x^2\right)
+                =\dfrac{\epsilon_0}{2} \left(E_z^2-E_y^2\right)
+                \\
+                \\
+                T_{xy}=T_{yx}=\epsilon_0 \left(E_x E_y\right)=0
+                \\
+                \\
+                T_{yz}=T_{zy}=\epsilon_0 \left(E_y E_z\right)
+                \\
+                \\
+                T_{zx}=T_{xz}=\epsilon_0 \left(E_z E_x\right)=0
+              \end{cases}
+              \\
+              \\
+              \\
               \overleftrightarrow{T}=\begin{pmatrix}
                 T_{xx} & T_{xy} & T_{xz} 
                 \\
                 T_{yx} & T_{yy} & T_{yz} 
                 \\
                 T_{zx} & T_{zy} & T_{zz} 
+              \end{pmatrix}=\begin{pmatrix}
+                -\dfrac{\epsilon_0}{2} \left(E_y^2+E_z^2\right) & 0 & 0 
+                \\
+                0 & \dfrac{\epsilon_0}{2} \left(E_y^2-E_z^2\right) & \epsilon_0 \left(E_y E_z\right) 
+                \\
+                0 & \epsilon_0 \left(E_y E_z\right) & \dfrac{\epsilon_0}{2} \left(E_z^2-E_y^2\right) 
               \end{pmatrix}
-              \\
-              \\
-              \\
-              T_{xx}=\epsilon_0 \left(E_x ~ E_x -\dfrac{1}{2} \delta_{xx} ~ E^2 \right)
-              =\epsilon_0 \left[
-                0-\dfrac{1}{2} ~ \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
-              \right]
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{
-                T_{xx}=-\dfrac{\epsilon_0}{2}  ~ \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right) 
-              } ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{xy}=\epsilon_0 \left(E_x ~ E_y -\dfrac{1}{2} \delta_{xy} ~ E^2 \right)
-              =\epsilon_0 \left(0-\dfrac{1}{2} ~ 0\right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{xy}=0} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{xz}=\epsilon_0 \left(E_x ~ E_z -\dfrac{1}{2} \delta_{xz} ~ E^2 \right)
-              = \epsilon_0 \left(0-\dfrac{1}{2} ~ 0\right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{xz}=0} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{yx}=\epsilon_0 \left(E_y ~ E_x -\dfrac{1}{2} \delta_{yx} ~ E^2 \right)
-              =\epsilon_0 \left(0-\dfrac{1}{2} ~ 0\right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{yx}=0} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{yy}=\epsilon_0 \left(E_y ~ E_y -\dfrac{1}{2} \delta_{yy} ~ E^2 \right)
-              =\epsilon_0 \left(E_y^2 -\dfrac{1}{2} (1) ~ E^2 \right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{yy}=\epsilon_0 \left[
-                E_y^2
-                -\dfrac{1}{2} \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
-              \right]} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{yz}=\epsilon_0 \left(E_y ~ E_z -\dfrac{1}{2} \delta_{yz} ~ E^2 \right)
-              =\epsilon_0 \left(E_y ~ E_z -\dfrac{1}{2} \times 0 \times ~ E^2 \right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{yz}=\epsilon_0 E_y ~ E_z} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{zx}=\epsilon_0 \left(E_z ~ E_x -\dfrac{1}{2} \delta_{zx} ~ E^2 \right)
-              =\epsilon_0 \left(0 -\dfrac{1}{2} 0 \right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{zx}=0} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{zy}=\epsilon_0 \left(E_z ~ E_y -\dfrac{1}{2} \delta_{zy} ~ E^2 \right)
-              =\epsilon_0 \left(E_z ~ E_y -\dfrac{1}{2} \times 0 \times ~ E^2 \right)
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{T_{zy}=\epsilon_0 ~ E_y ~ E_z} ~~~~ \checkmark
-              \\
-              \\
-              \\
-              T_{zz}=\epsilon_0 \left(E_z ~ E_z -\dfrac{1}{2} \delta_{zz} ~ E^2 \right)
-              =\epsilon_0 ~ \left[
-                E_z^2 ~ -\dfrac{1}{2} \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
-              \right]
-              \\
-              \\
-              \\
-              \therefore ~~~ \boxed{
-                T_{zz}=\epsilon_0 \left[
-                  E_z^2 ~ -\dfrac{1}{2} \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
-                \right]
-              } ~~~~ \checkmark
-              \\
-              \\
             $
+            \\
+            \\
           }
         
       \end{enumerate}
