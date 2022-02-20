@@ -196,15 +196,38 @@
             \therefore ~~~ \boxed{
               \dfrac{\partial \rho}{\partial t}=-\nabla.J
             } ~~~~ \checkmark
+            \\
+            \\
           $
         }
       
-      \item Suppose there is a charge current density $\mathcal{J}=Cx ~ \hat{x}$ within some region of space. Find the
+      \item Suppose there is a charge current density $\mathbf{J}=Cx ~ \hat{x}$ within some region of space. Find the
       charge density $\rho(r, t)$ at the origin $r=0$ at some later time $t$, assuming that $\rho(0, 0)=0$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          At the origin $r=0 ~ (r=x ~ \hat{x}+y ~ \hat{y}+z ~ \hat{z})$. Using the continuity equation we have:
+          \\
+          \\
+          $
+            \dfrac{\partial \rho}{\partial t}=-\nabla.J=-\left[\nabla. \left(Cx ~ \hat{x}\right)\right]
+            =-\left[\dfrac{\partial}{\partial x} ~ \hat{x}. \left(Cx ~ \hat{x}\right)\right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \dfrac{\partial \rho}{\partial t}=-C 
+            \Longrightarrow \bigints \dfrac{\partial \rho}{\partial t} ~ dt
+            =\bigints -C ~ dt
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \rho(0,t)=-Ct 
+            } ~~~~ \checkmark
+          $
+          \\
+          \\
+        }
       
     \end{enumerate}
 
