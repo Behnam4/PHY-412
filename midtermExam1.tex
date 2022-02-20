@@ -350,22 +350,151 @@
 
     \item \textbf{Problem 4 [20 points]} The electric field of an elliptically polarized EM wave in vacuum is formed by the superposition
       $$
-        E(r,t)=E_y ~ sin(ax-wt) ~ \hat{y}+E_z ~ cos(ax-wt) ~ \hat{z}
+        E(r,t)=E_y ~ sin(ax-\omega t) ~ \hat{y}+E_z ~ cos(ax-\omega t) ~ \hat{z}
       $$
       where $a$ is a positive constant.
       \begin{enumerate}
         \item What is the direction that the wave travels, and what is its wavelength?
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            Based on the given wave, we can see that one wave is in the y-direction and the other one is in the z-direction. We learn that
+            the direction of propagation is in the direction of $E \times B$ (\emph{the Poynting vector points in the direction of the propagation of the wave})
+            therefore, the direction that the wave tarvels is in the x-direction.
+            \\
+            From page 387 of the textbook we learned that when two waves have the same frequency and wave number (constructive)
+            then the \emph{combined wave still has the same frequency and wavelength}.
+            \\
+            For a wave with $A ~ cos\left[k\left(a-vt\right)+\delta\right]$ format, the wavelength is found by $\lambda=\dfrac{2\pi}{k}$.
+            \\
+            \\
+            $
+              \therefore ~~~ \lambda=\dfrac{2\pi}{1} \Longrightarrow \boxed{\lambda=2\pi} ~~~~ \checkmark
+            $
+          }
 
         \item Determine the radiation pressure carried by the field by deriving the Maxwell stress tensor for
         the field.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            In chapter 8, we learned about the \textbf{Maxwell stress tensor}. Let's rewrite again here. Note the  \textbf{Kronecker delta},
+            $\delta_{ij}$ is $1$ if the indices are the same $(\delta_{xx}=\delta_{yy}=\delta_{zz}=1)$ and zero otherwise
+            $(\delta_{xy}=\delta_{xz}=\delta_{yz}=0)$. Also, $c^2=\dfrac{1}{\mu_0 ~ \epsilon_0}$ comes from the wave equation that  
+            can be derived from Maxwell's equations.
+            \\
+            \\
+            $
+              T_{ij} \equiv \epsilon_0 \left(E_i ~ E_j -\dfrac{1}{2} \delta_{ij} ~ E^2 \right)
+              +\dfrac{1}{\mu_0} \left(B_i ~ B_j -\dfrac{1}{2} \delta_{ij} B^2 \right) ~~~~~~~~~~~~~~~ (8.17)
+              \\
+              \\
+              \\
+              \overleftrightarrow{T}=\begin{pmatrix}
+                T_{xx} & T_{xy} & T_{xz} 
+                \\
+                T_{yx} & T_{yy} & T_{yz} 
+                \\
+                T_{zx} & T_{zy} & T_{zz} 
+              \end{pmatrix}
+              \\
+              \\
+              \\
+              T_{xx}=\epsilon_0 \left(E_x ~ E_x -\dfrac{1}{2} \delta_{xx} ~ E^2 \right)
+              =\epsilon_0 \left[
+                0-\dfrac{1}{2} ~ \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
+              \right]
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                T_{xx}=-\dfrac{\epsilon_0}{2}  ~ \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right) 
+              } ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{xy}=\epsilon_0 \left(E_x ~ E_y -\dfrac{1}{2} \delta_{xy} ~ E^2 \right)
+              =\epsilon_0 \left(0-\dfrac{1}{2} ~ 0\right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{xy}=0} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{xz}=\epsilon_0 \left(E_x ~ E_z -\dfrac{1}{2} \delta_{xz} ~ E^2 \right)
+              = \epsilon_0 \left(0-\dfrac{1}{2} ~ 0\right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{xz}=0} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{yx}=\epsilon_0 \left(E_y ~ E_x -\dfrac{1}{2} \delta_{yx} ~ E^2 \right)
+              =\epsilon_0 \left(0-\dfrac{1}{2} ~ 0\right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{yx}=0} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{yy}=\epsilon_0 \left(E_y ~ E_y -\dfrac{1}{2} \delta_{yy} ~ E^2 \right)
+              =\epsilon_0 \left(E_y^2 -\dfrac{1}{2} (1) ~ E^2 \right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{yy}=\epsilon_0 \left[
+                E_y^2
+                -\dfrac{1}{2} \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
+              \right]} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{yz}=\epsilon_0 \left(E_y ~ E_z -\dfrac{1}{2} \delta_{yz} ~ E^2 \right)
+              =\epsilon_0 \left(E_y ~ E_z -\dfrac{1}{2} \times 0 \times ~ E^2 \right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{yz}=\epsilon_0 E_y ~ E_z} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{zx}=\epsilon_0 \left(E_z ~ E_x -\dfrac{1}{2} \delta_{zx} ~ E^2 \right)
+              =\epsilon_0 \left(0 -\dfrac{1}{2} 0 \right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{zx}=0} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{zy}=\epsilon_0 \left(E_z ~ E_y -\dfrac{1}{2} \delta_{zy} ~ E^2 \right)
+              =\epsilon_0 \left(E_z ~ E_y -\dfrac{1}{2} \times 0 \times ~ E^2 \right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{T_{zy}=\epsilon_0 ~ E_y ~ E_z} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              T_{zz}=\epsilon_0 \left(E_z ~ E_z -\dfrac{1}{2} \delta_{zz} ~ E^2 \right)
+              =\epsilon_0 ~ \left[
+                E_z^2 ~ -\dfrac{1}{2} \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
+              \right]
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                T_{zz}=\epsilon_0 \left[
+                  E_z^2 ~ -\dfrac{1}{2} \left(E_y^2 ~ sin^2(ax-\omega t)+E_z^2 ~ cos^2(ax-\omega t)\right)
+                \right]
+              } ~~~~ \checkmark
+              \\
+              \\
+            $
+          }
         
       \end{enumerate}
 
