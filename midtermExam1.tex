@@ -231,6 +231,7 @@
       
     \end{enumerate}
 
+    \pagebreak
 
     \item \textbf{Problem 2 [20 points]} A toroid with a current $I$ and a total of n windings is placed in an uniform
     electric field $\mathcal{E}=E ~ \hat{z}$, which points along the axis of symmetry of the toroid. The toroid has a radius
@@ -245,37 +246,122 @@
         \item Determine the Poynting vector everywhere in space. Use the standard cylindrical coordinates
         with axes $\hat{s}$, $\hat{\phi}$, $\hat{z}$.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            The Poynting vector is defined in Griffiths as $\overrightarrow{S} \equiv \dfrac{1}{\mu_0} \left(E \times B\right)$ so let's
+            find $B$ and $E$. Using the Ampère's law er have
+            \\
+            \\
+            $
+              \bigoint\limits_{S} \overrightarrow{B}.\overrightarrow{d\ell}=\mu_0 ~ I_{enc}
+              \\
+              \\
+              B ~ \bigoint\limits_{S} d\ell=\mu_0 ~ I_{enc} \times n \Longrightarrow B \times 2\pi r=\mu_0 ~ n ~ I_{enc}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{B=\dfrac{\mu_0 ~ n ~ I}{2\pi r} ~ \hat{\phi}} ~~~~ \text{Within the toroid}
+              \\
+              \\
+            $
+            Note that the magnetic field outside the toroid is zero. And $r \approx \dfrac{a+b}{2}$ is the radius of the amperian loop.
+            \\
+            \\
+            $
+              \overrightarrow{S}=\dfrac{1}{\mu_0} \left(E \times B\right)
+              =\dfrac{1}{\mu_0} \left(E ~ \hat{z} \times \dfrac{\mu_0 ~ n ~ I}{2\pi r} ~ \hat{\phi}\right)
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                \overrightarrow{S}=-\dfrac{E n I}{2\pi r} ~ \hat{s}
+              }
+            $
+            \\
+            \\
+            The direction of $\overrightarrow{S}$ is in the $\hat{s}$ direction. We know that the direction of Poynting vector is 
+            the direction of energy flow.
+            \\
+            \\
+            \\
+          }
+
 
         \item Determine the total flux of field energy into the toroid by integrating the Poynting vector.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            We already found the poynting vector so we have
+            \\
+            \\
+            $
+              \overrightarrow{S}=-\dfrac{E n I}{2\pi r} ~ \hat{s}
+              \\
+              \\
+              \bigints\limits_{0}^{2\pi} \bigints\limits_{a}^{b}  \overrightarrow{S}.\left(s ~ d\phi ~ dz ~ \hat{s}\right)
+              =\bigints\limits_{0}^{2\pi} \bigints\limits_{a}^{b} \left(- \dfrac{E n I}{2\pi r} ~ \hat{s}\right).\left(s ~ d\phi ~ dz ~ \hat{s}\right)
+              \\
+              \\
+              \\
+              =\dfrac{E ~ s ~ n ~ I}{2\pi} \left(2\pi\right) \left(b-a\right)
+              =E ~ s ~ n ~ I \left(b-a\right)
+              \\
+              \\
+              \\
+              \Phi=\bigints \overrightarrow{B}.\overrightarrow{dA}
+              =\bigints\limits_{a}^{b} \left(\dfrac{\mu_0 ~ n ~ I}{2\pi r}\right) \times h dr
+              \\
+              \\
+              \\
+              \therefore ~~~ \Phi=\mu_0 \dfrac{n ~ I ~ h}{2 \pi} ~ ln\left(\dfrac{b}{a}\right)
+              \\
+              \\
+            $
+            And to get the total flux all we need is $\Phi \times n$.
+          }
 
         \item Determine the total linear momentum stored in the fields.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            From page $367$ of the textbook we learn that the linear momentum stored in the fields is
+            \\
+            \\
+            $
+              p=\mu_0 ~ \epsilon_0 ~ \bigints\limits_{V} S d\tau
+              =\mu_0 ~ \epsilon_0 ~ \bigints\limits_{a}^{b} \left(- \dfrac{E n I}{2\pi r} ~ \hat{s}\right) ~ d\tau
+              \\
+              \\
+              \\
+              \therefore ~~~ p=-\dfrac{\mu_0 ~ \epsilon_0 ~ E I n}{2 \pi r} ~ \hat{s}
+              \\
+              \\
+              \\
+              g=\epsilon_0 \left(E \times B\right)=-\epsilon_0 \dfrac{E I n}{2 \pi r}
+              \\
+              \\
+            $
+          }
 
         \item Determine the total angular momentum stored in the fields.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
-
-        \item Qualitatively, what happens to the toroid when the E field is reduced to zero?
-
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            On page $371$ of the textbook angular momentum is defined as
+            \\
+            \\
+            $
+              \ell=r \times g=\epsilon_0 \left[r \times \left(E \times B\right)\right]
+              =r \times \left(-\epsilon_0 \dfrac{E I n}{2 \pi r}\right)
+              \\
+              \\
+              \therefore ~~~ \ell=-\epsilon_0 \dfrac{E I n}{2 \pi r}
+              \\
+              \\
+            $
+          }
 
       \end{enumerate}
-
-    \pagebreak
 
     \item \textbf{Problem 3 [20 points]} 
     Two infinite, electrically neutral wires are parallel to each other and each carries a current $I$ flowing
@@ -333,8 +419,6 @@
           \\
           \\
         }
-
-        % \overleftrightarrow{T}
 
       \item Confirm the result in part (a) by doing the easier calculation (i.e. use the Lorentz force law).
       The following integral might be helpful for part (a):
