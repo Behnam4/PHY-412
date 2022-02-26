@@ -58,23 +58,155 @@
   \end{titlepage}
 
   \begin{enumerate}
-    \item \textbf{9.14 (25 points)} Calculate the exact reflection and transmission coefficients, without assuming $\mu_1=\mu_2=\mu_0$.
-     \textbf{(Exact reflection and transmission for magnetic materials)}
-    Confirm that $R+T=1$.
-
-      % \textcolor{hwColor}{
-      %   \\
-      % }
-
-    \item \textbf{9.18 (20 points)} The index of refraction of diamond is $2.42$. Construct the graph analogous to Fig. $9.16$ for the air/diamond 
+    \item \textbf{9.18 (30 points)} The index of refraction of diamond is $2.42$. Construct the graph analogous to Fig. $9.16$ for the air/diamond 
     interface. (Assume  $\mu_1=\mu_2=\mu_0$.) In particular, calculate (a) the amplitudes at normal incidence, (b) Brewster’s angle, and (c)
     the “crossover” angle, at which the reflected and transmitted amplitudes are equal.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \begin{figure}[h!]
+        \centering
+        \includegraphics[height=6cm, width=10cm]{figure9.16.JPG}
+      \end{figure}
 
-    \item \textbf{9.39 (55 points)} According to Snell’s law, when light passes from an optically dense medium into a less dense one ($n_1 > n_2$) the 
+      \textcolor{hwColor}{
+        \\
+        We are given the index of refraction which is $2.42$ and we are assuming $\mu_1=\mu_2=\mu_0$. So we have:
+        \\
+        \\
+        $
+          \beta=\dfrac{\mu_1 ~ v_1}{\mu_2 ~ v_2}=\dfrac{\mu_1 ~ n_2}{\mu_2 ~ n_1}
+          =\dfrac{\mu_0 ~ n_2}{\mu_0 ~ n_1}=\dfrac{n_1}{n_2}=\dfrac{2.42}{1}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{n_2}{n_1}=2.42=\beta
+          } ~~~~ \checkmark
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+        $
+        \textbf{(a)}
+        \\
+        \\
+        $
+          \tilde{{E_0}_R}=\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right) \tilde{{E_0}_I}
+        $
+        \\
+        \\
+        So we have to find the value of $\alpha$:
+        \\
+        \\
+        $
+          \alpha=\dfrac{\sqrt{1-\left[\dfrac{n_1}{n_2} sin(\theta_I)\right]^2}}{cos(\theta_I)}
+          =\dfrac{\sqrt{1-\left[2.42 sin(0)\right]^2}}{cos(0)}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \alpha=1
+          } ~~~~ \checkmark
+          \\
+          \\
+          \tilde{{E_0}}_R=\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right) \tilde{{E_0}}_I
+          \Longrightarrow \dfrac{\tilde{{E_0}}_R}{\tilde{{E_0}}_I}=\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right)
+          =\dfrac{1-2.42}{1+2.42}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{\tilde{{E_0}}_R}{\tilde{{E_0}}_I}=−0.4152
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{\tilde{{E_0}}_T}{\tilde{{E_0}}_I}=\dfrac{2}{\alpha+\beta}
+            =\dfrac{2}{1+2.42}
+            =0.5847
+          } ~~~~ \checkmark
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          \textbf{(b)}
+          \\
+          \\
+          tan(\theta_B) \approx \dfrac{n_2}{n_1} \Longrightarrow \theta_B=Arctan(\dfrac{n_2}{n_1})
+          =Arctan(2.42)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \theta_B=67.5484^{\circ}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          \textbf{(c)}
+          \\
+          \\
+        $
+        We are asked to find the angle when the reflected and transmitted amplitudes are equal, therefore:
+        \\
+        \\
+        $
+          \tilde{{E_0}}_T=\tilde{{E_0}}_R \Longrightarrow \left(\dfrac{2}{\alpha+\beta}\right) \tilde{{E_0}}_I
+          =\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right)\tilde{{E_0}}_I
+          \\
+          \\
+          \Longrightarrow \left(\dfrac{2}{\alpha+\beta}\right)=\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            2=\alpha-\beta ~~ \text{or} ~~ \alpha=2+\beta
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \alpha=\dfrac{\sqrt{1-\left[\dfrac{n_1}{n_2} sin(\theta_I)\right]^2}}{cos(\theta_I)}
+          \Longrightarrow 2+\beta=\dfrac{\sqrt{1-\left[2.42 \times sin(\theta_I)\right]^2}}{cos(\theta_I)}
+          \\
+          \\
+          \\
+          \left(2+\beta\right)^2=\dfrac{1- \dfrac{1}{\beta^2} ~ sin^2(\theta_I)}{cos^2(\theta_I)} 
+          \Longrightarrow \left(2+\beta\right)^2 cos^2(\theta_I)=1-\dfrac{sin^2(\theta_I)}{\beta^2} 
+          \\
+          \\
+          \left(2+\beta\right)^2 \left(1-sin^2(\theta_I)\right)-1+\dfrac{sin^2(\theta_I)}{\beta^2}=0
+          \Longrightarrow \dfrac{\left(2+\beta\right)^2-1}{\left(2+\beta\right)^2-\dfrac{1}{\beta^2}}=sin^2(\theta_I)
+          \\
+          \\
+          \\
+          \Longrightarrow sin(\theta_I)=\sqrt{\dfrac{\left(2+\beta\right)^2-1}{\left(2+\beta\right)^2-\dfrac{1}{\beta^2}}}
+          \Longrightarrow
+          \theta_I=Arcsin \left[
+            \sqrt{\dfrac{\left(2+\beta\right)^2-1}{\left(2+\beta\right)^2-\dfrac{1}{\beta^2}}}
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \theta_I=78.0574^{\circ}
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
+
+      \begin{figure}[h!]
+        \centering
+        \includegraphics[height=6cm, width=10cm]{YY.png}
+      \end{figure}
+
+    \pagebreak
+
+    \item \textbf{9.39 (70 points)} According to Snell’s law, when light passes from an optically dense medium into a less dense one ($n_1 > n_2$) the 
     propagation vector \textbf{k} bends away from the normal (Fig. 9.28). In particular, if the light is incident at the \textbf{critical angle}
     $$
       \theta_c \equiv sin^{-1} \left(n_2/n_1\right)
@@ -90,9 +222,6 @@
     \begin{figure}[h!]
       \centering
       \includegraphics[height=8cm, width=8cm]{figure9.28.JPG}
-      \caption{
-        This figure is taken from Wikipedia. 
-      }
     \end{figure}
 
     A quick way to construct the evanescent wave is simply to quote the results of Sect. 9.3.3, with $k_T=\omega ~ n_2/c$ and
