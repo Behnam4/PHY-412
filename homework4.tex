@@ -415,22 +415,155 @@
               \tilde{B}(r,t)=\dfrac{1}{\omega} ~ \tilde{E_0} e^{-\kappa z} \left[
                 \kappa ~ sin(kx-\omega t) ~ \hat{x}+k ~ cos(kx-\omega t) ~ \hat{z}
               \right] 
-            \end{cases} 
+            \end{cases}
+            \\
+            \\
           $
         }
 
       \item Check that the fields in (d) satisfy all of Maxwell’s equations (Eq. $9.67$).
       
-        % \textcolor{hwColor}{
-        %   \\
-        % }
-
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              \text{Gauss’s law}: ~~~ \nabla.E=\dfrac{1}{\epsilon_0} \rho
+              \\
+              \\
+              \text{No name}: ~~~ \nabla.B=0
+              \\
+              \\
+              \text{Faraday’s law}: ~~~ \nabla \times E=-\dfrac{\partial B}{\partial t}
+              \\
+              \\
+              \text{Ampère’s law with Maxwell’s correction}: ~~~ \nabla \times B=\mu_0 ~ J+\mu_0 ~ \epsilon_0 ~ \dfrac{\partial E}{\partial t}
+            \end{cases}
+            \\
+            \\
+            \\
+            \nabla.E=\dfrac{\partial}{\partial y} \left(E_0 ~ e^{-\kappa ~ z} ~ cos(kx-\omega ~ t)\right)
+            \\
+            \\
+            \therefore ~~~ \boxed{\nabla.E=0} ~~~~ \checkmark
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \nabla.B=\dfrac{\partial}{\partial x} \left(\dfrac{E_0}{\omega} e^{-\kappa ~ z} ~ sin(kx-\omega ~ t)\right)
+            +\dfrac{\partial}{\partial z} \left(\dfrac{E_0}{\omega} e^{-\kappa ~ z} ~ cos(kx-\omega ~ t)\right)
+            \\
+            \\
+            =\dfrac{E_0}{\omega} \kappa ~ k ~ e^{-\kappa ~ z} ~ cos(kx-\omega ~ t)
+            -\dfrac{E_0}{\omega} \kappa ~ k ~ e^{-\kappa ~ z} ~ cos(kx-\omega ~ t)
+            \\
+            \\
+            \therefore ~~~ \boxed{\nabla.B=0} ~~~~ \checkmark
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \nabla \times E=\begin{vmatrix}
+              \hat{x} && \hat{y} && \hat{z}
+              \\
+              \\
+              \dfrac{\partial}{\partial x} && \dfrac{\partial}{\partial y} && \dfrac{\partial}{\partial z}
+              \\
+              \\
+              0 && E_y && 0
+            \end{vmatrix}
+            =-\dfrac{E_0}{\omega} e^{\kappa z} \left(
+              -\kappa ~ \omega  ~ cos(kx-\omega t) ~ \hat{x}+k ~ \omega ~ sin(kx-\omega ~ t) ~ \hat{z}
+            \right)
+            \\
+            =-\dfrac{\partial B}{\partial t}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\nabla \times E=-\dfrac{\partial B}{\partial t}} ~~~~ \checkmark
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \nabla \times B=\begin{vmatrix}
+              \hat{x} && \hat{y} && \hat{z}
+              \\
+              \\
+              \dfrac{\partial}{\partial x} && \dfrac{\partial}{\partial y} && \dfrac{\partial}{\partial z}
+              \\
+              \\
+              B_x && 0 && B_z
+            \end{vmatrix}
+            =\left(\dfrac{\partial B_x}{\partial z}-\dfrac{\partial B_z}{\partial x}\right) \hat{y}
+            \\
+            \\
+            =\left(
+              -\dfrac{E_0}{\omega} ~ \kappa^2 ~ e^{-\kappa z} sin(kx-\omega t)+\dfrac{E_0}{\omega} \kappa^2 ~ e^{-\kappa z} sin(kx-\omega t)
+            \right)\hat{y}
+            \\
+            \\
+            =\dfrac{\omega^2}{c^2} \left(n_1^2 ~ sin(\theta_I)-n_1^2 ~ sin^2(\theta_I)+n_2^2\right) \dfrac{E_0}{\omega} e^{\kappa ~ z} sin(kx-\omega t) \hat{y}
+            \\
+            \\
+            =\dfrac{n_2^2 ~ \omega^2}{c^2} \dfrac{E_0}{\omega} e^{\kappa ~ z} sin(kx-\omega t) \hat{y}
+            \\
+            \\
+            =\omega^2 ~ \epsilon_2 ~ \mu_2 \dfrac{E_0}{\omega} e^{\kappa ~ z} sin(kx-\omega t) \hat{y}
+            \\
+            \\
+            =\mu_2 ~ \epsilon_2 ~ E_0 ~ \omega ~ e^{-\kappa z} ~ sin(kx-\omega t) \hat{y}=\mu_2 ~ \epsilon_2 ~ \dfrac{\partial E}{\partial t}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{\nabla \times B=\mu_2 ~ \epsilon_2 ~ \dfrac{\partial B}{\partial t}} ~~~~ \checkmark
+            \\
+            \\
+           $
+        }
 
       \item For the fields in (d), construct the Poynting vector, and show that, on average, no energy is transmitted in the z direction.
       
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \mathbf{S}=\dfrac{1}{\mu_2} ~ \left(E \times B\right)
+            =\dfrac{1}{\mu_2} ~ \dfrac{E_0^2}{\omega} ~ e^{-2\kappa ~ z} 
+            \begin{vmatrix}
+              \hat{x} & \hat{y} & \hat{z}
+              \\
+              \\
+              0 & cos(kx-\omega t) & 0
+              \\
+              \\
+              k ~ sin(kx-\omega t) & 0 & k ~ cos(kx-\omega t)
+            \end{vmatrix}
+            \\
+            \\
+            \\
+            \therefore ~~~ \mathbf{S}=\dfrac{E_0^2}{\mu_2 ~ \omega} e^{-2\kappa ~ z}
+            \left[
+              k ~ cos^2(kx-\omega t) ~ \hat{x}-\kappa ~ cos(kx-\omega t) ~ sin(kx-\omega t) \hat{z}
+            \right] ~~~~~ \checkmark
+            \\
+            \\
+            \\
+            \begin{cases}
+              \langle cos^2 \rangle=\dfrac{1}{2}
+              \\
+              \\
+              \langle sin ~ cos \rangle=0  
+            \end{cases} \Longrightarrow
+            \boxed{
+              \langle S \rangle=\dfrac{k}{2} ~ \dfrac{E_0^2}{\mu_2 ~ \omega} ~ e^{-2 \kappa z} ~ \hat{x}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+          $
+          Hence, on average, no energy is transmitted in the z direction.
+        }
 
     \end{enumerate}
 
