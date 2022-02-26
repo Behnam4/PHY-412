@@ -249,24 +249,121 @@
       $$
       This is a wave propagating in the $x$ direction (\emph{parallel} to the interface!), and attenuated in the $z$ direction.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From page 406 we have:
+          \\
+          \\
+          $
+            \mathbf{\tilde{E}}_T(\mathbf{r}, t)=\mathbf{\tilde{E_0}}_T ~ e^{i(k_T.r-\omega ~ t)}
+            \\
+            \\
+            \mathbf{k_T}.r=K\left(sin(\theta_T) ~ \hat{x}+cos(\theta_T) ~ \hat{z}\right).\left(x ~ \hat{x}+y ~ \hat{y}+z ~ \hat{z}\right)
+            =K_T ~ x ~ sin(\theta_T)+K_T ~ z ~ cos(\theta_T)
+            \\
+            \\
+            =K_T ~ x ~ sin(\theta_T)+K_T ~ z ~ \sqrt{1-sin^2(\theta_T)}
+            =K_T ~ x ~ sin(\theta_T)+K_T ~ z ~ \sqrt{-\left(sin^2(\theta_T)-1\right)}
+            \\
+            \\
+            =K_T ~ x ~ sin(\theta_T)+K_T ~ z ~ \sqrt{i^2 ~ \left(sin^2(\theta_T)-1\right)}
+            \\
+            \\
+            \therefore ~~~ \mathbf{k_T}.r=K_T ~ x ~ sin(\theta_T)+i ~ K_T ~ z ~ \sqrt{\left(sin^2(\theta_T)-1\right)} ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \begin{cases}
+              k=k_T ~ sin(\theta_T)=\dfrac{n_1}{n_2} \dfrac{\omega n_2}{c} sin(\theta_I)
+              \\
+              \\
+              \kappa=\kappa_T \sqrt{sin^2(\theta_T)-1}=\dfrac{\omega ~ n_2}{} \sqrt{\dfrac{n_1^2}{n_2^2} ~ sin^2(\theta_I)-1}
+            \end{cases}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \mathbf{\tilde{E}}_T(\mathbf{r}, t)=\mathbf{\tilde{E_0}}_T ~ e^{-\kappa z} ~ e^{i(kx-\omega ~ t)}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item Noting that $\alpha$ (Eq. 9.108) is now imaginary, use Eq. $9.109$ to calculate the reflection coefficient for polarization 
       parallel to the plane of incidence. [Notice that you get $100\%$ reflection, which is better than at a conducting 
       surface (see,for example, Prob. 9.22).]
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From page 411 we have:
+          \\
+          $
+            R=\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right)^2
+            =\dfrac{-\beta-i ~ a }{\beta+i ~ a} \times \dfrac{-\beta+i ~ a}{\beta-i ~ a}
+            =\dfrac{\beta^2+a^2}{\beta^2+a^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              R=1
+            } ~~~~ \checkmark
+          $
+        }
+
+      \pagebreak
 
       \item Do the same for polarization perpendicular to the plane of incidence (use the
       results of Prob. 9.17).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          We got the Fresnel's equations for a perpendicular polarization:
+          \\
+          \\
+          $
+            \dfrac{1}{\mu_1} B_1^{||}=\dfrac{1}{\mu_2} B_2^{||}
+            \Longrightarrow \dfrac{1}{\mu_1} \left[
+              \dfrac{1}{v_1} {E_0}_I (-cos(\theta_1))+\dfrac{1}{v_1} {E_0}_R cos(\theta_1)
+            \right]
+            =\dfrac{1}{\mu_2 ~ v_2} {E_0}_T (-cos(\theta_2))
+            \\
+            \\
+            \Longrightarrow {E_0}_I-{E_0}_R=\left[\dfrac{\mu_1 ~ v_1 ~ cos(\theta_2)}{\mu_2 ~ v_2 ~ cos(\theta_1)}\right] ~ {E_0}_T
+            \\
+            \\
+            \begin{cases}
+              \alpha \equiv \dfrac{cos(\theta_2)}{cos(\theta_1)}
+              \\
+              \\
+              \beta=\dfrac{\mu_1 ~ v_1}{\mu_2 ~ v_2}
+            \end{cases}
+            \\
+            \\
+            \therefore ~~~ \boxed{{E_0}_I-{E_0}_R=\alpha ~ \beta ~ {E_0}_T} 
+            \Longrightarrow 2{E_0}_I=\left(1+\alpha ~ \beta\right) ~ {E_0}_T
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              {E_0}_T=\left(\dfrac{2}{1+\alpha ~ \beta}\right) ~ {E_0}_I
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            {E_0}_R=\left(\dfrac{\alpha-\beta}{\alpha+\beta}\right) {E_0}_I
+            =\left(\dfrac{1-\beta}{1+\beta}\right) {E_0}_I ~~~~~ \text{The amplitudes (real part)}
+            \\
+            \\
+            \\
+            R=\left(\dfrac{1-\alpha ~ \beta}{1+\alpha ~ \beta}\right)^2=\left(\dfrac{1-i ~ a ~ \beta}{1+i ~ a ~ \beta}\right)^2
+            =\dfrac{1-i ~ a ~ \beta}{1+i ~ a ~ \beta} \times \dfrac{1+i ~ a ~ \beta}{1-i ~ a ~ \beta}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{R=1} ~~~~ \checkmark
+          $
+        }
 
       \item In the case of polarization perpendicular to the plane of incidence, show that
       the (real) evanescent fields are
@@ -280,9 +377,47 @@
         \end{rcases*}
       $$
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              \tilde{E}(r,t)=\tilde{E_0}_T ~ e^{i(\kappa_T.r-\omega t)} \hat{y}
+              \\
+              \\
+              \tilde{B}(r,t)=\dfrac{\left(-cos(\theta_T) ~ \hat{x}+sin(\theta_T) ~ \hat{z}\right)}{v_2} ~ \tilde{E_0}_T ~ e^{i(\kappa_T.r-\omega t)} 
+            \end{cases}
+            \\
+            \\
+            \\
+            \text{Since:}
+            \\
+            \\
+            \begin{cases}
+              K_T.r=k ~ \hat{x}+i ~ \kappa ~ z-\omega ~ t 
+              \\
+              \\
+              sin(\theta_T)=\dfrac{c ~ k}{\omega n_2}
+              \\
+              \\
+              cos(\theta_T)=i ~ \dfrac{c ~ \kappa}{\omega n_2}
+            \end{cases} ~~~~~ \text{Note: ~} \dfrac{c}{n_2}=v_2
+            \\
+            \\
+            \\
+            \Longrightarrow
+            \begin{cases}
+              \tilde{E}(r,t)=\tilde{E_0} ~ e^{-\kappa z} ~ cos(kx-\omega t) ~ \hat{y}
+              \\
+              \\
+              \tilde{B}(r,t)=\dfrac{1}{v_2} ~ \tilde{E_0} e^{-\kappa z} ~ \dfrac{c}{\omega n_2} \times cos(kx-\omega t) \times \left[k \hat{z}-i ~ \kappa \hat{x}\right]
+              \\
+              \\
+              \tilde{B}(r,t)=\dfrac{1}{\omega} ~ \tilde{E_0} e^{-\kappa z} \left[
+                \kappa ~ sin(kx-\omega t) ~ \hat{x}+k ~ cos(kx-\omega t) ~ \hat{z}
+              \right] 
+            \end{cases} 
+          $
+        }
 
       \item Check that the fields in (d) satisfy all of Maxwell’s equations (Eq. $9.67$).
       
