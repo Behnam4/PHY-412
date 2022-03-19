@@ -63,10 +63,230 @@
     and per unit length carried by the wave, and take their ratio.] 
     \emph{You will need to find the transverse components of E and B to get the Poynting vector.}
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
-
+      \textcolor{hwColor}{
+        \\
+        From page 425, 426 and 429 of the textbookw have the following equations and solutions:
+        \\
+        \\
+        $
+          \begin{cases}
+            \tilde{E}=\tilde{E_0} ~ e^{i(kz-\omega t)}
+            \\
+            \\
+            \tilde{B}=\tilde{B_0} ~ e^{i(kz-\omega t)}
+          \end{cases} ~~~~~~~ (9.176)
+          \\
+          \\
+          \\
+          \tilde{E_0}=E_x ~ \hat{x}+E_y ~ \hat{y}+E_z ~ \hat{z}, ~~~~~ \tilde{B_0}=B_x ~ \hat{x}+B_y ~ \hat{y}+B_z ~ \hat{z}
+          \\
+          \\
+          \\
+          \text{Also, from problem 9.12 we have}
+          \\
+          \\
+          \begin{cases}
+            \langle u \rangle=\dfrac{1}{4} ~ Re \bigg( \epsilon_0 ~ \tilde{E}.\tilde{E}^* + \dfrac{1}{\mu_0} \tilde{B}.\tilde{B}^* \bigg) 
+            \\
+            \\
+            \langle S \rangle=\dfrac{1}{2 \mu_0} Re \bigg( \tilde{E} \times \tilde{B}^* \bigg)
+          \end{cases}
+          \\
+          \\
+          \\
+          B_z=B_0 cos \bigg(m ~ \pi ~ x/a \bigg) ~ cos \bigg(n ~ \pi ~ y/b \bigg) ~~~~~~ (9.186)
+          \\
+          \\
+          \\
+          \begin{cases}
+            E_x=\dfrac{i}{(\omega / c)^2-k^2} \bigg( k\dfrac{\partial E_z}{\partial x} + \omega \dfrac{\partial B_z}{\partial y} \bigg)
+            \\
+            \\
+            E_y=\dfrac{i}{(\omega / c)^2-k^2} \bigg( k\dfrac{\partial E_z}{\partial y} - \omega \dfrac{\partial B_z}{\partial x} \bigg)
+            \\
+            \\
+            B_x=\dfrac{i}{(\omega / c)^2-k^2} \bigg( k\dfrac{\partial B_z}{\partial x} - \dfrac{\omega}{c^2} \dfrac{\partial E_z}{\partial y} \bigg)
+            \\
+            \\
+            B_y=\dfrac{i}{(\omega / c)^2-k^2} \bigg( k\dfrac{\partial B_z}{\partial y} + \dfrac{\omega}{c^2} \dfrac{\partial E_z}{\partial x} \bigg)
+          \end{cases}
+          \Longrightarrow
+          \begin{cases}
+            E_x=-\dfrac{i ~ \omega}{(\omega / c)^2-k^2} \bigg( \dfrac{n ~ \pi}{b} \bigg) ~ B_0 ~ cos\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ sin\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+            \\
+            \\
+            E_y=\dfrac{i ~ \omega}{(\omega / c)^2-k^2} \bigg( \dfrac{m ~ \pi}{a} \bigg) ~ B_0 ~ sin\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+            \\
+            \\
+            B_x^*=\dfrac{i k~ }{(\omega / c)^2-k^2} ~ \bigg( \dfrac{m ~ \pi}{a} \bigg) ~ B_0 ~ sin\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+            \\
+            \\
+            B_y^*=\dfrac{i ~ k}{(\omega / c)^2-k^2} ~ \bigg( \dfrac{m ~ \pi}{a} \bigg) ~ B_0 ~ sin\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+          \end{cases}
+          \\
+          \\
+          \\
+          \text{And now we have}
+          \\
+          \\
+          \begin{cases}
+            E_z=0
+            \\
+            \\
+            B_z^*=B_0 ~ cos\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+          \end{cases}
+          \\
+          \\
+          \\
+          \langle S \rangle=\dfrac{1}{2 \mu_0} Re \bigg( \tilde{E} \times \tilde{B}^* \bigg)
+          \\
+          \\
+          =\hat{x} ~ \bigg(\dfrac{1}{2 \mu_0} \dfrac{i ~ \pi ~ \omega ~ B_0^2}{(\omega/c)^2-k^2} ~ \bigg( \dfrac{m}{a} \bigg) ~ sin\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) \bigg)
+          \\
+          \\
+          +\hat{y} ~ \bigg(\dfrac{1}{2 \mu_0} \dfrac{i ~ \pi ~ \omega ~ B_0^2}{(\omega/c)^2-k^2} ~ \bigg( \dfrac{n}{b} \bigg) ~ cos\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ sin\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ cos^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) \bigg)
+          \\
+          \\
+          +\hat{z} ~ \bigg(
+            \dfrac{1}{2 \mu_0} \dfrac{\omega k ~ \pi^2 ~ B_0^2}{((\omega/c)-k^2)^2} 
+            \left[
+              cos^2\bigg( \dfrac{m \pi x}{a} \bigg) ~ sin^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ \bigg( \dfrac{n}{b} \bigg)^2
+              +cos^2\bigg( \dfrac{n \pi y}{b} \bigg) ~ sin^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ \bigg( \dfrac{m}{a} \bigg)^2
+            \right]
+          \bigg)
+          \\
+          \\
+          \\
+          \boxed{
+            \int\limits_{0}^{a} ~ sin^2\bigg( \dfrac{k ~ x}{w} \bigg) ~ dx=\dfrac{w}{2}
+          }
+          , ~~~~~~~ 
+          \boxed{
+            \int\limits_{0}^{a} ~ cos^2\bigg( \dfrac{k ~ x}{q} \bigg) ~ dx=\dfrac{q}{2}
+          }
+          \\
+          \\
+          \\
+          \therefore ~~~ \bigints \langle S \rangle. da=\bigints (
+              \dfrac{1}{2 \mu_0} Re \bigg( \tilde{E} \times \tilde{B}^* \bigg)
+            \\
+            \\
+            =\hat{x} ~ \bigg(\dfrac{1}{2 \mu_0} \dfrac{i ~ \pi ~ \omega ~ B_0^2}{(\omega/c)^2-k^2} ~ \bigg( \dfrac{m}{a} \bigg) ~ sin\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) \bigg)
+            \\
+            \\
+            +\hat{y} ~ \bigg(\dfrac{1}{2 \mu_0} \dfrac{i ~ \pi ~ \omega ~ B_0^2}{(\omega/c)^2-k^2} ~ \bigg( \dfrac{n}{b} \bigg) ~ cos\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ sin\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ cos^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) \bigg)
+            \\
+            \\
+            +\hat{z} ~ \bigg(
+              \dfrac{1}{2 \mu_0} \dfrac{\omega k ~ \pi^2 ~ B_0^2}{((\omega/c)-k^2)^2} 
+              \left[
+                cos^2\bigg( \dfrac{m \pi x}{a} \bigg) ~ sin^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ \bigg( \dfrac{n}{b} \bigg)^2
+                +cos^2\bigg( \dfrac{n \pi y}{b} \bigg) ~ sin^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ \bigg( \dfrac{m}{a} \bigg)^2
+              \right]
+            \bigg).da
+          )
+          \\
+          \\
+          \\
+        $
+        Solving the above integral with the help of the two (in box) integrals we get the following result:
+        \\
+        \\
+        $
+          \therefore ~~~ \boxed{
+            \int \langle S \rangle. da=\dfrac{1}{8 \mu_0} \dfrac{a ~ b ~ \omega ~ k ~ \pi^2 ~ B_0^2}{\bigg((\omega/c)^2-k^2 \bigg)^2}
+            \times \bigg( \bigg( \dfrac{m}{a} \bigg)^2+\bigg( \dfrac{n}{b} \bigg)^2 \bigg)
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \text{On page 429 we have} ~ k=\dfrac{1}{c} ~ \sqrt{\omega^2-\omega^2_{mn}} ~ \text{where} ~ c \pi \sqrt{(m/a)^2+(n/b)^2} 
+          \\
+          \\
+          \\
+          \Longrightarrow \boxed{
+            \int \langle S \rangle. da=\dfrac{1}{8 \mu_0} \dfrac{\omega ~ k ~ a ~ b ~ B_0^2 ~ c^2}{\omega^2_{mn}}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \\
+          \langle u \rangle=\dfrac{1}{4} ~ Re \bigg( \epsilon_0 ~ \tilde{E}.\tilde{E}^* + \dfrac{1}{\mu_0} \tilde{B}.\tilde{B}^* \bigg) 
+          =\dfrac{n^2}{b^2} ~ cos^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ sin^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) \dfrac{1}{4} ~ \dfrac{\omega^2 ~ \pi^2 ~ B_0^2}{\bigg( (\omega/c)^2-k^2\bigg)^2}
+          \\
+          \\
+          +\dfrac{m^2}{a^2} ~ cos^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ sin^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) \dfrac{1}{4} ~ \dfrac{\omega^2 ~ \pi^2 ~ B_0^2}{\bigg( (\omega/c)^2-k^2\bigg)^2}
+          \\
+          \\
+          +\dfrac{B_0^2}{4 \mu_0} ~ cos^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+          \\
+          \\
+          +\dfrac{1}{4 \mu_0 \bigg((\omega/c)^2-k^2 \bigg)^2} \left[
+            cos^2\bigg( \dfrac{m \pi x}{a} \bigg) ~ sin^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ \bigg( \dfrac{n}{b} \bigg)^2
+            +cos^2\bigg( \dfrac{n \pi y}{b} \bigg) ~ sin^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ \bigg( \dfrac{m}{a} \bigg)^2
+          \right]
+          \\
+          \\
+          \\
+          \bigints \langle u \rangle. da=
+          \bigints (\dfrac{n^2}{b^2} ~ cos^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ sin^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) \dfrac{1}{4} ~ \dfrac{\omega^2 ~ \pi^2 ~ B_0^2}{\bigg( (\omega/c)^2-k^2\bigg)^2}
+          \\
+          \\
+          +\dfrac{m^2}{a^2} ~ cos^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ sin^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) \dfrac{1}{4} ~ \dfrac{\omega^2 ~ \pi^2 ~ B_0^2}{\bigg( (\omega/c)^2-k^2\bigg)^2}
+          +\dfrac{B_0^2}{4 \mu_0} ~ cos^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ cos^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg)
+          \\
+          \\
+          +\dfrac{1}{4 \mu_0 \bigg((\omega/c)^2-k^2 \bigg)^2} \left[
+            cos^2\bigg( \dfrac{m \pi x}{a} \bigg) ~ sin^2\bigg( \dfrac{n ~ \pi ~ y}{b} \bigg) ~ \bigg( \dfrac{n}{b} \bigg)^2
+            +cos^2\bigg( \dfrac{n \pi y}{b} \bigg) ~ sin^2\bigg( \dfrac{m ~ \pi ~ x}{a} \bigg) ~ \bigg( \dfrac{m}{a} \bigg)^2
+          \right]
+          ).da
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \int \langle u \rangle. da=\dfrac{B_0^2 ~ a ~ b}{16 \mu_0}
+            +\dfrac{\epsilon_0 ~ a ~ b}{16} ~ \dfrac{\omega^2 ~ \pi^2 ~ B_0^2}{\left[(\omega/c)^2-k^2\right]^2} \left[\dfrac{n^2}{b^2}+\dfrac{m^2}{a^2}\right]
+            +\dfrac{a ~ b}{16 \mu_0} ~ \dfrac{\omega^2 ~ \pi^2 ~ B_0^2}{\left[(\omega/c)^2-k^2\right]^2} \left[\dfrac{n^2}{b^2}+\dfrac{m^2}{a^2}\right]
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \text{On page 429 we have} ~ k=\dfrac{1}{c} ~ \sqrt{\omega^2-\omega^2_{mn}} ~ \text{where} ~ c \pi \sqrt{(m/a)^2+(n/b)^2} 
+          \\
+          \\
+          \\
+          \Longrightarrow \boxed{
+            \int \langle u \rangle. da=\dfrac{1}{8 \mu_0} \dfrac{\omega^2 ~ a ~ b ~ B_0^2}{\omega^2_{mn}}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+        $
+        Now we can take their ratio:
+        \\
+        \\
+        $
+          R=\dfrac{
+            \dfrac{1}{8 \mu_0} \dfrac{\omega ~ k ~ a ~ b ~ B_0^2 ~ c^2}{\omega^2_{mn}}
+          }{
+            \dfrac{1}{8 \mu_0} \dfrac{\omega^2 ~ a ~ b ~ B_0^2}{\omega^2_{mn}}
+          }=\dfrac{k ~ c^2}{\omega}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            R=\dfrac{c}{\omega} \sqrt{\omega^2-\omega^2_{mn}}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+        $
+        The above was achieved using equation $k=\dfrac{1}{c} ~ \sqrt{\omega^2-\omega^2_{mn}}$ on page 429.
+        \\
+        \\
+        \\
+      }
 
     \item \textbf{9.31 (30 points)} Work out the theory of $TM$ modes for a rectangular wave guide. In particular, find the 
     longitudinal electric field, the cutoff frequencies, and the wave and group velocities. Find the ratio of the lowest 
