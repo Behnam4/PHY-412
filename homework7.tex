@@ -1,0 +1,141 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{442020}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter III}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Homework Seven}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Samuel Teitelbaum}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{10.7 (20 points)} A time-dependent point charge $q(t)$ at the origin, $\rho(r,t)=q(t) ~ \delta^3(r)$, 
+    is fed by a current $J(r,t)=-\dfrac{1}{4 \pi} \bigg(\dfrac{\dot{q}}{r^2}\bigg) ~ \hat{r}$, where $\dot{q} \equiv \dfrac{dq}{dt}$.
+    \begin{enumerate}
+      \item Check that charge is conserved, by confirming that the continuity equation is
+      obeyed.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Find the scalar and vector potentials in the Coulomb gauge. If you get stuck, try
+      working on (c) first.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Find the fields, and check that they satisfy all of Maxwell’s equations. (\emph{P. R. Berman, Am. J. Phys. 76 48 (2008).})
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+
+    \item \textbf{10.10 (30 points)} Confirm that the retarded potentials satisfy the Lorenz gauge condition. [
+      \emph{Hint:} First show that
+      $$
+        \nabla.\bigg(\dfrac{J}{\scriptr}\bigg)=\dfrac{1}{\scriptr} \bigg(\nabla.J\bigg)+\dfrac{1}{\scriptr} \bigg(\nabla^'.J\bigg)-\nabla^'.\bigg(\dfrac{J}{\scriptr}\bigg),
+      $$
+      where $\nabla$ denotes derivatives with respect to $r$, and $\nabla^'$ denotes derivatives with respect to
+      $r^'$. Next, noting that $J(r^', t-\scriptr /c)$ depends on $r^'$ both explicitly and through $\scriptr$,
+      whereas it depends on $r$ only through $\scriptr$, confirm that
+      $$
+        \nabla.J=-\dfrac{1}{c} \dot{J}.\bigg(\nabla ~ \scriptr \bigg), ~~~ \nabla^'.J=-\dot{\rho}-\dfrac{1}{c} \dot{J}.\bigg(\nabla^' ~ \scriptr\bigg).
+      $$
+      Use this to calculate the divergence of $A$ (Eq. 10.26).
+      ]
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \item \textbf{10.11 (30 points)}
+      \begin{enumerate}
+        \item Suppose the wire in Ex. 10.2 carries a linearly increasing current
+        $$
+          I(t)=kt,
+        $$
+        for $t > 0$. Find the electric and magnetic fields generated.
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+        \item Do the same for the case of a sudden burst of current:
+        $$
+          I(t)=q_0 \delta(t).
+        $$
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+          
+      \end{enumerate}
+
+
+    \item \textbf{10.13 (20 points)} Suppose $J(r)$ is constant in time, so (Prob. 7.60) $\rho(r,t)=\rho(r,0)+\dot{\rho}(r,0)t$.
+    Show that 
+    $$
+      E(r,t)=\dfrac{1}{4 \pi \epsilon_0} \int \dfrac{\rho(r^', t)}{\scriptr^2} ~ \hat{\scriptr} ~ d \tau^'
+    $$
+    that is, Coulomb’s law holds, with the charge density evaluated at the non-retarded time.
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+  \end{enumerate}
+
+\end{document}
