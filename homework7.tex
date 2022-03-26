@@ -523,11 +523,46 @@
     $$
     that is, Coulomb’s law holds, with the charge density evaluated at the non-retarded time.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
-
-      % \bigg( \bigg)
+      \textcolor{hwColor}{
+        \\
+        $
+          \begin{cases}
+            \dot{\rho}(r,0) 
+            \\
+            \\
+            \dot{J}(r,t)=0
+          \end{cases} 
+          \\
+          \\
+          \\
+          \text{From page 449 we have}
+          \\
+          \\
+          E(r,t)=\dfrac{1}{4 \pi \epsilon_0} \bigints \left[
+            \dfrac{\rho(r^', t_r)}{\scriptr^2} \hat{\scriptr}
+            +\dfrac{\dot{\rho}(r^', t_r)}{c \scriptr} \hat{\scriptr}
+            -\dfrac{\dot{J}(r^', t_r)}{c^2 \scriptr}
+          \right] d\tau^'
+          \\
+          \\
+          t_r=t-\dfrac{\scriptr}{c}
+          \\
+          \\
+          \\
+          \\
+          \therefore ~~~ E(r,t)=\dfrac{1}{4 \pi \epsilon_0} \bigints \left[
+            \dfrac{\rho(r^', 0)+t \dot{\rho}(r^', 0)}{\scriptr^2} 
+            -\dfrac{\dot{\rho}(r^', 0) (\scriptr/c)}{\scriptr}
+            +\dfrac{\dot{\rho}(r^', 0)}{c \scriptr}
+          \right] \hat{\scriptr} d\tau^'
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            E(r,t)=\dfrac{1}{4 \pi \epsilon_0} \bigints \dfrac{\rho(r^', t)}{\scriptr^2} d\tau^' ~ \hat{\scriptr}
+          } ~~~~
+        $
+      }
 
   \end{enumerate}
 
