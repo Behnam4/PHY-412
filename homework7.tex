@@ -63,22 +63,147 @@
       \item Check that charge is conserved, by confirming that the continuity equation is
       obeyed.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          In chapter 5 we learned about the continuity equation, $\nabla.J=-\dfrac{\partial \rho}{\partial t}$, (where $J$ is 
+          current density and $\rho$ is charge density), which is the precise mathematical statement of local conservation 
+          of charge.
+          \\
+          \\
+          $ 
+            \begin{cases}
+              \nabla.J=-\dfrac{\partial \rho}{\partial t}
+              \\
+              \\
+              J(r,t)=-\dfrac{1}{4 \pi} \bigg(\dfrac{\dot{q}}{r^2}\bigg) ~ \hat{r}
+            \end{cases}
+            \Longrightarrow
+            L.H.S: ~ \nabla.J=\nabla.\bigg(-\dfrac{1}{4 \pi} \bigg(\dfrac{\dot{q}}{r^2}\bigg) ~ \hat{r} \bigg)
+            =-\dfrac{\dot{q}}{4 \pi} \left[\nabla.\bigg( \dfrac{\hat{r}}{r^2} \bigg)\right]
+            \\
+            \\
+            \\
+            \text{In chapter 1, page 50, equation 1.99, we have} ~~ \boxed{\nabla.\bigg( \dfrac{\hat{r}}{r^2} \bigg)=4 \pi \delta^3(r)}. \text{Therefore:}
+            \\
+            \\
+            \\
+            \nabla.J=-\dfrac{\dot{q}}{4 \pi} \left[ \nabla.\bigg( \dfrac{\hat{r}}{r^2} \bigg)\right]
+            =-\dfrac{\dot{q}}{4 \pi} \times 4 \pi \delta^3(r)
+            =-\dot{q} \delta^3(r)
+            =-\dfrac{dq}{dt} \delta^3(r) ~~~~~ \textbf{(A)}
+            \\
+            \\
+          $
+          A point charge is confined to a single point in space. Let's call it as $q(\overrightarrow{r})$. This means that 
+          the charge has a magnitude only at $\overrightarrow{r}$ , and at all other points it is zero. So, a point charge 
+          has a non-zero magnitude at the point it occupies. This particular property of the charge density of a point 
+          charge is exactly identical to the definition of the Dirac-delta function. Therefore, it seems quite comfortable 
+          that we could use this function to represent the volume charge density of a point charge.
+          At the origin, the charge is non-zero, but the inverse volume blows up. So, we substitute the Dirac-delta 
+          function in the place of inverse volume as
+          $$
+            \rho=q ~ \delta^3(\overrightarrow{r})
+          $$
+          hence, we can rewrite \textbf{(A)} as 
+          \\
+          \\
+          $
+            L.H.S: ~ -\dfrac{d}{dt} \left[q ~ \delta^3(r)\right]=-\dfrac{d}{dt} \rho 
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{L.H.S=-\dfrac{d}{dt} \rho}=R.H.S ~~~~ \checkmark
+            \\
+            \\
+            \\
+          $
+          With the above result the we can state that the charge is conserved, since the continuity equation holds.
+          \\
+          \\
+        }
+
+      \pagebreak
 
       \item Find the scalar and vector potentials in the Coulomb gauge. If you get stuck, try
       working on (c) first.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From page 441 of the textbook we have
+          $
+            \\
+            \\
+            V(r,t)=\dfrac{1}{4 \pi \epsilon_0} \bigint \dfrac{\rho(r^', t)}{\scriptr} d\tau^'
+            \\
+            \\
+            \\
+            \text{Based on the part (a) of this problem set, we have the following:}
+            \\
+            \\
+            V(r,t)=\dfrac{q}{4 \pi \epsilon_0} \bigint \dfrac{\delta^3(r^')}{\scriptr} d\tau^'
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              V(r,t)=\dfrac{q}{4 \pi \epsilon_0 r}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+            \therefore ~~~ \begin{cases}
+              \nabla \times A=0
+              \\
+              \\
+              \nabla.A=0
+            \end{cases} \Longrightarrow A=0
+            \\
+            \\
+          $
+          Note that one solution is zero. but it is not the only solution. The other solutions correspond to freely 
+          propagating electromagnetic waves, and no symmetry argument eliminates them ($\overrightarrow{B} \neq 0$ for these solutions). 
+          But in any case these electromagnetic waves are not caused by the changing $\rho$ so it seems this problem wants 
+          you to take $\overrightarrow{A}=0$. You should be able to verify Maxwell's equations whether you take it to vanish or not.
+          \\
+          \\
+        }
 
       \item Find the fields, and check that they satisfy all of Maxwell’s equations. (\emph{P. R. Berman, Am. J. Phys. 76 48 (2008).})
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            E=-\nabla V-\dfrac{\partial A}{\partial t}
+            \\
+            \\
+            \\
+            E=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q(t)}{r^2} \hat{r} ~ B=0 ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \nabla \times E=-\dfrac{\partial B}{\partial t}=0 ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \nabla.E=\dfrac{1}{4 \pi \epsilon_0} \bigg( q \bigg) ~ \nabla.\bigg( \dfrac{q ~ \delta^3(r)}{\epsilon_0} \bigg) 
+            \Longrightarrow \nabla.E=\dfrac{\rho}{\epsilon_0} ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \nabla \times B=0
+            \\
+            \\
+            \\
+            \nabla \times B=\mu_0 J+\mu_0 \epsilon_0 \dfrac{\partial E}{\partial t}
+            \Longrightarrow \mu_0 J+\mu_0 \epsilon_0 \dfrac{\partial E}{\partial t}=\mu_0 \left[
+              -\dfrac{1}{4 \pi} \dfrac{\dot{q}}{r^2} \hat{r}
+            \right]+\mu_0 \epsilon_0 \left[
+              \dfrac{\dot{q}}{4 \pi \epsilon_0 r^2} \hat{r}
+            \right]=0 ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
     \end{enumerate}
 
