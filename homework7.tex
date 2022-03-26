@@ -358,7 +358,6 @@
           $
         }
 
-        % \bigg( \bigg)
     \item \textbf{10.11 (30 points)}
       \begin{enumerate}
         \item Suppose the wire in Ex. 10.2 carries a linearly increasing current
@@ -367,21 +366,155 @@
         $$
         for $t > 0$. Find the electric and magnetic fields generated.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              A(r,t)=\bigg( \dfrac{\mu_0}{4 \pi} ~ \hat{z}\bigg) \bigints\limits_{0}^{\sqrt{(ct)^2-r^2}} \dfrac{k \bigg(t-\dfrac{\sqrt{r^2+z^2}}{c} \bigg)}{\sqrt{r^2+z^2}} dz
+              \\
+              \\
+              \\
+              =\bigg( \dfrac{\mu_0 k}{2 \pi} \bigg) \bigg( \bigints\limits_{0}^{\sqrt{(ct)^2-r^2}} \dfrac{t}{\sqrt{r^2+z^2}} dz -\dfrac{1}{c} \bigints\limits_{0}^{\sqrt{(ct)^2-r^2}}  dz    \bigg) \hat{z}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                A(r,t)=\bigg( \dfrac{\mu_0 k}{2 \pi} \bigg)     
+                \left[
+                  t ~ ln\bigg( \dfrac{ct+\sqrt{c^2 t^2-r^2}}{r}\bigg)
+                  -\dfrac{1}{c} \sqrt{c^2 t^2-r^2}
+                \right]
+                \hat{z}
+              } ~~~~ \checkmark
+              \\
+              \\
+              \\
+              E(r,t)=-\dfrac{\partial A}{\partial t}
+              =-\dfrac{\partial}{\partial t} \left[
+                \bigg( \dfrac{\mu_0 k}{2 \pi} \bigg)     
+                \left[
+                  t ~ ln\bigg( \dfrac{ct+\sqrt{c^2 t^2-r^2}}{r}\bigg)
+                  -\dfrac{1}{c} \sqrt{c^2 t^2-r^2}
+                \right]
+                \hat{z}
+              \right]
+              \\
+              \\
+              \\
+              E(r,t)=-\bigg( \dfrac{\mu_0 k}{2 \pi} \bigg) 
+              \left[
+                ln\bigg( \dfrac{ct+\sqrt{c^2 t^2-r^2}}{r}\bigg)
+                +\dfrac{t}{r} \bigg( \dfrac{r}{ct+\sqrt{c^2 t^2-r^2}} \bigg) \bigg( c+\dfrac{1}{2} \dfrac{2c^2 t}{\sqrt{c^2 t^2-r^2}} \bigg)
+                -\dfrac{1}{2c} \dfrac{2c^2t}{\sqrt{c^2 t^2-r^2}}
+              \right]
+              \hat{z}
+              \\
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                E(r,t)=-\dfrac{\mu_0 k}{2 \pi} ~ ln\bigg( \dfrac{ct+\sqrt{c^2t^2-r^2}}{r} \bigg) \hat{z}
+              } ~~~~ \checkmark
+              \\
+              \\
+              \\
+              \\
+              B(r,t)=-\dfrac{\partial A_z}{\partial r} \hat{\Phi}
+              =-\dfrac{\partial}{\partial r} \left[
+                \bigg( \dfrac{\mu_0 k}{2 \pi} \bigg)     
+                \left[
+                  t ~ ln\bigg( \dfrac{ct+\sqrt{c^2 t^2-r^2}}{r}\bigg)
+                  -\dfrac{1}{c} \sqrt{c^2 t^2-r^2}
+                \right]
+              \right]
+              \hat{\Phi}
+              \\
+              \\
+              \\
+              =-\dfrac{\mu_0 k}{2 \pi} \left[
+                \bigg( \dfrac{tr}{ct+\sqrt{c^2t^2-r^2}} \bigg)
+                \dfrac{
+                  \bigg( -\dfrac{r^2}{\sqrt{c^2 t^2-r^2}}\bigg)-ct-\sqrt{c^2 t^2-r^2}
+                }{r^2}
+                +\dfrac{1}{c} \dfrac{r}{\sqrt{c^2t^2-r^2}}
+              \right] ~ \hat{\Phi}
+              \\
+              \\
+              \\
+              =-\dfrac{\mu_0 k}{2 \pi r c} \dfrac{-c^2 t^2-r^2}{\sqrt{c^2 t^2-r^2}} ~ \hat{\Phi}
+              \\
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                B(r,t)=\dfrac{\mu_0 k}{2 \pi r c} \sqrt{c^2 t^2-r^2} ~ \hat{\Phi}
+              } ~~~~ \checkmark
+              \\
+              \\
+            $
+          }
 
         \item Do the same for the case of a sudden burst of current:
         $$
           I(t)=q_0 \delta(t).
         $$
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              A(r,t)=\dfrac{\mu_0}{4 \pi} \bigints\limits_{- \infty}^{+ \infty} \dfrac{q_0 \delta(t-\scriptr/c)}{\scriptr} ~ dz ~ \hat{z}
+              =\dfrac{\mu_0}{2 \pi} \bigints\limits_{0}^{+ \infty} \dfrac{q_0 \delta(t-\scriptr/c)}{\scriptr} ~ dz ~ \hat{z}
+              \\
+              \\
+              \\
+              \begin{cases}
+                \scriptr=\sqrt{r^2+z^2}
+                \\
+                \\
+                or
+                \\
+                \\
+                z=\sqrt{\scriptr^2-r^2}
+              \end{cases} \Longrightarrow \begin{cases}
+                dz=\dfrac{1}{2} ~ \dfrac{2 \scriptr ~ d\scriptr}{\sqrt{\scriptr-r^2 }}
+                \\
+                \\
+                z=\infty \longrightarrow \scriptr=\infty
+                \\
+                \\
+                z=0 \longrightarrow \scriptr=r
+              \end{cases}
+              \\
+              \\
+              \\
+              \therefore ~~~ A(r,t)=\dfrac{\mu_0 q_0}{2 \pi} \bigints\limits_{r}^{+ \infty} 
+              \dfrac{\delta(t-\scriptr/c)}{\scriptr} \dfrac{\scriptr}{\sqrt{\scriptr^2-r^2}} ~ d\scriptr ~~ \hat{z}
+              \\
+              \\
+              \\
+              \text{Knowing that } \delta(t-\scriptr/c)=c ~ \delta(\scriptr-ct)
+              \\
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                \begin{cases}
+                  A(r,t)=\dfrac{\mu_0 q_0 c}{2 \pi} \dfrac{1}{\sqrt{c^2t^2-r^2}} ~ \hat{z} ~~~~ r > ct
+                  \\
+                  \\
+                  \\
+                  E(r,t)=-\dfrac{\partial A}{\partial t}=\dfrac{\mu_0 q_0 c^3 t}{2 \pi \left[c^2 t^2-r^2\right]^{3/2}} ~ \hat{z} ~~~~ r/c > t
+                  \\
+                  \\
+                  \\
+                  B(r,t)=-\dfrac{\partial A_z}{\partial \Phi}=-\dfrac{\mu_0 q_0 c r}{2 \pi \left[c^2 t^2-r^2\right]^{3/2}} ~ \hat{\Phi} ~~~~ r/c > t
+                \end{cases}
+              } ~~~~ \checkmark
+              \\
+              \\
+            $
+          }
           
       \end{enumerate}
-
 
     \item \textbf{10.13 (20 points)} Suppose $J(r)$ is constant in time, so (Prob. 7.60) $\rho(r,t)=\rho(r,0)+\dot{\rho}(r,0)t$.
     Show that 
@@ -393,6 +526,8 @@
       % \textcolor{hwColor}{
       %   \\
       % }
+
+      % \bigg( \bigg)
 
   \end{enumerate}
 
