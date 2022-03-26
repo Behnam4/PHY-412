@@ -222,10 +222,143 @@
       Use this to calculate the divergence of $A$ (Eq. 10.26).
       ]
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          Let's start off with equation 10.26
+          $$
+            V(r,t)=\dfrac{1}{4 \pi \epsilon_0} \bigints \dfrac{\rho(r^', t_r)}{\scriptr} d\tau^', ~~ A(r,t)=\dfrac{\mu_0}{4 \pi} \bigints \dfrac{J(r^', t_r)}{\scriptr} d\tau^'
+          $$
+          From the \textbf{Vector Identities} section of the textbook, product rule 5 states
+          $$
+            \nabla.\bigg( f A\bigg)=f \bigg( \nabla.A \bigg)+A.\bigg( \nabla f\bigg),
+          $$
+          therefore, we have:
+          \\
+          \\
+          $
+            \begin{cases}
+              \nabla.\bigg( \dfrac{J}{\scriptr}\bigg)=\dfrac{1}{\scriptr} \bigg( \nabla.J\bigg)+J.\bigg( \nabla \dfrac{1}{\scriptr}\bigg)
+              \\
+              \\
+              \nabla^'.\bigg( \dfrac{J}{\scriptr} \bigg)=\dfrac{1}{\scriptr} \bigg( \nabla^'.J \bigg)+J.\bigg( \nabla^' \dfrac{1}{\scriptr} \bigg)
+            \end{cases}
+            \\
+            \\
+            \\
+            \nabla.\bigg( \dfrac{J}{\scriptr} \bigg)=\dfrac{1}{\scriptr} \bigg( \nabla.J \bigg)-J.\bigg( \nabla^' \dfrac{1}{r} \bigg)
+            =\dfrac{1}{r} \bigg( \nabla.J \bigg)+\dfrac{1}{\scriptr} \bigg( \nabla^'.J \bigg)-\nabla^'.\bigg( \dfrac{J}{\scriptr} \bigg)
+            \\
+            \\
+            \\
+            \nabla.J=\dfrac{\partial J_x}{\partial x}+\dfrac{\partial J_y}{\partial y}+\dfrac{\partial J_z}{\partial z}
+            =\dfrac{\partial J_x}{\partial t_r} \dfrac{\partial t_r}{\partial x}
+            +\dfrac{\partial J_y}{\partial t_r} \dfrac{\partial t_r}{\partial y}
+            +\dfrac{\partial J_z}{\partial t_r} \dfrac{\partial t_r}{\partial z}
+            \\
+            \\
+            \\
+            \begin{cases}
+              \dfrac{\partial t_r}{\partial x}=-\dfrac{1}{c} \dfrac{\partial r}{\partial x}
+              \\
+              \\
+              \dfrac{\partial t_r}{\partial y}=-\dfrac{1}{c} \dfrac{\partial r}{\partial y}
+              \\
+              \\
+              \dfrac{\partial t_r}{\partial z}=-\dfrac{1}{c} \dfrac{\partial r}{\partial z}
+            \end{cases}
+            \\
+            \\
+            \\
+            \\
+            \nabla.J=\dfrac{\partial J_x}{\partial t_r} \bigg( -\dfrac{1}{c} \dfrac{\partial r}{\partial x} \bigg)
+            +\dfrac{\partial J_y}{\partial t_r} \bigg( -\dfrac{1}{c} \dfrac{\partial r}{\partial y} \bigg)
+            +\dfrac{\partial J_z}{\partial t_r} \bigg( -\dfrac{1}{c} \dfrac{\partial r}{\partial z} \bigg)
+            \\
+            \\
+            \\
+            \nabla.J=-\dfrac{1}{c} \left[
+              \dfrac{\partial J_x}{\partial t_r} \dfrac{\partial \scriptr}{\partial x}
+            +\dfrac{\partial J_y}{\partial t_r} \dfrac{\partial \scriptr}{\partial y}
+            +\dfrac{\partial J_z}{\partial t_r} \dfrac{\partial \scriptr}{\partial z}
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \nabla.J=-\dfrac{1}{c} \dfrac{\partial J}{\partial t_r}.\bigg( \nabla \scriptr \bigg)
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+            \\
+            \nabla^'.J=\left[
+              \dfrac{\partial J^'_x}{\partial x^'}+\dfrac{\partial J^'_x}{\partial t_r} \dfrac{\partial t_r}{\partial x^'}
+            \right]
+            +
+            \left[
+              \dfrac{\partial J^'_y}{\partial y^'}+\dfrac{\partial J^'_y}{\partial t_r} \dfrac{\partial t_r}{\partial y^'}
+            \right]
+            +
+            \left[
+              \dfrac{\partial J^'_z}{\partial z^'}+\dfrac{\partial J^'_z}{\partial t_r} \dfrac{\partial t_r}{\partial z^'}
+            \right]
+            \\
+            \\
+            \\
+            \nabla^'.J=\left[
+              \dfrac{\partial J^'_x}{\partial x^'}+\dfrac{\partial J^'_y}{\partial y^'}+\dfrac{\partial J^'_z}{\partial z^'}
+            \right]
+            -\dfrac{1}{c} \left[
+              \dfrac{\partial J^'_x}{\partial t_r} \dfrac{\partial \scriptr}{\partial x^'}
+              +\dfrac{\partial J^'_y}{\partial t_r} \dfrac{\partial \scriptr}{\partial y^'}
+              +\dfrac{\partial J^'_z}{\partial t_r} \dfrac{\partial \scriptr}{\partial z^'}
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \nabla^'.J=-\dfrac{\partial \rho}{\partial t}-\dfrac{1}{c} \dfrac{\partial J}{\partial t_r}.\bigg( \nabla^' \scriptr \bigg)
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+            \\
+            \nabla.\bigg( \dfrac{J}{\scriptr} \bigg)=\dfrac{1}{\scriptr} \bigg( -\dfrac{1}{c} \dfrac{\partial J}{\partial t_r}.\bigg( \nabla^' \scriptr \bigg) \bigg)
+            +\dfrac{1}{\scriptr} \bigg( -\dfrac{\partial \rho}{\partial t}-\dfrac{1}{c} \dfrac{\partial J}{\partial t_r}.\bigg( \nabla^' \scriptr \bigg) \bigg)
+            -\nabla.\bigg( \dfrac{J}{\scriptr} \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \nabla.\bigg( \dfrac{J}{\scriptr} \bigg)=-\dfrac{1}{\scriptr} \dfrac{\partial \rho}{\partial t}-\nabla^'.\bigg( \dfrac{J}{\scriptr} \bigg)
+              ~~~~ \Longleftrightarrow \nabla^' \scriptr=-\nabla \scriptr
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \nabla.A=\dfrac{\mu_0}{4 \pi} \left[
+              -\dfrac{\partial }{\partial t} \bigints \dfrac{\rho}{\scriptr} d\tau-\bigints\nabla^'.\bigg( \dfrac{J}{\scriptr} \bigg)
+            \right]
+            \\
+            \\
+            \\
+            \nabla.A=-\mu_0 \epsilon_0 \dfrac{\partial }{\partial t} \left[
+              \dfrac{1}{4 \pi \epsilon_0} \bigints \dfrac{\rho}{\scriptr} d\tau
+            \right]-\dfrac{\mu_0}{4 \pi} \oint \dfrac{J}{\scriptr} da ~~~~~ \Longleftrightarrow J=0
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \nabla.A=-\mu_0 \epsilon_0 \dfrac{\partial V}{\partial t}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
+        % \bigg( \bigg)
     \item \textbf{10.11 (30 points)}
       \begin{enumerate}
         \item Suppose the wire in Ex. 10.2 carries a linearly increasing current
