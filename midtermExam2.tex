@@ -1,0 +1,225 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{442020}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter III}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Midterm Exam 2}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Samuel Teitelbaum}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  
+  \begin{itemize}
+    \item This exam is available all weekend, but should take you 4-6 hours to complete.
+    \item Your solutions must be uploaded to Canvas just as you do with homework.
+    \item The exam should be taken without the use of internet (aside from Canvas materials, and email
+    in the event that you have questions during the exam).
+    \item The only allowed materials are: Griffiths textbook, your math methods textbook, any materials
+    on Canvas, and your own hand-written or hand-typed notes.
+    \item Do not discuss the midterm problems with anyone until after April $11, ~ 2022$.
+    \item If you get stuck on math, explain the physics as well as you can.  Much of the credit is given 
+    for showing how you proceed through the problem and what assumptions you are making.
+  \end{itemize}
+
+  \pagebreak
+
+  \begin{enumerate}
+    \item \textbf{Problem 1 [20 points]}
+    \begin{enumerate}
+      \item Find the Gauge transformation that relates the vector potential 
+      $A=-\alpha y ~ \hat{x}$ to $A^'=+\alpha x ~ \hat{y}$.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Determine if the potentials $A(r,t)=\dfrac{1}{2} B_0 \times r$ and $V(r,t)=0$ satisfy the Lorentz 
+      and Coulomb gauges. Assume that $B_0$ is a constant vector (independent of position and time). What are
+      the $E$ and $B$ fields that correspond to these potentials?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Show that it is always possible to choose a gauge in which $V(r,t)=0$.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+  \item \textbf{Problem 2 [20 points]} 
+
+  In lecture, I mentioned that metal foils are often used to reduce the intensity of X-Ray beams used for imaging 
+  and other types of measurements. In this problem, we will design a copper X-Ray beam attenuator. I looked up the 
+  index of refraction $\tilde{n}$ for copper using the Berkeley Lab's Center for X-Ray Optics website. I have 
+  provided a screenshot showing the graph of the complex refractive index $\tilde{n}=1-\delta -i \beta$ below. The 
+  graph shows both $\gamma$ (dashed cyan line) and $\beta$ (solid yellow line). I checked that $\mu=0.999994 \mu_0$.
+    \begin{enumerate}
+      \item I mentioned that reflectivity is usually very low for hard X-Rays, which is why grazing incidence
+      optics are often used. Based on the graph of $\tilde{n}$, estimate the reflection intensity coefficient for a
+      copper-vacuum interface assuming X-Rays with $7 ~ keV$ photon energy. Assume the beam strikes the foil at normal 
+      incidence.
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+      \item Assume $7 ~ keV$ photons again, estimate how thick the foil should be in order to reduce the
+      X-Ray intensity by a factor of 10. Assume the X-Ray beam strikes the foil at normal incidence.
+
+      \begin{center}
+        \includegraphics[height=8cm, width=8cm]{1.JPG}
+      \end{center}
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+    \end{enumerate}
+
+
+  \item \textbf{Problem 3 [10 points]} 
+  
+  A transverse electric (TE) mode of frequency $\omega$ propagates along the $\hat{z}$
+  direction through a hallow waveguide with square cross section of size $a$. The $z$ component of the $B$ field is
+  $$
+    \tilde{B}_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg) ~ exp\bigg( i k_z z-i \omega t\bigg)
+  $$
+    \begin{enumerate}
+      \item For the given mode, determine the minimum and maximum angular frequencies $\omega$ that can
+      propagate through this waveguide.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Determine the time-averaged flux of field energy passing through the waveguide. \emph{Hint: It will
+      save you some time to note that, as I pointed out in lecture, the time-averaged Poynting vector
+      could be simplified to read} $ \langle S \rangle=\dfrac{1}{2 \mu_0} ~ Re \bigg( E_0 \times B^*_0 \bigg)$
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+  \item \textbf{Problem 4 [10 points]} 
+  
+  A transverse electric (TE) mode of frequency $\omega$ propagates along the $\hat{z}$ direction through a hollow
+  waveguide with square cross section of size $a$. The $z$ component of the $B$ field is
+  $$
+    \tilde{B}_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( \pi y/a \bigg) ~ exp\bigg( i k z-i \omega t\bigg)
+  $$
+  We take the real part of the above to be the actual field strength.
+    \begin{enumerate}
+      \item Write down the dispersion relation $k(\omega)$ and determine the group and phase velocities.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Determine the surface charge density $\rho(y,z,t)$ for the wall of the waveguide with surface normal
+      in the $\hat{n}=-\hat{x}$ direction. Hint: you should firstly write down a general expression for the
+      surface charge density on the surface of an ideal conductor. Assume the waveguide is an ideal
+      conductor.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+  
+    \end{enumerate}
+
+  \item \textbf{Problem 5 [20 points]}
+  
+  A straight, neutral wire of length $L$ carries a line current of $I ~ \hat{x}$ along the $\hat{x}$ axis for times
+  $t \ge 0$  (it is suddenly turned on). The current is zero everywhere for times $t < 0$. As a result of the current,
+  point charges accumulate at the ends of the wire, at the positions $r=0$ and $r=-L ~ \hat{x}$. The point charges
+  are initially zero, for times $t < 0$. Determine the vector potential $A(t)$, the scalar potential $V(t)$, the
+  electric field $E(t)$ and the magnetic field $B(t)$ at the position $r=x_0 \hat{x}$. Assume $L >> x_0 > 0$, and 
+  write your solutions only for the time domain $t < L/c$ (in other words, you may pretend that the
+  wire is infinitely long).
+  \begin{center}
+    \includegraphics[height=3cm, width=12cm]{2.JPG}
+  \end{center}
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+
+  \item \textbf{Problem 6 [20 points]}
+
+  A laser of frequency $\omega$ shines at normal incidence on a thin metal film with properties $\epsilon, \mu, \sigma$. 
+  The complex wavenumber within the conductor is $\tilde{k}= a + ib$. Assume a vacuum outside of the film.
+    \begin{enumerate}
+      \item Assuming the high-conductivity limit, determine what a and b are. Don't derive anything; use
+      the formula sheet.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Determine the electric field $E(z,t)$ and magnetic field $B(z,t)$ within the conductor, assuming
+      the incident beam has an electric field $E_I= \hat{x} ~ E_{I0} ~ exp \bigg( i k_0 z - i \omega t \bigg)$ 
+      and the metal-vacuum interface is at $z = 0$. You don't need to derive anything; use the formula sheet. 
+      You may write your answer in terms of the symbols $a$ and $b$.
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \end{enumerate}
+
+  \end{enumerate}
+
+\end{document}
