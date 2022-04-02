@@ -75,7 +75,7 @@
     \item \textbf{Problem 1 [20 points]}
     \begin{enumerate}
       \item Find the Gauge transformation that relates the vector potential 
-      $A=-\alpha y ~ \hat{x}$ to $A^'=+\alpha x ~ \hat{y}$.
+      $A=-\alpha y ~ \hat{x}$ to $A^'=\alpha x ~ \hat{y}$.
 
         % \textcolor{hwColor}{
         %   \\
@@ -127,6 +127,7 @@
 
     \end{enumerate}
 
+  \pagebreak
 
   \item \textbf{Problem 3 [10 points]} 
   
@@ -135,21 +136,120 @@
   $$
     \tilde{B}_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg) ~ exp\bigg( i k_z z-i \omega t\bigg)
   $$
+
+    \begin{center}
+      \includegraphics[height=5cm, width=5cm]{3.JPG}
+    \end{center}
+
     \begin{enumerate}
       \item For the given mode, determine the minimum and maximum angular frequencies $\omega$ that can
       propagate through this waveguide.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From the textbook, we know that if $E_z=0$, we call these TE ("transverse electric") waves. For a square wave guide shape
+          which is subject to $B^{\perp}=0$ boundary condition we have:
+          \\
+          $
+            B_z(x,y)=X(x) ~ Y(y) 
+            \\
+            \\
+            Y \dfrac{d^2 X}{dx^2}+X \dfrac{d^2 Y}{dy^2}+\left[\bigg( \omega/c \bigg)^2-k^2\right] XY=0
+            \Longrightarrow \begin{cases}
+              \dfrac{1}{X} \dfrac{d^2 X}{dx^2}=-k^2_x
+              \\
+              \\
+              \dfrac{1}{Y} \dfrac{d^2 Y}{dy^2}=-k^2_y
+            \end{cases}
+            \\
+            \\
+            \\
+            \text{The General solution: } X(x)=A ~ sin\bigg( k_x x\bigg)+b ~ cos \bigg( k_x x\bigg)
+            \\
+            \\
+            \text{Based on the boundry condition A is zero therefore}, 
+            \\
+            \\
+            \therefore ~~~ \begin{cases}
+              B_z=B_0 ~ cos\bigg( m \pi x/a\bigg) ~ cos\bigg( n \pi y/a\bigg), ~~~~ m,n=0,1,2,...
+              \\
+              \\
+              k=\sqrt{
+                \bigg( \omega/c \bigg)^2- \pi^2 \left[ \bigg( m/a \bigg)^2+\bigg( n/b \bigg)^2 \right]
+              }
+            \end{cases}
+            \\
+            \\
+            \\
+            \\
+            \\
+          $
+          From the textbook, this result is called $T_{mn}$ mode. Comparing the above result with the given 
+          transverse electric mode gives us $m=1$ and $n=2$.
+          \\
+          \\
+          $
+            k=\sqrt{\bigg( \omega/c \bigg)^2- \pi^2 \left[ \bigg( 1/a \bigg)^2+\bigg( 2/a \bigg)^2 \right]}
+            =\sqrt{\bigg( \omega/c \bigg)^2- \pi^2 \left[ 1/a^2 + 4/a^2 \right]}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              k=\sqrt{\bigg( \omega/c \bigg)^2- \dfrac{5 \pi^2}{a^2}}
+            } ~~~ \checkmark
+          $
+          \\
+          \\
+          \\
+          $
+            \text{The cutoff frequency is } \omega < c \pi \sqrt{\bigg( m/a \bigg)^2+\bigg( n/a \bigg)^2} \equiv \omega_{mn}
+            \\
+            \\
+            \\
+            \omega_{mn}=c \pi \sqrt{\dfrac{m^2+n^2}{a^2}}=c \pi \dfrac{\sqrt{m^2+n^2}}{\sqrt{a^2}}
+            \Longrightarrow \omega_{mn}=\dfrac{c \pi}{a} \sqrt{m^2+n^2}
+            \\
+            \\
+            \\
+            \omega_{12}=\dfrac{c \pi}{a} \sqrt{1^2+2^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \omega_{12}=\dfrac{c \pi}{a} \sqrt{5}
+            } ~~~~ \checkmark ~~~~
+          $
+          This above is the lowest cutoff frequency.
+          \\
+          \\
+          \\
+          \textbf{Sanity check:}
+          \\
+          $
+            \text{If } \omega=\dfrac{c \pi}{a} \sqrt{5} \text{ then } k=\sqrt{\bigg( \bigg( \dfrac{c \pi}{a} \sqrt{5} \bigg) /c \bigg)^2- \dfrac{5 \pi^2}{a^2}}=0
+            \\
+            \\
+          $
+          If $\omega$ is less than that then the wave number is imaginary. I do not think there is a maximum angular frequency since any
+          larger values for $\omega$ keeps the wave number a real number.
+          \\
+          \\
+        }
 
       \item Determine the time-averaged flux of field energy passing through the waveguide. \emph{Hint: It will
       save you some time to note that, as I pointed out in lecture, the time-averaged Poynting vector
-      could be simplified to read} $ \langle S \rangle=\dfrac{1}{2 \mu_0} ~ Re \bigg( E_0 \times B^*_0 \bigg)$
+      could be simplified to read} $\langle S \rangle=\dfrac{1}{2 \mu_0} ~ Re \bigg( E_0 \times B^*_0 \bigg)$
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \langle S \rangle=\dfrac{1}{2 \mu_0} ~ Re \bigg( E_0 \times B^*_0 \bigg)
+            \\
+            \\
+            \\
+            \tilde{B}_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg) ~ e^{i( k_z z-\omega t)}
+          $
+        }
 
     \end{enumerate}
 
