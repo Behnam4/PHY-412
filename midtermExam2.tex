@@ -219,7 +219,7 @@
               \omega_{12}=\dfrac{c \pi}{a} \sqrt{5}
             } ~~~~ \checkmark ~~~~
           $
-          This above is the lowest cutoff frequency.
+          This is the lowest cutoff frequency.
           \\
           \\
           \\
@@ -242,12 +242,132 @@
 
         \textcolor{hwColor}{
           \\
+          \\
           $
             \langle S \rangle=\dfrac{1}{2 \mu_0} ~ Re \bigg( E_0 \times B^*_0 \bigg)
             \\
             \\
             \\
             \tilde{B}_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg) ~ e^{i( k_z z-\omega t)}
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              B_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg) cos(k_z z-\omega t)
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \text{Since this is a TE mode } \boxed{E_z=0}. 
+            \\
+            \\
+            E.q ~ (9.180)
+            \\
+            \\
+            \begin{cases}
+              E_x=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial E_z}{\partial x}+\omega \dfrac{\partial B_z}{\partial y} \bigg)
+              =\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial ~ 0}{\partial x}+\omega \dfrac{\partial}{\partial y} \left[B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg)\right] \bigg)
+              \\
+              \\
+              E_y=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial E_z}{\partial y}-\omega \dfrac{\partial B_z}{\partial x} \bigg)
+              =\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial ~ 0}{\partial y}-\omega \dfrac{\partial}{\partial x} \left[B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg)\right]  \bigg)
+              \\
+              \\
+              B_x=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial B_z}{\partial x}-\dfrac{\omega}{c^2} \dfrac{\partial E_z}{\partial y} \bigg)
+              =\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial}{\partial x} \left[B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg)\right]  -\dfrac{\omega}{c^2} \dfrac{\partial ~ 0}{\partial y} \bigg)
+              \\
+              \\
+              B_y=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial B_z}{\partial y}+\dfrac{\omega}{c^2} \dfrac{\partial E_z}{\partial x} \bigg)
+              =\dfrac{i}{(\omega/c)^2 -k^2} \bigg( k \dfrac{\partial}{\partial y} \left[B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg)\right] +\dfrac{\omega}{c^2} \dfrac{\partial ~ 0}{\partial x} \bigg)
+            \end{cases}
+            \\
+            \\
+            \\
+            \begin{cases}
+              E_x=-\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{2 \pi \omega B_0}{a} cos(\dfrac{\pi x}{a}) ~ sin(\dfrac{2 \pi y}{a}) \bigg)
+              \\
+              \\
+              E_y=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{\pi \omega B_0}{a} sin(\dfrac{\pi x}{a}) ~ cos(\dfrac{2 \pi y}{a}) \bigg)
+              \\
+              \\
+              B_x=-\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{\pi k B_0}{a} sin(\dfrac{\pi x}{a}) ~ cos(\dfrac{2 \pi y}{a}) \bigg) 
+              \\
+              \\
+              B_y=-\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{2 \pi k B_0}{a} cos(\dfrac{\pi x}{a}) ~ sin(\dfrac{2 \pi y}{a}) \bigg)
+            \end{cases}
+            \\
+            \\
+            \\
+            \\
+            \therefore ~~~ \begin{cases}
+              E_x=-\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{2 \pi \omega B_0}{a} cos(\dfrac{\pi x}{a}) ~ sin(\dfrac{2 \pi y}{a}) \bigg)
+              \\
+              \\
+              E_y=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{\pi \omega B_0}{a} sin(\dfrac{\pi x}{a}) ~ cos(\dfrac{2 \pi y}{a}) \bigg)
+              \\
+              \\
+              E_z=0
+              \\
+              \\
+              B^*_x=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{\pi k B_0}{a} sin(\dfrac{\pi x}{a}) ~ cos(\dfrac{2 \pi y}{a}) \bigg) 
+              \\
+              \\
+              B^*_y=\dfrac{i}{(\omega/c)^2 -k^2} \bigg( \dfrac{2 \pi k B_0}{a} cos(\dfrac{\pi x}{a}) ~ sin(\dfrac{2 \pi y}{a}) \bigg)
+              \\
+              \\
+              B^*_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( 2 \pi y/a \bigg)
+            \end{cases}
+            \\
+            \\
+            \Longrightarrow \langle S \rangle=\dfrac{1}{2 \mu_0} ~ \bigg( E_0 \times B^*_0 \bigg)
+            =\dfrac{1}{2 \mu_0} ~ \left[
+              \hat{x} \bigg( E_y B^*_z - E_z B^*_y \bigg)
+              -\hat{y} \bigg( E_x B^*_z - E_z B^*_x \bigg)
+              +\hat{z} \bigg( E_x B^*_y - E_y B^*_x \bigg)
+            \right]
+            \\
+            \\
+            \\
+            =\dfrac{1}{2 \mu_0} ~ \left[
+              \hat{x} \bigg( E_y B^*_z \bigg)
+              -\hat{y} \bigg( E_x B^*_z \bigg)
+              +\hat{z} \bigg( E_x B^*_y - E_y B^*_x \bigg)
+            \right]
+            \\
+            \\
+            \\
+            =\dfrac{1}{2 \mu_0} \times \bigg(
+              \hat{x} \bigg( \dfrac{i}{(\omega/c)^2 -k^2} \dfrac{\pi \omega B^2_0}{a} sin(\dfrac{\pi x}{a}) ~ cos(\dfrac{\pi x}{a}) ~ cos^2(\dfrac{2 \pi y}{a}) \bigg)
+              \\
+              \\
+              \\
+              -\hat{y} \bigg( -\dfrac{i}{(\omega/c)^2 \dfrac{2 \pi \omega B^2_0}{a} sin(\dfrac{2 \pi y}{a}) cos(\dfrac{2 \pi y}{a}) cos^2(\dfrac{\pi x}{a}) } \bigg)
+              \\
+              \\
+              \\
+              +\hat{z} \bigg(
+                \dfrac{4 \pi^2 \omega B^2_0 k}{\left[(\omega/c)^2-k^2\right]^2 a^2} cos^2(\dfrac{\pi x}{a}) sin^2(\dfrac{2 \pi y}{a})
+                 -
+                 \dfrac{- \pi^2 \omega k B^2_0}{\left[(\omega/c)^2-k^2\right]^2 a^2} sin^2(\dfrac{\pi x}{a}) cos^2(\dfrac{2 \pi y}{a})
+              \bigg)
+            \bigg)
+            \\
+            \\
+            \\
+            \\
+            \bigints\limits_{0}^{a} \bigints\limits_{0}^{a} ~ \langle S \rangle dx ~ dy
+            \\
+            \\
+            \text{Using } \bigints\limits_{0}^{a} sin^2(m \pi/a) dx=\bigints\limits_{0}^{a} cos^2(m \pi x/a) dx=\dfrac{a}{2} \text{ we have:}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \bigints\limits_{0}^{a} \bigints\limits_{0}^{a} ~ \langle S \rangle dx ~ dy
+              =\dfrac{1}{8 \mu_0} \dfrac{\pi^2 k \omega B^2_0}{\left[(\omega/c)^2-k^2\right]^2} \left[ 
+                \bigg( \dfrac{\pi}{a} \bigg)^2+\bigg( \dfrac{2}{a} \bigg)^2
+              \right]
+            } ~~~~ \checkmark
+            \\
           $
         }
 
