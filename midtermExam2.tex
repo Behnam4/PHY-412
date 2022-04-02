@@ -379,6 +379,8 @@
 
     \end{enumerate}
 
+  \pagebreak
+
   \item \textbf{Problem 4 [10 points]} 
   
   A transverse electric (TE) mode of frequency $\omega$ propagates along the $\hat{z}$ direction through a hollow
@@ -390,9 +392,71 @@
     \begin{enumerate}
       \item Write down the dispersion relation $k(\omega)$ and determine the group and phase velocities.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \tilde{B}_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg( \pi y/a \bigg) ~ e^{i(kz-\omega t)}
+            \\
+            \\
+            \text{The real part} ~~~ \boxed{
+              B_z=B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg(\pi y/a \bigg) cos(k z-\omega t)
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+          Basically, a dispersion relation is a representation of a wave's frequency as a function of wavelenght which
+          is more common to use angular frequency $\omega$ and the wave number instead of frequency and wavelenght.
+          $B_z=B_0 ~ cos(\dfrac{m \pi x}{a}) ~ cos(\dfrac{n \pi y}{b})$ is called the solution of $TE_{mn}$ mode.
+          From the lecture notes we know (for a TE wave)
+          \\
+          \\
+          $
+            \begin{cases}
+              \omega_{mn}=c \pi \sqrt{\bigg( \dfrac{m}{a} \bigg)^2+\bigg( \dfrac{n}{b} \bigg)^2}
+              \\
+              \\
+              k(\omega)=\dfrac{1}{c} \sqrt{\omega^2-\omega^2_{mn}}
+              \\
+              \\
+              v_{phase}=\dfrac{\omega}{k}=\dfrac{c}{\sqrt{1-\bigg( \omega_{mn}/\omega \bigg)^2}}
+              \\
+              \\
+              v_{group}=\dfrac{1}{dk/d\omega}
+            \end{cases}
+            \Longrightarrow
+            \dfrac{dk}{d \omega}=\dfrac{d}{d \omega} \left[
+              \dfrac{1}{c} \sqrt{\omega^2-\omega^2_{mn}}
+            \right]=\dfrac{\omega}{c \sqrt{\omega^2-\omega^2_{mn}}}
+            \\
+            \\
+            \\
+            \begin{cases}
+              \omega_{mn}=\dfrac{c \pi}{a} \sqrt{2}
+              \\
+              \\
+              k(\omega)=\dfrac{1}{c} \sqrt{\omega^2-\dfrac{2 c^2 \pi^2}{a^2}}
+              \\
+              \\
+              v_{phase}=\dfrac{c}{\sqrt{1-\dfrac{2 c^2 \pi^2}{a^2 \omega^2}}}
+              \\
+              \\
+              v_{group}=\dfrac{1}{dk/d\omega}=\dfrac{1}{\dfrac{\omega}{c \sqrt{\omega^2-\omega^2_{mn}}}}
+              =\dfrac{c \sqrt{\omega^2-\omega^2_{mn}}}{\omega}
+            \end{cases}
+            \\
+            \\
+          $
+          I am a bit doubtful about my results because I am not sure if I used the correct formula for $B_z$ in both 
+          questions 3 $\&$ 4. The reason is that the textbook has defined $B_0 ~ cos(m \pi x/a) ~ cos(n \pi y/b)$ so the 
+          values for $m$ and $n$ are clear. In the two questions, I used $e^{i(kz-\omega t)}$ otherwise, I'd end up
+          with $B_0 ~ cos \bigg( \pi x/a \bigg) ~ cos \bigg(\pi y/a \bigg) cos(k z-\omega t)$ which I was not sure how to 
+          retrieve the values of $m$ and $n$. The only way that I could think of was to use 
+          \emph{Angle-Sum and -Difference Trig Identities} to make $cos \bigg( \pi x/a \bigg) ~ cos \bigg(\pi y/a \bigg) cos(k z-\omega t)$
+          similiar to $cos(m \pi x/a) ~ cos(n \pi y/b)$ from the textbook and then continue the work. I hope my solutions are worth
+          some points. Thank you!
+          \\
+          \\
+        }
 
       \item Determine the surface charge density $\rho(y,z,t)$ for the wall of the waveguide with surface normal
       in the $\hat{n}=-\hat{x}$ direction. Hint: you should firstly write down a general expression for the
