@@ -77,23 +77,168 @@
       \item Find the Gauge transformation that relates the vector potential 
       $A=-\alpha y ~ \hat{x}$ to $A^'=\alpha x ~ \hat{y}$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          The Gauge Transformation is used to simplify our solutions. (at least based on my understanding so far). 
+          It makes the two compact Maxwell's equations nicer. The important fact is that the Gauge transformation
+          gives the exact \emph{same} E and B fields, but different V and A fields. Using different gauge 
+          transformations allows us to choose the one that will make the problem we are solving easier to solve.
+          In general, any rule that lets us change potential without changing the fields.From the textbook we have:
+          \\
+          \\
+          $
+            \begin{cases}
+             A^'=A+\nabla \lambda
+             \\
+             \\
+             V^'=V-\dfrac{\partial \lambda}{\partial t}
+            \end{cases}
+             ~~~~~ \text{and given} ~~ \begin{cases}
+              A=-\alpha y ~ \hat{x}
+              \\
+              \\
+              A^'=+\alpha x ~ \hat{y}
+            \end{cases}
+            \\
+            \\
+            \\
+            \Longrightarrow \nabla \lambda=A^'-A=\alpha y ~ \hat{x}+\alpha x ~ \hat{y}, ~~~~
+            \nabla \equiv \dfrac{\partial }{\partial x} ~ \hat{x}
+            +\dfrac{\partial }{\partial y} ~ \hat{y}
+            +\dfrac{\partial }{\partial z} ~ \hat{z}
+            \\
+            \\
+            \\
+            \Longrightarrow \dfrac{\partial \lambda}{\partial x} ~ \hat{x}
+            +\dfrac{\partial \lambda}{\partial y} ~ \hat{y}
+            =ay ~ \hat{x}+ax ~ \hat{y}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \lambda=axy ~ \hat{x}+axy ~ \hat{y}
+            } ~~~~ \checkmark
+            \\
+          $
+        }
 
-      \item Determine if the potentials $A(r,t)=\dfrac{1}{2} B_0 \times r$ and $V(r,t)=0$ satisfy the Lorentz 
+      \item Determine if the potentials $A(r,t)=\dfrac{1}{2} B_0 \times r$ and $V(r,t)=0$ satisfy the Lorenz 
       and Coulomb gauges. Assume that $B_0$ is a constant vector (independent of position and time). What are
       the $E$ and $B$ fields that correspond to these potentials?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          When a potential obeys $\nabla.A=0$, then it is said to be in Coulomb gauge, and if a potential obeys 
+          $\nabla.A=-\mu_0 \epsilon_0 \dfrac{\partial V}{\partial t}$ equation then it is said to be in Lorenz gauage.
+          \\
+          \\
+          $
+            \boxed{
+              \nabla. \bigg( A \times B\bigg)=B.\bigg( \nabla \times A\bigg)-A.\bigg( \nabla \times B \bigg)
+            }
+            \\
+            \\
+            \\
+            \\
+            \begin{cases}
+              \nabla.A=-\mu_0 \epsilon_0 \dfrac{\partial V}{\partial t}=-\mu_0 \epsilon_0 \dfrac{\partial 0}{\partial t}=0
+              \\
+              \\
+              \nabla.A=\nabla.\bigg( \dfrac{1}{2} B_0 \times r \bigg)=r.\bigg( \nabla \times k \bigg)-k. \bigg( \nabla \times r \bigg)
+            \end{cases}
+            \\
+            \\
+            \\
+            \nabla. \bigg( \dfrac{1}{2} B_0 \times r \bigg)
+            =r.\bigg( \nabla \times \dfrac{1}{2} B_0 \bigg)-\dfrac{1}{2} B_0.\bigg( \nabla \times r \bigg)
+            =r.\bigg( 0 \bigg)-\dfrac{B_0}{2r sin\theta}\left[\dfrac{\partial}{\partial \theta}sin \theta ~ r_{\phi}-\dfrac{d r_{\phi}}{\partial \phi}  \right] \hat{r}
+            \\
+            \\
+            \nabla. \bigg( \dfrac{1}{2} B_0 \times r \bigg)=-\dfrac{B_0}{2r sin\theta}\left[\dfrac{\partial}{\partial \theta}sin \theta ~ r_{\phi}-\dfrac{d r_{\phi}}{\partial \phi}  \right] \hat{r}
+            \\
+            \\
+            \\
+          $
+          Therefore, the two potentials are not in Coulomb gauge and but they are in Lorenz gauge.
+          \\
+          \\
+          \\
+          $
+            E=-\nabla V-\dfrac{\partial A}{\partial t}
+            =-\nabla \bigg( 0 \bigg)-\dfrac{\partial}{\partial t} \left[
+              \dfrac{1}{2} B_0 \times r
+            \right]
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              E=-\dfrac{\partial}{\partial t} \left[
+                \dfrac{1}{2} B_0 \times r
+              \right]
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+            B=\nabla \times A
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              B=\nabla \times \bigg( \dfrac{1}{2}B_0 \times r \bigg)
+            } ~~~~ \checkmark
+          $
+          \\
+          \\
+        }
 
       \item Show that it is always possible to choose a gauge in which $V(r,t)=0$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              A=A^'+\nabla \lambda
+              \\
+              \\
+              V=V^' -\dfrac{\partial \lambda}{\partial t}
+            \end{cases}
+            \\
+            \\
+            \\
+            \text{Taking the divergence:}
+            \\
+            \\
+            \nabla.A=\nabla.A^'+\nabla^2 \lambda=-\mu_0 \epsilon_0 \dfrac{\partial V}{\partial t}
+            =-\mu_0 \epsilon_0 \dfrac{\partial V^'}{\partial t}+\mu_0 \epsilon_0 \dfrac{\partial^2 \lambda}{\partial t^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ -\mu_0 \epsilon_0 \dfrac{\partial V^'}{\partial t}-\nabla.A^'=\nabla^2 \lambda-\mu_0 \epsilon_0 \dfrac{\partial^2 \lambda}{\partial t^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \Box^2 \lambda=-\mu_0 \epsilon_0 \dfrac{\partial V^'}{\partial t}-\nabla.A^'
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+          Basically, what we have here is the solution of the wave function and we know how to solve it. Therefore, $V=0$ so we have:
+          \\
+          \\
+          $
+            V^'=\dfrac{\partial \lambda}{\partial t} \Longrightarrow \boxed{\lambda=\bigints\limits_{0}^{t} V^'(r, t^') ~ dt^'} ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+          $
+          In other words, the solution to the Poisson equation is achieved when $V=0$, Hence, it is always possible to choose a gauage when $V=0$.
+          \\
+          \\
+          $
+            V(r,t)=\dfrac{1}{4 \pi \epsilon_0} \bigints \dfrac{\rho(r^', t)}{\scriptr} ~ d\tau^'
+          $ 
+        }
 
     \end{enumerate}
 
@@ -110,9 +255,10 @@
       copper-vacuum interface assuming X-Rays with $7 ~ keV$ photon energy. Assume the beam strikes the foil at normal 
       incidence.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            Behnam was here
+          }
 
       \item Assume $7 ~ keV$ photons again, estimate how thick the foil should be in order to reduce the
       X-Ray intensity by a factor of 10. Assume the X-Ray beam strikes the foil at normal incidence.
@@ -121,9 +267,9 @@
         \includegraphics[height=8cm, width=8cm]{1.JPG}
       \end{center}
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+          }
 
     \end{enumerate}
 
