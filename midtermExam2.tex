@@ -242,6 +242,8 @@
 
     \end{enumerate}
 
+  \pagebreak
+
   \item \textbf{Problem 2 [20 points]} 
 
   In lecture, I mentioned that metal foils are often used to reduce the intensity of X-Ray beams used for imaging 
@@ -615,6 +617,8 @@
   
     \end{enumerate}
 
+  \pagebreak
+
   \item \textbf{Problem 5 [20 points]}
   
   A straight, neutral wire of length $L$ carries a line current of $I ~ \hat{x}$ along the $\hat{x}$ axis for times
@@ -628,10 +632,75 @@
     \includegraphics[height=3cm, width=12cm]{2.JPG}
   \end{center}
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
-
+      \textcolor{hwColor}{
+        \\
+        $
+          I=\begin{cases}
+            I ~ \hat{x} ~~~~ t \geq 0
+            \\
+            \\
+            0 ~~~~~~ t <0
+          \end{cases}
+          \\
+          \\
+          \\
+        $
+        Since the wire is electircally neutral, so the scalr potential $V$ is zero everywhere ourtside the wire. 
+        We leanred that in the nonstatic case, it is not the status of the source \emph{right now} that matters,
+        but rather its condition at some earlier at the retarded, $t_r$, time when the message left. $\scriptr$ 
+        is always the distance from the source point to the field point, so we have:
+        \\
+        \\
+        $
+          t_r=t-\dfrac{\scriptr}{c}
+          \\
+          \\
+          \\
+          A=\hat{x} ~ \dfrac{\mu_0}{4 \pi} \bigints\limits_{X_1}^{X_2} ~ \dfrac{J \bigg( r^', t-\dfrac{\scriptr}{c} \bigg)}{\scriptr} ~ dx
+          =\hat{x} ~ \dfrac{\mu_0}{4 \pi} \bigints\limits_{X_1}^{X_2} ~ \dfrac{I(t_r)}{\scriptr} ~ dx
+          \\
+          \\
+        $
+        For the field to reach point $P$ which is $x_0$ away from the end of the wire, takes $\dfrac{x_0}{c}$ so for $t < \dfrac{x_0}{c}$
+        $A=0$. 
+        \\
+        \\
+        $
+          A=2\bigg( \hat{x} ~ \dfrac{\mu_0 I}{4 \pi} \bigg) \bigints\limits_{x_0}^{ct-s} \dfrac{1}{ x-L } ~ dx
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            A=\dfrac{\mu_0 I}{2 \pi} ln \bigg( \dfrac{ct-s-L}{x_0-L} \bigg) ~ \hat{x}
+          } ~~~~ \checkmark
+        $
+        \\
+        \\
+        \\
+        Knowing $A$, we can calculate $E$ and $B$.
+        \\
+        \\
+        $
+          \begin{cases}
+            B=\nabla \times A=\dfrac{\partial A_x}{\partial s} ~ \hat{\phi}=\dfrac{\partial}{\partial s} \left[\dfrac{\mu_0 I}{2 \pi} ln \bigg( \dfrac{ct-s-L}{x_0-L} \bigg) \right] ~ \hat{\phi}
+            \\
+            \\
+            E=-\dfrac{\partial A}{\partial t}
+            =-\dfrac{\partial}{\partial t} \left[\dfrac{\mu_0 I}{2 \pi} ln \bigg( \dfrac{ct-s-L}{x_0-L} \bigg)\right] ~ \hat{x}
+          \end{cases}
+          \\
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            B=\dfrac{\mu_0 I}{2 \pi \bigg( ct-s-L \bigg)} ~ \hat{\phi}
+            ~~~~~~~
+            E=-\dfrac{\mu_0 I c}{2\pi \bigg( ct-s-L \bigg)} ~ \hat{x}
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
   \item \textbf{Problem 6 [20 points]}
 
