@@ -710,18 +710,98 @@
       \item Assuming the high-conductivity limit, determine what a and b are. Don't derive anything; use
       the formula sheet.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From the textbook on page 412, for a \emph{prefect} conductor we have $\rho=\infty$ and $\tau=0$.
+          \\
+          \\
+          $
+            \begin{cases}
+              \tilde{k}=a+ib
+              \\
+              \\
+              a \equiv \omega \sqrt{\dfrac{\epsilon \mu}{2}} \left[ \sqrt{1+\bigg( \dfrac{\sigma}{\epsilon \omega} \bigg)^2+1} \right]^{1/2}
+              \\
+              \\
+              b \equiv \omega \sqrt{\dfrac{\epsilon \mu}{2}} \left[ \sqrt{1+\bigg( \dfrac{\sigma}{\epsilon \omega} \bigg)^2-1} \right]^{1/2}
+            \end{cases}
+          $
+          \\
+          \\
+          \\
+          From chapters 4, 6, and 7 we learned the following:
+          \\
+          \\
+          $
+            \begin{cases}
+              \epsilon=\epsilon_r \epsilon_0
+              \\
+              \\
+              \mu=\mu_0 \bigg( 1+ \chi_m \bigg)
+            \end{cases}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \tilde{k}=\omega \left[
+                \sqrt{\dfrac{\epsilon \mu}{2}} \left[ \sqrt{1+\bigg( \dfrac{\sigma}{\epsilon \omega} \bigg)^2+1} \right]^{1/2}
+              +i ~ \sqrt{\dfrac{\epsilon \mu}{2}} \left[ \sqrt{1+\bigg( \dfrac{\sigma}{\epsilon \omega} \bigg)^2-1} \right]^{1/2}
+              \right]
+            }
+          $
+        }
 
       \item Determine the electric field $E(z,t)$ and magnetic field $B(z,t)$ within the conductor, assuming
       the incident beam has an electric field $E_I= \hat{x} ~ E_{I0} ~ exp \bigg( i k_0 z - i \omega t \bigg)$ 
       and the metal-vacuum interface is at $z = 0$. You don't need to derive anything; use the formula sheet. 
       You may write your answer in terms of the symbols $a$ and $b$.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          \begin{cases}
+            \tilde{E}(z,t)=\tilde{E}_{I0} ~ e^{\tilde{k}z-\omega t}
+            =\tilde{E}_{I0} ~ e^{-bz} ~ e^{i(kz-\omega t)} ~ \hat{x}
+            \\
+            \\
+            \tilde{B}(z,t)=\tilde{B}_0 ~ e^{\tilde{k}z-\omega t}
+            =\dfrac{a+ib}{\omega} ~ \tilde{E}_{I0} ~ e^{-bz} ~ e^{i(az-\omega t)} ~ \hat{y}
+          \end{cases}
+          \\
+          \\
+        $
+        \\
+        The \emph{real} B and E are:
+        \\
+        \\
+        $
+          \begin{cases}
+            E(z,t)=\tilde{E}_{I0} ~ e^{-bz} ~ cos(az-\omega t+\delta_E) ~ \hat{x}
+            \\
+            \\
+            B(z,t)=\tilde{E}_{I0} ~ e^{-bz} ~ cos(kz-\omega t+\delta_E+\phi) ~ \hat{y}
+          \end{cases}
+          \\
+          \\
+          \\
+        $
+        where 
+        $
+          \\
+          \\
+          \dfrac{B_0}{E_0}=\dfrac{\sqrt{a^2+b^2}}{\omega}=\sqrt{\epsilon \mu \sqrt{1+(\dfrac{\sigma}{\epsilon \omega})^2}}
+          \\
+          \\
+          \\
+          \phi=Arctan\big( \dfrac{b}{a} \bigg)
+          \\
+          \\
+          \\
+          \delta-B-\delta_E=\phi
+          \\
+          \\
+        $.
+      }
 
     \end{enumerate}
 
