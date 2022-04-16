@@ -249,9 +249,57 @@
       \includegraphics[height=5cm, width=7cm]{1.JPG}
     \end{center}
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From equation $10.46$ we can write the potential (scalar) as:
+          \\
+          \\
+          $
+            V(r,t)=\dfrac{1}{4 \pi \epsilon_0} \dfrac{qc}{\sqrt{\bigg( c^2t-r.v \bigg)^2+\bigg( c^2-v^2 \bigg) \bigg( r^2-c^2 t^2 \bigg)}}
+            \\
+            \\
+            \\
+            \bigg( c^2t-r.v \bigg)^2+\bigg( c^2-v^2 \bigg) \bigg( r^2-c^2 t^2 \bigg)
+            =c^4 t^2 -2c^2 t \bigg( r.v \bigg)+\bigg( r.v \bigg)^2+c^2 r^2 -c^4 t^2 -v^2 r^2 +v^2 c^2 t^2
+            \\
+            \\
+            \\
+            =r^2 \bigg( c^2-v^2 \bigg)+c^2 \bigg( r^2+R^2-2r.R \bigg)+\bigg( r.v \bigg)^2-2c^2 \bigg( r^2-r.R \bigg)
+            \\
+            \\
+            \\
+            =\bigg( r.v \bigg)^2 -r^2 v^2+c^2 R^2
+            =\left[ \bigg( R+vt\bigg).v \right]^2-v^2 \left[ R+vt \right]^2+c^2 R^2
+            \\
+            \\
+            \\
+            =  v^4 t^2+\bigg( R.v \bigg)^2+2v^2 t \bigg( R.v \bigg)-R^2 v^2-2vt^2 \bigg( R.v \bigg)-v^4 t^2+c^2 R^2
+            \\
+            \\
+            \\
+            \therefore ~~~ \bigg( c^2t-r.v \bigg)^2+\bigg( c^2-v^2 \bigg) \bigg( r^2-c^2 t^2 \bigg)=-v^2 R^2 ~ sin^2 \theta+c^2 R^2
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \bigg( c^2t-r.v \bigg)^2+\bigg( c^2-v^2 \bigg) \bigg( r^2-c^2 t^2 \bigg)=R^2 c^2 \bigg( 1-\dfrac{v^2}{c^2} sin^2 \theta \bigg)
+            }
+            \\
+            \\
+            \\
+            \therefore ~~~ V(r,t)=\dfrac{1}{4 \pi \epsilon_0} \dfrac{qc}{\sqrt{\bigg( c^2t-r.v \bigg)^2+\bigg( c^2-v^2 \bigg) \bigg( r^2-c^2 t^2 \bigg)}}
+            =\dfrac{1}{4 \pi \epsilon_0} \dfrac{qc}{\sqrt{R^2 c^2 \bigg( 1-\dfrac{v^2}{c^2} sin^2 \theta \bigg)}}
+            \\
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              V(r,t)=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{R \sqrt{1-\dfrac{v^2}{c^2} sin^2 \theta}}
+            } ~~~~ \checkmark
+          $
+        }
+
+    \pagebreak
 
     \item \textbf{10.25 (20 points)} Figure $2.35$ summarizes the laws of electrostatics in a "triangle
     diagram" relating the source $(\rho)$, the field $(E)$, and the potential $(V)$. Figure $5.48$
@@ -260,9 +308,14 @@
     $\rho$ and $J$ (constrained by the continuity equation), fields $E$ and $B$, and potentials $V$
     and $A$ (constrained by the Lorenz gauge condition). Do not include formulas for $V$
     and $A$ in terms of $E$ and $B$.
-    \begin{center}
-      \includegraphics[height=7cm, width=7cm]{2.JPG}
-    \end{center}
+    % \begin{center}
+    %   \includegraphics[height=7cm, width=7cm]{2.JPG}
+    % \end{center}
+
+    \begin{figure}[htp]
+        \includegraphics[height=3cm, width=3cm]{2.JPG}
+        \includegraphics[height=3cm, width=3cm]{2.JPG}
+    \end{figure}
 
         % \textcolor{hwColor}{
         %   \\
