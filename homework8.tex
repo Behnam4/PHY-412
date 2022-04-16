@@ -62,9 +62,176 @@
     origin, and at time $t = 0$ the charge is at $(a, 0)$, on the positive x axis.) Find the
     Liénard-Wiechert potentials for points on the $z$ axis.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          The Liénard-Wiechert potentials describe the classical electromagnetic effect of a moving 
+          electric point charge in terms of a vector potential and a scalar potential in the Lorenz gauge.
+          We learned that the \textbf{Liénard-Wiechert potentials} for a moving point charge are:
+          \\
+          \\
+          $
+            \begin{cases}
+              V(\mathbf{r},t)=\dfrac{1}{4 \pi \epsilon_0} \dfrac{qc}{\bigg( \scriptr c- \mathbf{\scriptr}.\mathbf{v} \bigg)}
+              \\
+              \\
+              A(\mathbf{r},t)=\dfrac{\mu_0}{4 \pi} \dfrac{qc \mathbf{v}}{\bigg( \scriptr c- \mathbf{\scriptr}.\mathbf{v} \bigg)}
+              =\dfrac{\mathbf{v}}{c^2} V(\mathbf{r},t)
+            \end{cases}
+            \\
+            \\
+          $
+          According to the setup of this problem, we can simulate the charge move with a sinusoidal function as:
+          \\
+          \\
+          $
+            r(t)=a \left[
+              cos(\omega t) ~ \hat{x}+sin(\omega t) ~ \hat{y}
+            \right]
+          $
+          \\
+          \\
+          \text{The above equation satifies the following condition which is what we wanted:}
+          \\
+          \\
+          $
+            \boxed{t=0 \longrightarrow r(0)=r(t)=a \left[cos(\omega \times 0) ~ \hat{x}+sin(\omega \times 0) ~ \hat{y}\right]=a}
+            \\
+            \\
+            \\
+            \text{The velocity of the particle is:}
+            \\
+            \\
+            \dfrac{\partial r}{\partial t}
+            =\dfrac{\partial}{\partial t} \bigg( a \left[cos(\omega t) ~ \hat{x}+sin(\omega t) ~ \hat{y}\right] \bigg)
+            \\
+            \\
+            \dfrac{\partial r}{\partial t}=a \dfrac{\partial}{\partial t} \bigg( \left[cos(\omega t) ~ \hat{x}+sin(\omega t) ~ \hat{y}\right] \bigg)
+            =a \bigg( -\omega ~ sin(\omega t) ~ \hat{x}+\omega ~ cos(\omega t) ~ \hat{y} \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              v(t)=a \omega \bigg( -sin(\omega t) ~ \hat{x}+cos(\omega t) ~ \hat{y} \bigg)
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \text{From page 9, chapter 1, we learned that definition of } \scriptr \text{ as:}
+            \\
+            \\
+            \begin{cases}
+              \scriptr \equiv r- r^' ~~~~ \text{Field point minus source point}
+              \\
+              \\
+              \scriptr=\bigg( x-x^' \bigg) ~ \hat{x}+\bigg( y-y^' \bigg) ~ \hat{y}+\bigg( z-z^' \bigg) ~ \hat{z}
+            \end{cases}
+            \\
+            \\
+            \\
+          $
+          Consider a point at a distance $z$ from the center along the z-axis, therefore field point minus 
+          source point gives us.
+          \\
+          \\
+          $ 
+            \scriptr=r-r^'=z ~ \hat{z}- \bigg( a \left[
+              cos(\omega t) ~ \hat{x}+sin(\omega t) ~ \hat{y}
+            \right] \bigg) 
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \scriptr=-a ~ cos(\omega t) ~ \hat{x}-a ~ sin(\omega t) ~ \hat{y}+z ~ \hat{z}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \scriptr^2=\left[
+              -a ~ cos(\omega t) ~ \hat{x}-a ~ sin(\omega t) ~ \hat{y}+z ~ \hat{z}
+            \right]^2
+            =\left[ -a ~ cos(\omega t) ~ \hat{x}-a ~ sin(\omega t) ~ \hat{y}+z ~ \hat{z} \right] 
+            \left[ -a ~ cos(\omega t) ~ \hat{x}-a ~ sin(\omega t) ~ \hat{y}+z ~ \hat{z} \right]
+            \\
+            \\
+            \\
+            \scriptr^2=a^2 ~ cos^2(\omega t) ~ \hat{x}.\hat{x}
+            +a^2 ~ cos(\omega t) sin(\omega t) ~ \hat{x}.\hat{y}
+            -az ~ cos(\omega t) ~ \hat{x}.\hat{z}
+            +a^2 ~ sin(\omega t) cos(\omega t) ~ \hat{y}.\hat{x}
+            +a^2 ~ sin^2(\omega t) ~ \hat{y}.\hat{y}
+            -az ~ sin(\omega t) ~ \hat{y}.\hat{z}
+            -az ~ cos(\omega t) ~ \hat{z}.\hat{x}
+            -az ~ sin(\omega t) ~ \hat{z}.\hat{y}
+            +z^2 ~ \hat{z}.\hat{z}
+            \\
+            \\
+            \\
+            \scriptr^2=a^2 ~ cos^2(\omega t)+a^2 ~ sin^2(\omega t)+z^2
+            =a^2 \left[cos^2(\omega t)+sin^2(\omega t)\right]+z^2
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \scriptr^2=a^2+z^2 
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \hat{\scriptr}=\dfrac{\scriptr}{\scriptr}=\dfrac{
+              -a ~ cos(\omega t) ~ \hat{x}-a ~ sin(\omega t) ~ \hat{y}+z ~ \hat{z}
+            }{
+              \sqrt{a^2+z^2}
+            }
+            \\
+            \\
+            \\
+            \hat{\scriptr}.v=\bigg( 
+              \dfrac{
+                -a ~ cos(\omega t) ~ \hat{x}-a ~ sin(\omega t) ~ \hat{y}+z ~ \hat{z}
+              }{
+                \sqrt{a^2+z^2}
+              }  
+            \bigg).\bigg( 
+              a \omega \bigg( -sin(\omega t) ~ \hat{x}+cos(\omega t) ~ \hat{y} \bigg)
+            \bigg)=a^2 \omega ~ sin(\omega t) cos(\omega t)-a^2 \omega ~ sin(\omega t) cos(\omega t)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \hat{\scriptr}.v=0
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \text{From page 455 of the textbook we know } t_r=t \pm \dfrac{\scriptr}{c} \text{, hence: (we want the minus sign)}
+            \\
+            \\
+            t_r=t - \dfrac{\scriptr}{c}=\dfrac{ct-\scriptr}{c} \Longrightarrow \scriptr=c \bigg( t-t_r \bigg)
+            \Longrightarrow \hat{\scriptr}=\dfrac{r-v t_r}{c \bigg( t-t_r \bigg)}
+            \\
+            \\
+            \\
+            \text{Knowing that } \hat{\scriptr}.v=0 \Longrightarrow 1-\dfrac{\hat{\scriptr}.v}{c}=1
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \begin{cases}
+                V(\mathbf{r},t)=V(z,t)=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{\sqrt{a^2+z^2}}
+                \\
+                \\
+                A(\mathbf{r},t)=A(z,t)
+                =\dfrac{q}{4 \pi \epsilon_0 c^2} \dfrac{
+                  a \omega \bigg( -sin(\omega t_r) ~ \hat{x}+cos(\omega t_r) ~ \hat{y} \bigg)
+                  }{
+                    \sqrt{a^2+z^2}
+                  }
+              \end{cases}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
     \item \textbf{10.16 (20 points)} Show that the scalar potential of a point charge moving with constant 
     velocity (Eq. $10.49$) can be written more simply as
