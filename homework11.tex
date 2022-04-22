@@ -1,0 +1,116 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter III}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Homework 11}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Samuel Teitelbaum}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{12.41} Show that the (ordinary) acceleration of a particle of mass m and
+    charge $q$, moving at velocity $u$ under the influence of electromagnetic fields $E$ and
+    $B$, is given by
+    $$
+      a=\dfrac{q}{m} \sqrt{1-u^2/c^2} \left[E+u \times B-\dfrac{1}{c^2} u (u.E)\right]
+    $$
+    [\emph{Hint}: Use Eq. $12.74$.]
+    \emph{This is valuable for understanding the forces on charged particles in a synchrotron 
+    or laser field. Note the Lorentz force is an ordinary force ($F$, not $K$) and ordinary velocity ($u$, not eta).}
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \item \textbf{12.48} An electromagnetic plane wave of (angular) frequency $\omega$ is traveling
+    in the $x$ direction through the vacuum. It is polarized in the $y$ direction, and the
+    amplitude of the electric field is $E_0$.
+    \emph{The relativistic doppler shift, done formally.}
+    \begin{enumerate}
+      \item Write down the electric and magnetic fields, $E(x, y,z, t)$ and $B(x, y,z, t)$. [Be
+      sure to define any auxiliary quantities you introduce, in terms of $\omega$, $E_0$, and the
+      constants of nature.]
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item This same wave is observed from an inertial system $\bar{B}$ moving in the $x$ direction
+      with speed $v$ relative to the original system $S$. Find the electric and magnetic
+      fields in $\bar{S}$, and express them in terms of the $\bar{S}$ coordinates:  $\bar{E}(\bar{x}, \bar{y}, \bar{z}, \bar{t})$ and
+      $\bar{B}(\bar{x}, \bar{y}, \bar{z}, \bar{t})$. [Again, be sure to define any auxiliary quantities you introduce.]
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item  What is the frequency $\bar{\omega}$ of the wave in $\bar{S}$? Interpret this result. What is the
+      wavelength $\bar{\lambda}$ of the wave in $\bar{S}$? From $\bar{\omega}$ and $\bar{\lambda}$, determine the speed of the
+      waves in $\bar{S}$. Is it what you expected?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item What is the ratio of the intensity in $\bar{S}$ to the intensity in $\bar{S}$? As a youth, Einstein wondered what an 
+      electromagnetic wave would look like if you could run along beside it at the speed of light. What can you tell him about the amplitude,
+      frequency, and intensity of the wave, as $v$ approaches $c$?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+  \end{enumerate}
+
+\end{document}
