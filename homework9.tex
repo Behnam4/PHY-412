@@ -64,9 +64,130 @@
     (so you can use the Larmor formula), and calculate the lifespan of Bohr's atom.
     (Assume each revolution is essentially circular.)
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          We know that centripetal force is a force that makes a body follow a curved path. Its direction is 
+          always orthogonal to the motion of the body and towards the fixed point of the instantaneous 
+          center of curvature of the path. And it is mathematical formula is $F_c=\dfrac{m v^2}{r}$. 
+          In chapter 2 we were introduced with the Coulomb's law 
+          $(F=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q Q}{r^2} \hat{\scriptr})$ which is an 
+          experimental law of physics that quantifies the amount of force between two stationary, 
+          electrically charged particles. Equating the two formulas gives us:
+          \\
+          \\
+          $
+            F_c=F \Longrightarrow \dfrac{m v^2}{r}=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r^2}
+            \\
+            \\
+            \\
+            mv^2=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r}
+            \Longrightarrow \boxed{
+              v=\sqrt{\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{rm}}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \begin{cases}
+              \text{Electron mass: } 9.1093837 \times 10^{-31} ~ kg
+              \\
+              \\
+              \text{Radius: } 5 \times 10^{-11} ~ m
+              \\
+              \\
+              \text{Charge: } 1.60217663 \times 10^{-19} ~ C
+            \end{cases} \Longrightarrow
+            v=\sqrt{\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{rm}}
+            =\sqrt{\dfrac{1}{4 \pi \epsilon_0} \dfrac{\bigg( 1.60217663 \times 10^{-19} \bigg)^2}{ \bigg( 5 \times 10^{-11} ~ m \bigg) \times\bigg( 9.1093837 \times 10^{-31} ~ kg \bigg) }}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              v=2251149.43608 ~ m/s
+            }
+            \\
+            \\
+          $
+          From page $481$ we have the \textbf{Larmor formula} as $P=\dfrac{\mu_0 q^2 a^2}{6 \pi c}$. Assuming the 
+          total energy of electron as $U$:
+          \\
+          \\
+          \\
+          $
+            \begin{cases}
+              F=ma=\dfrac{mv^2}{r}
+              \\
+              \\
+              P=\dfrac{\mu_0 q^2 a^2}{6 \pi c}
+            \end{cases} \Longrightarrow P=\dfrac{\mu_0 q^2}{6 \pi c} \bigg( \dfrac{v^2}{r} \bigg)^2
+            =\dfrac{\mu_0 q^2}{6 \pi c} \left[\dfrac{\bigg( \sqrt{\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{rm}} \bigg)^2}{r} \right]^2
+            =\dfrac{\mu_0 q^2}{6 \pi c} \bigg( \dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r^2 m} \bigg)^2 ~~~~~ (A)
+            \\
+            \\
+            \\
+            U=P.E.+K.E.=-\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r}+\dfrac{1}{2} m v^2
+            =-\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r}+\dfrac{1}{2} m \left[\sqrt{\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{rm}}\right]^2
+            \\
+            \\
+            =-\dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r}+\dfrac{1}{2} m \dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{rm}
+            \Longrightarrow \boxed{U=-\dfrac{1}{8 \pi \epsilon_0}\dfrac{q^2}{r}} 
+            \\
+            \\
+            \\
+            P=-\dfrac{dU}{dt}=-\dfrac{d}{dt} \left[-\dfrac{1}{8 \pi \epsilon_0} \dfrac{q^2}{r}\right]
+            =\dfrac{q^2}{8 \pi \epsilon_0} \dfrac{dr}{dt}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              P=-\dfrac{1}{8 \pi \epsilon_0} \dfrac{q^2}{r^2} \dfrac{dr}{dt}
+            } ~~~~~ (B)
+            \\
+            \\
+            \\
+            \begin{cases}
+              \text{From (A): } P=\dfrac{\mu_0 q^2}{6 \pi c} \bigg( \dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r^2 m} \bigg)^2
+              \\
+              \\
+              \text{From (B): } P=-\dfrac{1}{8 \pi \epsilon_0} \dfrac{q^2}{r^2}
+            \end{cases}
+            \Longrightarrow
+            \dfrac{\mu_0 q^2}{6 \pi c} \bigg( \dfrac{1}{4 \pi \epsilon_0} \dfrac{q^2}{r^2 m} \bigg)^2
+            =-\dfrac{1}{8 \pi \epsilon_0} \dfrac{q^2}{r^2} \dfrac{dr}{dt}
+            \\
+            \\
+            \\
+            dt=-dr ~ 3c r^2 \bigg( \dfrac{2 \pi \epsilon_0 m c}{q^2} \bigg)^2
+            \\
+            \\
+            \\
+            t=\bigints dt=\bigints\limits_{r_A}^{0} -dr ~ 3c r^2 \bigg( \dfrac{2 \pi \epsilon_0 m c}{q^2} \bigg)^2
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              t=r^3_A ~ c \bigg( \dfrac{2 \pi \epsilon_0 mc}{q^2} \bigg)^2
+            } ~~~~ \checkmark
+            \\
+            \\
+            \text{Plugging in the vales we have gives us:}
+            \\
+            \\
+            t=\bigg( 5 \times 10^{-11} \bigg)^3 ~  \bigg( 3 \times 10^8 \bigg) 
+            \bigg( \dfrac{
+              2 \pi \bigg( 8.85 \times 10^{-12} \bigg) \bigg( 9.1093837 \times 10^{-31} \bigg) \bigg( 3 \times 10^8  \bigg)
+            }{
+              \bigg( 1.60217663 \times 10^{-19} \bigg)^2
+            } \bigg)^2
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              t \approxeq 1.3141 \times 10^{-11} ~ s
+            }
+          $
+        }
+
+    \pagebreak
 
     \item \textbf{11.17 (30 points)} 
     \begin{enumerate}
