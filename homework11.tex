@@ -20,7 +20,7 @@
 \newcommand{\scriptr}{\mathcalligra{r}\,}
 \newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
 
-\definecolor{hwColor}{HTML}{AD53BA}
+\definecolor{hwColor}{HTML}{442020}
 
 \begin{document}
 
@@ -67,9 +67,35 @@
     \emph{This is valuable for understanding the forces on charged particles in a synchrotron 
     or laser field. Note the Lorentz force is an ordinary force ($F$, not $K$) and ordinary velocity ($u$, not eta).}
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          Eq. ~ 12.74 \longrightarrow F=\dfrac{m}{\sqrt{1-u^2/c^2}} \left[a+\dfrac{u(u.a)}{c^2-u^2}\right]
+          =q(E+u \times B)
+          \\
+          \\
+          \\
+          \Longrightarrow \dfrac{q}{m} \sqrt{1-u^2/c^2} (E+ u \times B)=a+\dfrac{u(u.a)}{(c^2-u^2)}
+          \\
+          \\
+          \\
+          u.a+\dfrac{u^2 (u.a)}{c^2 (1-u^2/c^2)}=\dfrac{q}{m} \sqrt{1-u^2/c^2} \bigg( u.E+u.(u \times B) \bigg)
+          \\
+          \\
+          \\
+          \text{Substituting the above value into the below equation gives us:}
+          \\
+          \\
+          \dfrac{u(u.a)}{c^2-u^2}=\dfrac{q \sqrt{1-u^2/c^2}}{m} \dfrac{u(u.E)}{c^2}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            a=\dfrac{q}{m} \sqrt{1-u^2/c^2} \left[E+u \times B-\dfrac{1}{c^2} u (u.E)\right]
+          } ~~~~ \checkmark
+          \\
+        $
+      }
 
     \item \textbf{12.48} An electromagnetic plane wave of (angular) frequency $\omega$ is traveling
     in the $x$ direction through the vacuum. It is polarized in the $y$ direction, and the
