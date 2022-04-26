@@ -94,6 +94,7 @@
             a=\dfrac{q}{m} \sqrt{1-u^2/c^2} \left[E+u \times B-\dfrac{1}{c^2} u (u.E)\right]
           } ~~~~ \checkmark
           \\
+          \\
         $
       }
 
@@ -106,34 +107,159 @@
       sure to define any auxiliary quantities you introduce, in terms of $\omega$, $E_0$, and the
       constants of nature.]
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From page 397, (chapter 9), we have:
+          \\
+          \\
+          $
+            E(z, t)=E_0 cos(kz-\omega+\delta) \hat{x}, ~~~ B(z,t)=\dfrac{1}{c} E_0 cos(kz-\omega t+\delta) \hat{y}
+            \\
+            \\
+            \\
+            \boxed{
+              E(x,y,z, t)=E_0 cos(kx-\omega+0) \hat{y}, ~~~ B(x,y,z,t)=\dfrac{1}{c} E_0 cos(kx-\omega t+0) \hat{z}
+            }
+            \\
+            \\
+          $
+        }
 
       \item This same wave is observed from an inertial system $\bar{B}$ moving in the $x$ direction
       with speed $v$ relative to the original system $S$. Find the electric and magnetic
       fields in $\bar{S}$, and express them in terms of the $\bar{S}$ coordinates:  $\bar{E}(\bar{x}, \bar{y}, \bar{z}, \bar{t})$ and
       $\bar{B}(\bar{x}, \bar{y}, \bar{z}, \bar{t})$. [Again, be sure to define any auxiliary quantities you introduce.]
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \alpha \equiv \gamma \bigg( 1-\dfrac{v}{c} \bigg)=\sqrt{\dfrac{
+              1-v/c
+            }{
+              1+v/c
+            }}
+            \\
+            \\
+            \begin{cases}
+              \bar{E}_x=0
+              \\
+              \\
+              \bar{E}_y=\gamma E_0 \left[cos(k x-\omega t)-\dfrac{v}{c} cos(k x -\omega t)\right]=E_0 \alpha cos(kx-\omega t)
+              \\
+              \\
+              \bar{E}_z=0
+            \end{cases}
+            \\
+            \\
+            \\
+            \begin{cases}
+              \bar{B}_x=0
+              \\
+              \\
+              \bar{B}_y=\gamma E_0 \left[\dfrac{1}{c}cos(k x-\omega t)-\dfrac{v}{c^2} cos(k x -\omega t)\right]=\dfrac{E_0 \alpha}{c} cos(kx-\omega t)
+              \\
+              \\
+              \bar{B}_z=0
+            \end{cases}
+            \\
+            \\
+          $
+          Now by using the Lorentz transformation we have:
+          \\
+          \\
+          $
+            \begin{cases}
+              x=\gamma (\bar{x}+v \bar{t})
+              \\
+              \\
+              t=\gamma (\bar{t}+\dfrac{v}{c^2} \bar{x})
+            \end{cases} 
+            \Longrightarrow \gamma \left[k(\bar{x}+v \bar{t})-\omega (\bar{t}+\dfrac{v}{c^2} \bar{x}) \right]
+            =\gamma \left[\bar{x}(k-\dfrac{\omega v}{c^2})-\bar{t}(\omega-kv)\right]=\bar{k} \bar{x}-\bar{\omega} \bar{t}
+            \\
+            \\
+            \\
+            \Longrightarrow \bar{k} \bar{x}-\bar{\omega} \bar{t}=kx-\omega t ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \begin{cases}
+              \bar{k}=\gamma (k-\dfrac{\omega v}{c^2})=\gamma k (1-\dfrac{v}{c})=\alpha k
+              \\
+              \\
+              \bar{\omega}=\gamma \omega (1-\dfrac{v}{c})=\alpha \omega
+            \end{cases}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \begin{cases}
+                \bar{E}(\bar{x}, \bar{y}, \bar{z}, \bar{t})=\bar{E}_0 cos(\bar{k} \bar{x}-\bar{\omega} \bar{t}) ~ \hat{y}
+                \\
+                \\
+                \bar{B}(\bar{x}, \bar{y}, \bar{z}, \bar{t})=\dfrac{\bar{E}_0}{c} cos(\bar{k} \bar{x}-\bar{\omega} \bar{t}) ~ \hat{z}
+              \end{cases}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \begin{cases}
+              \alpha = \sqrt{\dfrac{1-v/c}{1+v/c}}
+              \\
+              \\
+              \bar{\omega}=\alpha \omega 
+              \\
+              \\
+              \bar{k}=\alpha k
+              \\
+              \\
+              \bar{E}_0=\alpha E_0
+            \end{cases}
+            \\
+            \\
+          $
+        }
 
       \item  What is the frequency $\bar{\omega}$ of the wave in $\bar{S}$? Interpret this result. What is the
       wavelength $\bar{\lambda}$ of the wave in $\bar{S}$? From $\bar{\omega}$ and $\bar{\lambda}$, determine the speed of the
       waves in $\bar{S}$. Is it what you expected?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              \bar{\lambda}=\dfrac{2 \pi}{\bar{k}}=\dfrac{2 \pi}{\alpha k}=\dfrac{\lambda}{\alpha}
+              \\
+              \\
+              \bar{v}=\dfrac{\bar{\omega} \bar{\lambda}}{2 \pi}=\dfrac{\omega}{\lambda}=c ~~~~ \checkmark
+              \\
+              \\
+              \bar{\omega}=\omega \sqrt{\dfrac{1-v/c}{1+v/c}}
+            \end{cases}
+            \\
+            \\
+          $
+          $\bar{\omega}$ is the \textbf{Doppler shift}. We found that $\bar{v}=c$ which is the famous key that
+          The key premise to special relativity is that the speed of light is constant in all frames 
+          of reference, regardless of their motion. In other words, $c$ is constant in all inertial systems.
+          \\
+          \\
+        }
 
       \item What is the ratio of the intensity in $\bar{S}$ to the intensity in $\bar{S}$? As a youth, Einstein wondered what an 
-      electromagnetic wave would look like if you could run along beside it at the speed of light. What can you tell him about the amplitude,
-      frequency, and intensity of the wave, as $v$ approaches $c$?
+      electromagnetic wave would look like if you could run along beside it at the speed of light. What can you tell him 
+      about the amplitude, frequency, and intensity of the wave, as $v$ approaches $c$?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \dfrac{\bar{I}}{I}=\dfrac{\bar{E}^2_0}{E^2_0}=\dfrac{1-v/c}{1+v/c}=\alpha ~~~~ \checkmark
+            \\
+            \\
+          $
+          The amplitude, frequency, and intensity of the wave approaches to zero as we run faster and faster. But $c$
+          will be still $3 \times 10^{8}$ relative to us.
+        }
 
     \end{enumerate}
 
