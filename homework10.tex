@@ -191,9 +191,31 @@
     going at half the speed of light. How fast is the Lincoln going? (Leave your answer
     as a multiple of $c$.)
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          \begin{cases}
+            L_c=2 L_v
+            \\
+            \\
+            \dfrac{L_c}{\gamma_c}=\dfrac{L_v}{\gamma_v}
+          \end{cases}
+          \Longrightarrow 2 \gamma_v=\gamma_c=\sqrt{1-(\dfrac{1}{2})^2}
+          \\
+          \\
+          \\
+          \dfrac{v^2}{c^2}=1-\dfrac{1}{\gamma_c}
+          =1-\dfrac{3}{16}=\dfrac{13}{16}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            v=c \sqrt{\dfrac{13}{16}}=\dfrac{c \sqrt{13}}{4}
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item \textbf{12.10 (20 points)} A sailboat is manufactured so that the mast leans at an angle $\bar{\theta}$ with
     respect to the deck. An observer standing on a dock sees the boat go by at speed $v$
@@ -201,12 +223,38 @@
     \emph{Note that length contraction can help us understand why synchrotron radiation comes out in the 
     forward direction when going from the particle's frame to the observer frame.}
     \begin{center}
-      \includegraphics[height=11cm, width=11cm]{1214.JPG}
+      \includegraphics[height=4cm, width=4cm]{1214.JPG}
     \end{center}
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Consider $l$ as the length of the mast and the angle as $\theta$.
+        \\
+        \\
+        $
+          \begin{cases}
+            \text{x-direction: } l cos \theta
+            \\
+            \\
+            \text{y-direction: } l sin \theta
+          \end{cases} ~~~~ \begin{cases}
+            l^'_y=l sin \theta
+            \\
+            \\
+            l^'_x=\dfrac{cos \theta}{\gamma} ~~~ (\text{the horizontal length is contracted}), ~~~ \gamma=\dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}
+          \end{cases}
+          \\
+          \\
+          \\
+          tan \bar{\theta}=\dfrac{l sin \theta}{\dfrac{cos \theta}{\gamma}}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            tan \bar{\theta}=\gamma \times \tan \theta=\dfrac{tan \theta}{\sqrt{1-\dfrac{v^2}{c^2}}}
+          } ~~~~ \checkmark
+        $
+      }
 
   \end{enumerate}
 
