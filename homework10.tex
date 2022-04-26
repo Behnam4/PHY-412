@@ -20,7 +20,7 @@
 \newcommand{\scriptr}{\mathcalligra{r}\,}
 \newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
 
-\definecolor{hwColor}{HTML}{AD53BA}
+\definecolor{hwColor}{HTML}{442020}
 
 \begin{document}
 
@@ -64,9 +64,126 @@
     \emph{Note that this is for on-axis radiation (i.e. Bremstrahlung) which is a bit different from the example we 
     did in class.  Start with Eq. 11.74 in Griffiths, and proceed as we did in class to calculate the emitted intensity.}
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Starting with equation $11.74$ as it was suggested we have the following:
+        \\
+        \\
+        $
+          \dfrac{dP}{d\Omega}=\dfrac{\mu_0 q^2 a^2}{16 \pi^2 c} \dfrac{sin^2 \theta}{(1-\beta cos \theta)^5}
+          \\
+          \\
+        $
+        We learned from Calculus how to find the maxima and minima for an equation by differentiation.
+        \\
+        \\
+        $  
+          \dfrac{d}{d\theta} \left[\dfrac{sin^2 \theta}{(1-\beta cos \theta)^5}\right]=0
+          \\
+          \\
+          \\
+          \dfrac{
+            2 cos \theta sin \theta (1-\beta cos \theta)^5- sin^2 \theta \left[5 (0+\beta sin \theta) (1-\beta cos \theta)^4 \right]
+          }{
+            (1-\beta cos \theta)^{10}
+          }=0
+          \\
+          \\
+          \\
+          \dfrac{
+            2 cos \theta sin \theta (1-\beta cos \theta)^5- 5 \beta sin^3 \theta (1-\beta cos \theta)^4
+          }{
+            (1-\beta cos \theta)^{10}
+          }=0
+          \\
+          \\
+          \\
+          \dfrac{2 cos \theta sin \theta}{(1-\beta cos \theta)^5}-\dfrac{5 \beta sin^3 \theta}{(1-\beta cos \theta)^6}=0
+          \\
+          \\
+          \\
+          \dfrac{2 cos \theta sin \theta}{(1-\beta cos \theta)^5}=\dfrac{5 \beta sin^3 \theta}{(1-\beta cos \theta)^6}
+          \\
+          \\
+          \\
+          2 cos \theta sin \theta (1-\beta cos \theta)= 5 \beta sin^3 \theta
+          \\
+          \\
+          \\
+          2 cos \theta (1-\beta cos \theta)=5 \beta sin^2 \theta
+          \\
+          \\
+          \\
+          2 cos \theta (1-\beta cos \theta)=5 \beta (1-cos^2 \theta)
+          \\
+          \\
+          \\
+          2 cos \theta-2 \beta cos^2 \theta=5 \beta-5 \beta cos^2 \theta
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            3 \beta cos^2 \theta+2 cos \theta-5 \beta=0
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          cos \theta=\dfrac{
+            -2 \pm \sqrt{4+60 \beta^2}
+          }{
+            6 \beta
+          }
+          =\dfrac{-2 \pm \sqrt{4(1+15 \beta^2)}}{6 \beta}
+          =\dfrac{-1 \pm \sqrt{1+15 \beta^2}}{3 \beta}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \theta_{max}=Arccos\bigg(\dfrac{-1+\sqrt{1+15 \beta^2}}{3 \beta} \bigg), ~~~ \beta \rightarrow 0
+          }
+          \\
+          \\
+          \\
+        $ 
+        Note that $ \theta_{max}=Arccos\bigg(\dfrac{-1-\sqrt{1+15 \beta^2}}{3 \beta} \bigg)$ is another answer but 
+        we want the positive result.
+        For the case when the speed $v$ is close to $c$ we have:
+        \\
+        \\
+        $
+          \beta \equiv \dfrac{v}{c} \approxeq 1
+          \\
+          \\
+          \text{For lecture we had } \beta=1-\epsilon, \text{assuming } \epsilon \text{is very very small.}
+          \\
+          \\
+          \\
+          \dfrac{-1+\sqrt{1+15 (1-\epsilon)^2}}{3 (1-\epsilon)}
+          =\dfrac{-1+\sqrt{1+15 (1-\epsilon)^2}}{3} (1+\epsilon)
+          =\dfrac{-1+\sqrt{16-30 \epsilon}}{3} (1+\epsilon)
+          \\
+          \\
+          \\
+          =(1-\dfrac{5}{4} \epsilon) (1+\epsilon)
+          =1-\dfrac{1}{4} \epsilon
+          \\
+          \\
+          \\
+          \therefore ~~~ \theta_{max} \approxeq 0 \Longrightarrow cos \theta_{max} \approxeq1-\dfrac{1}{4} \theta^2_{max}
+          \\
+          \\
+          \\
+          \Longrightarrow \theta_{max}=\sqrt{\dfrac{\epsilon}{2}}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \theta_{max}=\sqrt{\dfrac{(1-\beta)}{2}}
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item \textbf{12.9 (20 points)} A Lincoln Continental is twice as long as a $VW$ Beetle, when they
     are at rest. As the Continental overtakes the $VW$, going through a speed trap, a
