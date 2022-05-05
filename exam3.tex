@@ -1,0 +1,182 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter III}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Exam 3}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Samuel Teitelbaum}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{itemize}
+    \item This exam is available all weekend, but should take you 4-6 hours to complete.
+    \item Your solutions must be uploaded to Canvas just as you do with homework.
+    \item The exam should be taken without the use of internet (aside from Canvas materials, and email
+    in the event that you have questions during the exam).
+    \item The only allowed materials are: Griffiths textbook, your math methods textbook, any materials
+    on Canvas, and your own hand-written or hand-typed notes.
+    \item Do not discuss the midterm problems with anyone until after May $6th, ~ 2022$.
+    \item If you get stuck on math, explain the physics as well as you can.  Much of the credit is given 
+    for showing how you proceed through the problem and what assumptions you are making.
+  \end{itemize}
+
+  \pagebreak
+
+  \begin{enumerate}
+    \item \textbf{Problem 1 [25 points]}
+    For the questions below, assume our standard reference frames in which the primed frame $\bar{S}$
+    moves at velocity $v \hat{x}$ with respect to the unprimed frame $S$. The origins of the coordinate 
+    systems overlap at time $t=\bar{t}=0$.
+    \begin{enumerate}
+      \item A photon has velocity $\bar{u}=(0,0,c)$ relative to the $\bar{S}$ frame. Find the velocity $u$
+      of the photon relative to the $S$ frame.
+
+      \item Determine the speed of the photon in the $S$ frame; confirm that it is still equal to $c$.
+
+      \item Suppose the photon has frequency $\bar{\omega}$ in the $\bar{S}$ frame. Write down the momentum
+      4-vector $\bar{p}^{\mu}$ for the photon in the $\bar{S}$ frame. Use Lorentz transformations to find the 
+      photon energy $E$ and 3-momentum in the $S$ frame.
+    \end{enumerate}
+
+    \pagebreak
+
+
+
+    \item \textbf{Problem 2 [25 points]}
+    At our CXFEL tour I went over how Inverse Compton scattering can be used to produce x-rays, as
+    in the Compact X-ray Light Source in the Biodesign $C$ building. In this problem you will reproduce
+    some of the results I derived in lecture. In a simplified picture, suppose that a photon and an electron
+    have a direct collision with each other, and the scattered photon propagates opposite to the initial
+    direction. The electrons energy is reduced, while the photon’s energy is increased. With knowledge
+    of the initial electron energy $E_{e,i}$ and the initial frequency of the photon $\omega_{p, i}$, we aim 
+    to find the final frequency of the photon $\omega_{p,f}$ after the collision. I will walk you through the 
+    calculation, and you fill in the details.
+    \begin{enumerate}
+      \item Suppose the initial photon 3-momentum is $p_{p,i}=\hbar k=\hbar \dfrac{\omega}{c} \hat{x}$
+      and the initial (relativistic) electron 3-momentum is $p_{e,i}=-p_{e,i} \hat{x}$. Write down the 
+      corresponding momentum 4-vectors $p^{\mu}_{p,i}$ and $p^{\mu}_{e,i}$. Recall that the energy of a 
+      photon is $E=\hbar \omega$.
+
+      \item We will transform into the primed frame in which the electron is at rest, in which case the
+      electron’s momentum 4-vector is understood to be $\bar{p}_{e,i}=\bigg( \bar{E}_{e,i}/c, 0,0,0 \bigg)$.
+      Write down the Lorenz-transformed photon momentum 4-vector $\bar{p}_{p,i}$ in this frame. There is 
+      nothing to “solve” here; just write it down in terms of the usual $\gamma =\gamma_v$. Be mindful of 
+      signs; they are important.
+
+      \item Although there is in principle a Compton frequency shift, we will assume that it is small enough
+      to be ignored $(\hbar \bar{\omega}_{p,i} << m_0 c^2)$. Under that assumption, the new momentum in the rest frame
+      simply reverses direction. Write down the new momentum 4-vector after the collision, $\bar{p}^{\mu}_{p,f}$.
+
+
+      \item Now do the Lorentz transformation back into the unprimed lab frame and solve for the final
+      momentum 4-vector of the photon, $p^{\mu}_{p,f}$.
+
+      \item Finally, show that the new frequency of the photon is approximately $\omega_{p,f} \approx 4 \gamma^2 \omega_{p,i}$.
+      (Note that $\gamma \approx E_{e,i}/m_0 c^2$).
+
+    \end{enumerate}
+    Now you know how ASU Compact X-ray Light Source works!
+    
+    \pagebreak
+
+
+
+
+    \item \textbf{Problem 3 [25 points]}
+    A particle of charge $q$ and rest mass $m_0$ moves at velocity $v=v \hat{x}$ in a constant magnetic field
+    $B=B_0 \hat{z}$. It’s motion will be circular.
+    \begin{enumerate}
+      \item Determine the radius $R$ of the circular orbit in terms of $B_0$, $m$ and $q$. Do not assume $v << c$.
+
+      \item Determine the total power radiated by the particle. Do not assume that $v << c$. Hint 1: this is
+      closely related to an example of synchrotron radiation we discussed in class. Hint 2: How are
+      $a$ and $v$ related for circular orbits?
+
+    \end{enumerate}
+    
+    \pagebreak
+
+
+
+
+    \item \textbf{Problem 4 [25 points]}
+    When a linear dielectric sphere of relative permittivity $\epsilon_r$ is placed in a uniform static electric 
+    field $E_0$, the field inside of the sphere is uniform and is equal to
+    $$
+      E_{in}=\dfrac{3}{\epsilon_r+2} E_0
+    $$
+    according to Griffiths equation $4.49$. From this model, we can develop the theory of Rayleigh scattering.
+    Assume the sphere has a radius $R$.
+    \begin{enumerate}
+      \item Write down an expression for the polarization field $P$ within the sphere, in terms of 
+      $\epsilon_r$ and $E_{in}$.
+
+      \item Determine the “polarizability” of the sphere, $\alpha$, defined by the relation $p=\alpha E_0$ 
+      where $p$ is the total dipole moment of the sphere. Hint: $P$ is the dipole moment per volume.
+
+      \item Suppose the external field is a plane wave of the form $E_0(r,t)=E_0 cos(kx-\omega t) \hat{z}$ and the
+      sphere is situated at the origin. In the Rayleigh approximation, we assume $\lambda >> R$ so that the
+      above uniform-field result is reasonable. Determine the electric dipole radiation fields $E_{dip}$ and
+      $B_{dip}$ far from the sphere in terms of $\alpha$, $\omega$ and $E_0$. Use the usual spherical coordinates 
+      $r, \theta, \phi$ and $\hat{r}, \hat{\theta}, \hat{\phi}$. 
+      \emph{Hint: save time by making use of equations developed in Griffiths.}
+
+
+      \item Determine the power radiated into a distant detector with a tiny solid angle $\Delta \Omega ≪ \pi$. 
+      Write it down in terms of $R$, $\epsilon_r$, the angles $\theta$ and $\phi$, and the incident intensity 
+      $I_0=\dfrac{1}{2 \mu_0 c}|E_0|^2$. \emph{Hint: save time by making use of equations developed in Griffiths.}
+    \end{enumerate}
+    
+    \pagebreak
+
+  \end{enumerate}
+
+\end{document}
