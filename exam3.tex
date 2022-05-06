@@ -90,6 +90,7 @@
 
 
 
+
     \item \textbf{Problem 2 [25 points]}
     At our CXFEL tour I went over how Inverse Compton scattering can be used to produce x-rays, as
     in the Compact X-ray Light Source in the Biodesign $C$ building. In this problem you will reproduce
@@ -136,16 +137,198 @@
     \begin{enumerate}
       \item Determine the radius $R$ of the circular orbit in terms of $B_0$, $m$ and $q$. Do not assume $v << c$.
 
+
+        \textcolor{hwColor}{
+          We are told that motion will be circular so it is fair to have the following assumptions:
+          \\
+          \begin{itemize}
+            \item Assume the motion is on the $X-Y$ plane
+            \item The velocity of the particle can be written as $v=(v_x, v_y, 0)$
+          \end{itemize}
+        }
+
+        \textcolor{hwColor}{
+          \\
+          With the help of Lorentz-force law and Newton’s law we have:
+          \\
+          \\
+          $
+            \begin{cases}
+              F=Q \bigg( V \times B \bigg)=q \bigg( v \times B_0 \bigg)
+              \\
+              \\
+              F=\dfrac{dp}{dt}=\dfrac{d (\gamma m_0 v)}{dt}
+            \end{cases} \Longrightarrow
+            q \bigg( v \times B_0 \bigg)=\dfrac{d (\gamma m_0 v)}{dt}
+            \\
+            \\
+            \\
+            \gamma \text{ comes out of the derivative because the speed of the particle is constant.}
+            \\
+            \\
+            \\
+            \gamma m_0 \dfrac{d v}{dt}=q \bigg( v \times B_0 \bigg)
+            \Longrightarrow
+            \dfrac{d v}{dt}=\dfrac{q}{\gamma m_0} \bigg( v \times B_0 \bigg)
+            \\
+            \\
+            \\
+            \bigg( v \times B_0 \bigg)=\begin{vmatrix}
+              \hat{x} && \hat{y} && \hat{z}
+              \\
+              v_x && v_y && 0
+              \\
+              0 && 0 && B_0
+            \end{vmatrix}=v_y B_0 \hat{x}-v_x B_0 \hat{y}
+            \\
+            \\
+            \\
+            \therefore ~~~ \begin{cases}
+              \dfrac{d v_x}{dt}=\dfrac{q B_0}{\gamma m_0} v_y
+              \\
+              \\
+              \dfrac{d v_y}{dt}=-\dfrac{q B_0}{\gamma m_0} v_x
+            \end{cases}
+            \\
+            \\
+            \\
+            \dfrac{d^2 v_x}{dt^2}=\dfrac{q B_0 }{\gamma m_0} \dfrac{d v_y}{dt}
+            =- \bigg( \dfrac{q B_0}{\gamma m_0}\bigg)^2 v_x
+            \\
+            \\
+            \\
+            \therefore ~~~ \begin{cases}
+              v_x(t)=A cos(\dfrac{q B_0}{\gamma m_0}+\phi)
+              \\
+              \\
+              v_y(t)=-A sin(\dfrac{q B_0}{\gamma m_0}+\phi)
+            \end{cases} ~~~~ \text{where } A=\dfrac{p}{\gamma m_0}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \bigg( x(t), y(t) \bigg)=\dfrac{A}{qB_0/\gamma m_0} \bigg( sin(\dfrac{q B_0}{\gamma m_0}+\phi), cos(\dfrac{q B_0}{\gamma m_0}+\phi) \bigg)
+            }
+            \\
+            \\
+          $ 
+          The above is an equation of a circle which its radius is 
+          $
+            R=\dfrac{A}{qB_0/\gamma m_0}
+            =\dfrac{\dfrac{p}{\gamma m_0}}{\dfrac{qB_0}{\gamma m_0}}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              R=\dfrac{p}{q B_0}=\dfrac{\gamma m_0 v}{q B_0}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+          $
+          Another way of finding the radius is:
+          \\
+          \\
+          $
+            q \bigg( v \times B_0 \bigg)=m_0 \dfrac{v^2}{R}
+            \\
+            \\
+            \\
+            q v B_0 sin(\dfrac{\pi}{2})=m_0 \dfrac{v^2}{R}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              R=\dfrac{\gamma m_0 v}{q B_0}
+            } ~~~~ \checkmark
+            \\
+          $
+        }
+
       \item Determine the total power radiated by the particle. Do not assume that $v << c$. Hint 1: this is
       closely related to an example of synchrotron radiation we discussed in class. Hint 2: How are
       $a$ and $v$ related for circular orbits?
 
+        \textcolor{hwColor}{
+          \\
+          Any charged particle moving in a curved path will emit electromagnetic radiation. We know that the 
+          angle between acceleration and velocity is $\dfrac{\pi}{2}$ for a particle on a circular path. From 
+          the given hint, we are working on a synchrotron radiation. The \textbf{Larmor formula} generalization
+          is found by formulas $11.72$ and $11.73$ of the textbook.
+          \\
+          \\
+          $
+            \begin{cases}
+              P=\dfrac{\mu_0 q^2 \gamma^6}{6 \pi c} \bigg( a^2- |\dfrac{v \times a}{c}|^2 \bigg)
+              \\
+              \\
+              \dfrac{dP}{d \Omega}=\dfrac{q^2 \mu_0}{16 \pi^2 c} \dfrac{|\hat{\scriptr} \times (u \times a)|^2}{(\hat{\scriptr}.u)^5}
+            \end{cases}
+            \\
+            \\
+            \\
+            \text{Assuming the following, we can start to derive the total power radiated:}
+            \\
+            \\
+            \begin{cases}
+              s_{\theta} \equiv sin\theta
+              \\
+              \\
+              c_{\theta} \equiv cos \theta
+              \\
+              \\
+              c_{\phi} \equiv cos \phi
+              \\
+              \\
+              \hat{\scriptr}=s_{\theta} c_{\phi} \hat{x}+s_{\theta} s_{\phi} \hat{y}+c_{\theta} \hat{z}
+            \end{cases}
+            \\
+            \\
+            \\
+            \begin{cases}
+              \hat{\scriptr}.u=c \hat{\scriptr}.\hat{\scriptr}-v c_{\theta}=c(1-\beta c_{\theta})
+              \\
+              \\
+              u \times a =( c \hat{\scriptr} \times a \hat{x})-( v \hat{z} \times a \hat{x})
+              =ca (-s_{\theta} s_{\phi} \hat{z}+c_{\theta} \hat{y})-av \hat{y}
+            \end{cases}
+            \\
+            \\
+            \\
+            \Longrightarrow 
+            \hat{\scriptr} \times (u \times a)=\begin{vmatrix}
+              \hat{x} && \hat{y} && \hat{z}
+              \\
+              \\
+              s_{\theta} c_{\phi} && s_{\theta} s_{\phi} && c_{\theta}
+              \\
+              \\
+              0 && -av+c_{\theta} a c && -ac s_{\theta} s_{\phi}
+            \end{vmatrix}
+            \\
+            \\
+            =\hat{x} (ac s^2_{\theta} s^2_{\phi}-ac c^2_{\theta}+av c_{\theta}) 
+            +\hat{y} ac s^2_{\theta} s_{\phi} s_{\theta}
+            +\hat{z} (ac s_{\theta} c_{\phi} c_{\theta}-av s_{\theta} c_{\phi})
+          $
+          \\
+          \\
+        }
+
     \end{enumerate}
-    
+
+    \begin{center}
+      \includegraphics[height=15cm, width=16cm]{3B(A).JPG}
+    \end{center}
+
     \pagebreak
 
-
-
+    \begin{center}
+      \includegraphics[height=15cm, width=16cm]{3B(B).JPG}
+    \end{center}
+    
+    \pagebreak
 
     \item \textbf{Problem 4 [25 points]}
     When a linear dielectric sphere of relative permittivity $\epsilon_r$ is placed in a uniform static electric 
